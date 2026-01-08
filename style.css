@@ -74,15 +74,15 @@ header {
 
 .open-menu, .close-menu {
     display: none;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     background: none;
     border: none;
 }
 
 .open-menu, .close-menu i {
     color: red;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 /* HERO */
@@ -425,5 +425,6 @@ i {
     }
 
 }
+
 
 
