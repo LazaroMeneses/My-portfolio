@@ -30,7 +30,7 @@
 
 body {
     font-family: Poppins, sans-serif;
-    line-height: 1,6;
+    line-height: 1.6;
     color: var(--text-color);
     background: var(--bg-dark);
     overflow-x: hidden;
@@ -122,7 +122,7 @@ header {
     font-size: 48px;
     color: var(--primary-color);
     text-shadow: 0 0 10px rgb(74, 222, 128 / 30);
-    font-weight: bo;
+    font-weight: bold;
 }
 
 .role {
@@ -424,4 +424,5 @@ i {
         padding: 1rem;
         max-width: 1200px;
     }
+
 }
