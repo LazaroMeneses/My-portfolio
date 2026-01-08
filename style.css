@@ -187,9 +187,8 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
     gap: 2rem;
-    max-width: 360px;
     min-height: 360px;
-    margin: 0 auto;
+    margin: 3rem auto;
     padding: 1rem 0 2rem 0;
 }
 
@@ -234,7 +233,7 @@ header {
 }
 
 .timeline {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 2rem;
     position: relative;
     border-left: 1px solid var(--secundary-color);
@@ -426,3 +425,4 @@ i {
     }
 
 }
+
