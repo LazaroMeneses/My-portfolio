@@ -80,10 +80,14 @@ header {
     border: none;
 }
 
-.open-menu, .close-menu i {
+.close-menu i {
     color: red;
     font-size: 30px;
 }
+
+.open-menu i {
+    color: red;
+    font-size: 30px;
 
 /* HERO */
 
@@ -425,6 +429,7 @@ i {
     }
 
 }
+
 
 
 
