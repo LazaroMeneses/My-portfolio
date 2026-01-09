@@ -6,7 +6,7 @@
     --text-color: #e2e8f0;
     --text-light: #94a3b8;
     --card-bg: #1e293b;
-    --transition: all .3s ease;
+    --transition: all .2s ease;
 }
 
 * {
@@ -205,6 +205,13 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: all .3s;
+}
+
+.skill-card:hover {
+    box-shadow: 0 0 10px var(--bg-darker);
+    transform: translateY(-5px);
+
 }
 
 .skill-card h3 {
@@ -223,12 +230,20 @@ header {
 }
 
 .skill-tag {
-    background: #4ade801a;
+    background: #0a0f1d;
     color: var(--text-light);
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     font-size: .9rem;
     cursor: default;
+    transition: var(--transition);
+}
+
+.skill-tag:hover {
+    background: #de4a4a1a;
+    transform: translateY(-3px);
+    cursor: pointer;
+    box-shadow: 0 0 3px var(--secundary-color);
 }
 
 /* EXPERIENCE */
@@ -331,6 +346,12 @@ header {
     border-radius: 0.5rem;
     border: 1px solid rgba(222, 74, 74, 0.1);
     text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px var(--secundary-color);
 }
 
 i {
