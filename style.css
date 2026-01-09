@@ -51,13 +51,14 @@ header {
     font-weight: bolder;
     color: var(--primary-color);
     text-shadow: 0 0 10px rgb(74, 222, 128 / 30%);
+    animation: SlideDown ease-in-out .7s;
 }
 
 .nav-list {
     list-style-type: none;
     display: flex;
     gap: 2rem;
-    
+    animation: SlideDown ease .7s;
 }
 
 .nav-list li a:hover {
@@ -73,6 +74,7 @@ header {
 }
 
 .open-menu, .close-menu {
+    animation: SlideLeft ease-in-out .4s;
     display: none;
     width: 30px;
     height: 30px;
@@ -121,6 +123,7 @@ header {
     font-size: 48px;
     margin-bottom: 1rem;
     color: var(--text-color);
+    animation: SlideRight ease .5s;
 }
 
 .highlight {
@@ -164,6 +167,13 @@ header {
     border-radius: 50%;
     border: 4px solid var(--primary-color);
     box-shadow: 0 0 30px #4ade8033;
+    animation: SlideUp ease-in-out .5s;
+    transition: var(--transition);
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    opacity: .8;
 }
 
 /* ABOUT */
@@ -452,7 +462,46 @@ i {
 
 }
 
+/* ANIMACIONES DE CARGA */
 
+@keyframes SlideUp {
+    from {
+        transform: translateY(30px);
+    }
 
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes SlideRight {
+    from {
+        transform: translateX(-30px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes SlideDown {
+    from {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes SlideLeft {
+    to {
+        transform: translateX(0px);
+    }
+
+    from {
+        transform: translateX(30px);
+    }
+}
 
 
