@@ -500,6 +500,7 @@ header.scrolled {
     color: var(--text-secondary);
     font-size: 1.05rem;
     line-height: 1.9;
+    text-align: justify;
 }
 
 .about-text p:last-child {
