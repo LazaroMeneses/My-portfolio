@@ -32,14 +32,15 @@
         <nav class="nav" id="nav">
             <button class="close-menu" id="close" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
             <ul class="nav-list">
-                <li><a href="#hero" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#hero" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
         <div class="header-actions">
+            <button class="lang-toggle" id="lang-toggle" aria-label="Change language">ES</button>
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                 <i class="bi bi-moon-stars-fill"></i>
             </button>
@@ -55,27 +56,27 @@
             <div class="hero-orb hero-orb-3"></div>
             <div class="hero-content">
                 <div class="hero-text">
-                    <p class="hero-greeting fade-in">Hello, I'm</p>
-                    <h1 class="fade-in">Lazarus <span class="gradient-text">Meneses P</span></h1>
+                    <p class="hero-greeting fade-in" data-i18n="hero.greeting">Hello, I'm</p>
+                    <h1 class="fade-in">Lazaro <span class="gradient-text">Meneses P</span></h1>
                     <p class="role fade-in"><span id="typed-role"></span><span class="typing-cursor">|</span></p>
-                    <p class="hero-description fade-in">Building dynamic and visually engaging web experiences with
+                    <p class="hero-description fade-in" data-i18n="hero.description">Building dynamic and visually engaging web experiences with
                         modern technologies.</p>
                     <div class="hero-cta fade-in">
-                        <a href="#projects" class="btn btn-primary"><i class="bi bi-grid"></i> View Projects</a>
-                        <a href="#contact" class="btn btn-outline"><i class="bi bi-chat-dots"></i> Get in Touch</a>
+                        <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects"><i class="bi bi-grid"></i> View Projects</a>
+                        <a href="#contact" class="btn btn-outline" data-i18n="hero.getInTouch"><i class="bi bi-chat-dots"></i> Get in Touch</a>
                     </div>
                     <div class="hero-stats fade-in">
                         <div class="stat">
                             <span class="stat-number">5+</span>
-                            <span class="stat-label">Projects</span>
+                            <span class="stat-label" data-i18n="hero.projects">Projects</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number">1+</span>
-                            <span class="stat-label">Year Exp.</span>
+                            <span class="stat-label" data-i18n="hero.yearExp">Year Exp.</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number">5+</span>
-                            <span class="stat-label">Technologies</span>
+                            <span class="stat-label" data-i18n="hero.technologies">Technologies</span>
                         </div>
                     </div>
                 </div>
@@ -90,16 +91,16 @@
         <!-- About Section -->
         <section class="about" id="about">
             <div class="container">
-                <h2 class="section-title fade-in">About Me</h2>
+                <h2 class="section-title fade-in" data-i18n="about.title">About Me</h2>
                 <div class="about-content">
                     <div class="about-text fade-in">
-                        <p>I'm an intermediate-level frontend developer passionate about building dynamic and visually
+                        <p data-i18n="about.para1">I'm an intermediate-level frontend developer passionate about building dynamic and visually
                             engaging web experiences. I work with HTML, CSS, and JavaScript, and I'm currently learning
                             ReactJS to take my projects to the next level.</p>
-                        <p>What motivates me most about programming is understanding the language of the future. I'm
+                        <p data-i18n="about.para2">What motivates me most about programming is understanding the language of the future. I'm
                             fascinated by how, through code, we can communicate with computers and bring our ideas to
                             life. What began as a simple curiosity has become a passion I can't let go of.</p>
-                        <p>My current goal is to grow as a freelancer, collaborating on real-world projects that
+                        <p data-i18n="about.para3">My current goal is to grow as a freelancer, collaborating on real-world projects that
                             challenge me and allow me to continue learning. In the long term, I aspire to develop my own
                             web application that reflects everything I've learned along the way.</p>
                     </div>
@@ -110,11 +111,11 @@
         <!-- Skills Section -->
         <section class="skills" id="skills">
             <div class="container">
-                <h2 class="section-title fade-in">Skills</h2>
+                <h2 class="section-title fade-in" data-i18n="skills.title">Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-card fade-in">
                         <div class="skill-icon"><i class="bi bi-code-slash"></i></div>
-                        <h3>Frontend</h3>
+                        <h3 data-i18n="skills.frontend">Frontend</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">HTML5</span>
                             <span class="skill-tag">CSS3</span>
@@ -124,7 +125,7 @@
                     </div>
                     <div class="skill-card fade-in">
                         <div class="skill-icon"><i class="bi bi-tools"></i></div>
-                        <h3>Dev Tools</h3>
+                        <h3 data-i18n="skills.devTools">Dev Tools</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Git</span>
                             <span class="skill-tag">GitHub</span>
@@ -135,7 +136,7 @@
                     </div>
                     <div class="skill-card fade-in">
                         <div class="skill-icon"><i class="bi bi-palette"></i></div>
-                        <h3>Design</h3>
+                        <h3 data-i18n="skills.design">Design</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Responsive Design</span>
                             <span class="skill-tag">UI / UX</span>
@@ -149,7 +150,7 @@
         <!-- Projects Section -->
         <section class="projects" id="projects">
             <div class="container">
-                <h2 class="section-title fade-in">Projects</h2>
+                <h2 class="section-title fade-in" data-i18n="projects.title">Projects</h2>
                 <div class="projects-grid">
                     <!-- Project 1 -->
                     <div class="project-card fade-in">
@@ -242,15 +243,15 @@
         <!-- Contact Section -->
         <section class="contact" id="contact">
             <div class="container">
-                <h2 class="section-title fade-in">Get in Touch</h2>
-                <p class="contact-subtitle fade-in">Have a project in mind? Let's work together to bring your ideas to
+                <h2 class="section-title fade-in" data-i18n="contact.title">Get in Touch</h2>
+                <p class="contact-subtitle fade-in" data-i18n="contact.subtitle">Have a project in mind? Let's work together to bring your ideas to
                     life.</p>
                 <div class="contact-wrapper">
                     <div class="contact-info fade-in">
                         <a href="mailto:lazarojosemenesesperez@gmail.com" class="contact-card">
                             <i class="bi bi-envelope"></i>
                             <div>
-                                <h4>Email</h4>
+                                <h4 data-i18n="contact.email">Email</h4>
                                 <span>lazarojosemenesesperez@gmail.com</span>
                             </div>
                         </a>
@@ -264,24 +265,24 @@
                         <a href="tel:+584142011437" class="contact-card">
                             <i class="bi bi-telephone"></i>
                             <div>
-                                <h4>Phone</h4>
+                                <h4 data-i18n="contact.phone">Phone</h4>
                                 <span>+58 414 201 1437</span>
                             </div>
                         </a>
                     </div>
                     <form class="contact-form fade-in" id="contact-form">
                         <div class="form-group">
-                            <input type="text" id="form-name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="form-name" name="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="form-email" name="email" placeholder="Your Email" required>
+                            <input type="email" id="form-email" name="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="form-message" name="message" rows="5" placeholder="Your Message"
+                            <textarea id="form-message" name="message" rows="5" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Your Message"
                                 required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit" id="form-submit">
-                            <i class="bi bi-send"></i> Send Message
+                            <i class="bi bi-send"></i> <span data-i18n="contact.sendMessage">Send Message</span>
                         </button>
                     </form>
                 </div>

@@ -10,10 +10,150 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.getElementById("close");
     const navLinks = document.querySelectorAll(".nav-link");
     const themeToggle = document.getElementById("theme-toggle");
+    const langToggle = document.getElementById("lang-toggle");
     const scrollTopBtn = document.getElementById("scroll-top");
     const typedRole = document.getElementById("typed-role");
     const contactForm = document.getElementById("contact-form");
     const sections = document.querySelectorAll("section[id]");
+
+    /* ===================
+       TRANSLATIONS
+       =================== */
+    const translations = {
+        en: {
+            nav: {
+                home: "Home",
+                about: "About",
+                skills: "Skills",
+                projects: "Projects",
+                contact: "Contact"
+            },
+            hero: {
+                greeting: "Hello, I'm",
+                description: "Building dynamic and visually engaging web experiences with modern technologies.",
+                viewProjects: "View Projects",
+                getInTouch: "Get in Touch",
+                projects: "Projects",
+                yearExp: "Year Exp.",
+                technologies: "Technologies"
+            },
+            about: {
+                title: "About Me",
+                para1: "I'm an intermediate-level frontend developer passionate about building dynamic and visually engaging web experiences. I work with HTML, CSS, and JavaScript, and I'm currently learning ReactJS to take my projects to the next level.",
+                para2: "What motivates me most about programming is understanding the language of the future. I'm fascinated by how, through code, we can communicate with computers and bring our ideas to life. What began as a simple curiosity has become a passion I can't let go of.",
+                para3: "My current goal is to grow as a freelancer, collaborating on real-world projects that challenge me and allow me to continue learning. In the long term, I aspire to develop my own web application that reflects everything I've learned along the way."
+            },
+            skills: {
+                title: "Skills",
+                frontend: "Frontend",
+                devTools: "Dev Tools",
+                design: "Design"
+            },
+            projects: {
+                title: "Projects"
+            },
+            contact: {
+                title: "Get in Touch",
+                subtitle: "Have a project in mind? Let's work together to bring your ideas to life.",
+                email: "Email",
+                phone: "Phone",
+                sendMessage: "Send Message",
+                namePlaceholder: "Your Name",
+                emailPlaceholder: "Your Email",
+                messagePlaceholder: "Your Message"
+            }
+        },
+        es: {
+            nav: {
+                home: "Inicio",
+                about: "Sobre Mí",
+                skills: "Habilidades",
+                projects: "Proyectos",
+                contact: "Contacto"
+            },
+            hero: {
+                greeting: "Hola, soy",
+                description: "Construyendo experiencias web dinámicas y visualmente atractivas con tecnologías modernas.",
+                viewProjects: "Ver Proyectos",
+                getInTouch: "Contáctame",
+                projects: "Proyectos",
+                yearExp: "Año Exp.",
+                technologies: "Tecnologías"
+            },
+            about: {
+                title: "Sobre Mí",
+                para1: "Soy un desarrollador frontend de nivel intermedio apasionado por construir experiencias web dinámicas y visualmente atractivas. Trabajo con HTML, CSS y JavaScript, y actualmente estoy aprendiendo ReactJS para llevar mis proyectos al siguiente nivel.",
+                para2: "Lo que más me motiva sobre la programación es entender el lenguaje del futuro. Me fascina cómo, a través del código, podemos comunicarnos con las computadoras y dar vida a nuestras ideas. Lo que comenzó como una simple curiosidad se ha convertido en una pasión que no puedo soltar.",
+                para3: "Mi objetivo actual es crecer como freelancer, colaborando en proyectos del mundo real que me desafíen y me permitan seguir aprendiendo. A largo plazo, aspiro a desarrollar mi propia aplicación web que refleje todo lo que he aprendido en el camino."
+            },
+            skills: {
+                title: "Habilidades",
+                frontend: "Frontend",
+                devTools: "Herramientas",
+                design: "Diseño"
+            },
+            projects: {
+                title: "Proyectos"
+            },
+            contact: {
+                title: "Contáctame",
+                subtitle: "¿Tienes un proyecto en mente? Trabajemos juntos para dar vida a tus ideas.",
+                email: "Email",
+                phone: "Teléfono",
+                sendMessage: "Enviar Mensaje",
+                namePlaceholder: "Tu Nombre",
+                emailPlaceholder: "Tu Email",
+                messagePlaceholder: "Tu Mensaje"
+            }
+        }
+    };
+
+    /* ===================
+       0. LANGUAGE TOGGLE
+       =================== */
+    let currentLang = localStorage.getItem("portfolio-lang") || "en";
+
+    function applyLanguage(lang) {
+        // Handle text content translations
+        const elements = document.querySelectorAll("[data-i18n]");
+        elements.forEach(element => {
+            const key = element.getAttribute("data-i18n");
+            const keys = key.split(".");
+            let translation = translations[lang];
+            keys.forEach(k => {
+                translation = translation[k];
+            });
+            if (translation) {
+                element.textContent = translation;
+            }
+        });
+
+        // Handle placeholder translations
+        const placeholderElements = document.querySelectorAll("[data-i18n-placeholder]");
+        placeholderElements.forEach(element => {
+            const key = element.getAttribute("data-i18n-placeholder");
+            const keys = key.split(".");
+            let translation = translations[lang];
+            keys.forEach(k => {
+                translation = translation[k];
+            });
+            if (translation) {
+                element.placeholder = translation;
+            }
+        });
+
+        langToggle.textContent = lang === "en" ? "ES" : "EN";
+        currentLang = lang;
+    }
+
+    langToggle.addEventListener("click", () => {
+        const newLang = currentLang === "en" ? "es" : "en";
+        applyLanguage(newLang);
+        localStorage.setItem("portfolio-lang", newLang);
+    });
+
+    // Apply saved language on load
+    applyLanguage(currentLang);
 
     /* ===================
        1. THEME TOGGLE
@@ -41,9 +181,15 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ===================
        2. MOBILE MENU
        =================== */
+    let scrollPosition = 0;
+
     openBtn.addEventListener("click", () => {
+        scrollPosition = window.pageYOffset;
         nav.classList.add("visible");
         document.body.style.overflow = "hidden";
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.width = "100%";
     });
 
     closeBtn.addEventListener("click", closeMenu);
@@ -62,7 +208,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function closeMenu() {
         nav.classList.remove("visible");
-        document.body.style.overflow = "";
+        document.body.style.removeProperty("overflow");
+        document.body.style.removeProperty("position");
+        document.body.style.removeProperty("top");
+        document.body.style.removeProperty("width");
+        window.scrollTo(0, scrollPosition);
     }
 
     /* ===================
@@ -101,14 +251,17 @@ document.addEventListener("DOMContentLoaded", () => {
        5. SCROLL SPY — Active Nav Link
        =================== */
     function updateActiveLink() {
-        const scrollPos = window.scrollY + 150;
+        // Don't update if mobile menu is open
+        if (nav.classList.contains("visible")) return;
+
+        const scrollPos = window.scrollY + 100;
 
         sections.forEach((section) => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
             const id = section.getAttribute("id");
 
-            if (scrollPos >= top && scrollPos < top + height) {
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
                 navLinks.forEach((link) => {
                     link.classList.remove("active");
                     if (link.getAttribute("href") === "#" + id) {

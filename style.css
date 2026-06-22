@@ -254,6 +254,29 @@ header.scrolled {
     gap: 0.75rem;
 }
 
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.lang-toggle:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
 .theme-toggle {
     display: flex;
     align-items: center;
@@ -1109,11 +1132,13 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 1rem;
+        padding: 4rem 2rem 2rem;
+        gap: 1.5rem;
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav.visible {
