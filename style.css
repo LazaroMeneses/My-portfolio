@@ -1283,3 +1283,96 @@ footer {
         max-width: 1300px;
     }
 }
+
+/* ==========================
+   PROJECT DETAILS PAGES
+   ========================== */
+.project-hero {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+    transition: var(--transition);
+}
+
+.project-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.project-content {
+    padding: 50px 0;
+    transition: var(--transition);
+}
+
+.project-section {
+    margin-bottom: 3rem;
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-section:hover {
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+
+.project-section h2 {
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+}
+
+.project-section p {
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.tech-stack {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.project-shineup .project-section h2 { color: var(--accent); }
+.project-eunoia .project-section h2 { color: var(--accent-secondary); }
+.project-elements .project-section h2 { color: var(--accent); }
+.project-notes .project-section h2 { color: #10b981; }
+.project-landing .project-section h2 { color: #f97316; }
+.project-btn.details-btn {
+    background: var(--accent-glow);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
+    font-weight: 600;
+    transition: var(--transition);
+}
+.project-btn.details-btn:hover {
+    background: var(--gradient);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 0 25px var(--accent-glow-secondary);
+    transform: translateY(-3px);
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View the Landing Page project by Lazarus Meneses, a semantic and responsive React.js landing page built with modern UI principles.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Lazarus Meneses">
+    <meta name="keywords" content="landing page project, React landing page, semantic HTML, UI UX project, Lazarus Meneses">
+    <link rel="canonical" href="https://lazaromeneses.vercel.app/pages/landing-page.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Landing Page Project | Lazarus Meneses">
+    <meta property="og:description" content="A responsive React.js landing page project focused on semantic HTML and modern UI structure.">
+    <meta property="og:url" content="https://lazaromeneses.vercel.app/pages/landing-page.html">
+    <meta property="og:image" content="../images/profile-img.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Landing Page Project | Lazarus Meneses">
+    <meta name="twitter:description" content="A responsive React.js landing page project focused on semantic HTML and modern UI structure.">
+    <meta name="twitter:image" content="../images/profile-img.jpeg">
+    <title>Landing Page - Project Details | Lazarus Meneses</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": "Landing Page",
+            "description": "A semantic and responsive landing page project built with React.js and polished UI practices.",
+            "url": "./landing-page.html",
+            "author": {
+                "@type": "Person",
+                "name": "Lazarus Meneses"
+            },
+            "keywords": [
+                "landing page",
+                "React.js",
+                "semantic HTML",
+                "portfolio"
+            ]
+        }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="../index.html#hero" class="nav-brand">LM</a>
+        <nav class="nav" id="nav">
+            <button class="close-menu" id="close" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+            <ul class="nav-list">
+                <li><a href="../index.html#hero" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="../index.html#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="../index.html#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="../index.html#projects" class="nav-link active" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="lang-toggle" id="lang-toggle" aria-label="Change language">ES</button>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <button class="open-menu" id="open" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        </div>
+    </header>
+
+    <main class="project-landing">
+        <section class="project-hero">
+            <div class="container">
+                <h1 class="project-title"><span class="gradient-text">Landing Page</span></h1>
+                <div class="project-meta">
+                    <span><i class="bi bi-calendar3"></i> August 2025</span>
+                    <span><i class="bi bi-tag"></i> UI / UX Design</span>
+                </div>
+                <p class="hero-description" style="max-width: 600px; margin: 0 auto;">
+                    Product landing page created to practice React.js fundamentals and semantic HTML best practices.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="container">
+                <div class="project-section">
+                    <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
+                    <p>
+                        Este proyecto nació de la necesidad de dominar el maquetado moderno y las bases de React.js aplicadas a un entorno de marketing digital (Landing Pages). El objetivo era crear una página que no solo se viera bien, sino que estuviera estructurada semánticamente para SEO y accesibilidad.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
+                    <p>
+                        El diseño responsive y la correcta utilización de componentes reutilizables en React fueron los principales focos del desarrollo. Se trabajó en lograr un balance entre un diseño atractivo que capturara la atención del usuario (para un producto de IA ficticio) y un código estructurado modularmente.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
+                    <div class="tech-stack">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Semantic HTML</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="https://neuroflow-ai-landing-page.vercel.app" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-globe"></i> <span data-i18n="projects.liveDemo">Ver Demo en Vivo</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

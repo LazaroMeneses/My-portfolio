@@ -50,7 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 design: "Design"
             },
             projects: {
-                title: "Projects"
+                title: "Projects",
+                purpose: "Why was it made? (Purpose)",
+                challenges: "Challenges & Development",
+                technologies: "Technologies Used",
+                liveDemo: "Live Demo",
+                downloadApk: "Download APK"
             },
             contact: {
                 title: "Get in Touch",
@@ -93,7 +98,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 design: "Diseño"
             },
             projects: {
-                title: "Proyectos"
+                title: "Proyectos",
+                purpose: "¿Por qué se hizo? (El Propósito)",
+                challenges: "Desafíos y Desarrollo",
+                technologies: "Tecnologías Utilizadas",
+                liveDemo: "Ver Demo en Vivo",
+                downloadApk: "Descargar APK"
             },
             contact: {
                 title: "Contáctame",
@@ -243,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ===================
        4. SCROLL TO TOP
        =================== */
-    scrollTopBtn.addEventListener("click", () => {
+    if(scrollTopBtn) scrollTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
@@ -292,6 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pauseBetween = 2000;
 
     function typeEffect() {
+        if (!typedRole) return;
         const currentRole = roles[roleIndex];
 
         if (!isDeleting) {
@@ -351,7 +362,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ===================
        8. CONTACT FORM HANDLER
        =================== */
-    contactForm.addEventListener("submit", (e) => {
+    if(contactForm) contactForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const name = document.getElementById("form-name").value.trim();

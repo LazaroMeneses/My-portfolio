@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Shine Up, a motivational quotes web app built with HTML, CSS, and JavaScript, later packaged as an Android app by Lazarus Meneses.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Lazarus Meneses">
+    <meta name="keywords" content="Shine Up, motivational app, quotes app, JavaScript app, Lazarus Meneses">
+    <link rel="canonical" href="https://lazaromeneses.vercel.app/pages/shineup.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shine Up | Motivational Quotes App Project by Lazarus Meneses">
+    <meta property="og:description" content="A motivational quotes web app built with HTML, CSS, and JavaScript for daily inspiration.">
+    <meta property="og:url" content="https://lazaromeneses.vercel.app/pages/shineup.html">
+    <meta property="og:image" content="../images/profile-img.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shine Up | Motivational Quotes App Project by Lazarus Meneses">
+    <meta name="twitter:description" content="A motivational quotes web app built with HTML, CSS, and JavaScript for daily inspiration.">
+    <meta name="twitter:image" content="../images/profile-img.jpeg">
+    <title>Shine Up - Project Details | Lazarus Meneses</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": "Shine Up",
+            "description": "A motivational quotes application crafted to inspire users with a clean and polished interface.",
+            "url": "./shineup.html",
+            "author": {
+                "@type": "Person",
+                "name": "Lazarus Meneses"
+            },
+            "keywords": [
+                "motivational app",
+                "quotes",
+                "JavaScript",
+                "Cordova",
+                "portfolio"
+            ]
+        }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="../index.html#hero" class="nav-brand">LM</a>
+        <nav class="nav" id="nav">
+            <button class="close-menu" id="close" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+            <ul class="nav-list">
+                <li><a href="../index.html#hero" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="../index.html#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="../index.html#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="../index.html#projects" class="nav-link active" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="lang-toggle" id="lang-toggle" aria-label="Change language">ES</button>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <button class="open-menu" id="open" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        </div>
+    </header>
+
+    <main class="project-shineup">
+        <section class="project-hero">
+            <div class="container">
+                <h1 class="project-title"><span class="gradient-text">Shine Up</span></h1>
+                <div class="project-meta">
+                    <span><i class="bi bi-calendar3"></i> April 2026</span>
+                    <span><i class="bi bi-tag"></i> Motivational App</span>
+                </div>
+                <p class="hero-description" style="max-width: 600px; margin: 0 auto;">
+                    A daily motivational quotes web application aimed to inspire users and keep them focused on their goals.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="container">
+                <div class="project-section">
+                    <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
+                    <p>
+                        Shine Up nació de la necesidad de proporcionar una herramienta sencilla y rápida para obtener motivación diaria. En un mundo lleno de distracciones, el objetivo era crear una plataforma limpia donde el usuario pudiera encontrar citas inspiradoras para empezar su día con energía positiva.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
+                    <p>
+                        El principal desafío de este proyecto fue crear una interfaz de usuario atractiva y moderna utilizando únicamente HTML, CSS y JavaScript Vanilla. Se priorizó el rendimiento y las animaciones fluidas para asegurar una excelente experiencia de usuario. Posteriormente, se utilizó Apache Cordova para empaquetar la aplicación web en un archivo APK instalable en dispositivos Android.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
+                    <div class="tech-stack">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript Vanilla</span>
+                        <span class="skill-tag">Apache Cordova</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="https://shineup-app.vercel.app" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-globe"></i> <span data-i18n="projects.liveDemo">Ver Demo en Vivo</span></a>
+                    <a href="../Apks/ShineUp.apk" class="btn btn-outline"><i class="bi bi-download"></i> <span data-i18n="projects.downloadApk">Descargar APK</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

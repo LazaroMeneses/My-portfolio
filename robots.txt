@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lazaromeneses.vercel.app/sitemap.xml
