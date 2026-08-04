@@ -27,3 +27,4 @@ html = html.replace(/class="project-btn"/g, 'class="project-btn details-btn"');
 fs.writeFileSync('index.html', html);
 
 console.log("Details button upgraded");
+

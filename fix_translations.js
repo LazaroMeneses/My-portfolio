@@ -43,3 +43,4 @@ files.forEach(file => {
     fs.writeFileSync(file, content);
 });
 console.log("Translations fixed");
+

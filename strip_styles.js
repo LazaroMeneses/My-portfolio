@@ -23,3 +23,4 @@ files.forEach((file, index) => {
     fs.writeFileSync(file, content);
 });
 console.log("Done");
+

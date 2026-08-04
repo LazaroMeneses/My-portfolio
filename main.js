@@ -1,5 +1,5 @@
 /* ==============================================
-   LAZARUS MENESES — PORTFOLIO JS
+   Lazaro Meneses — PORTFOLIO JS
    ============================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
