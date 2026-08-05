@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollTopBtn = document.getElementById("scroll-top");
     const typedRole = document.getElementById("typed-role");
     const contactForm = document.getElementById("contact-form");
+    const formStatusElement = document.getElementById("form-status");
     const sections = document.querySelectorAll("section[id]");
 
     /* ===================
@@ -65,7 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 sendMessage: "Send Message",
                 namePlaceholder: "Your Name",
                 emailPlaceholder: "Your Email",
-                messagePlaceholder: "Your Message"
+                messagePlaceholder: "Your Message",
+                successMessage: "Message sent successfully. Thank you!",
+                errorMessage: "Please complete all fields before sending.",
+                submitError: "Something went wrong. Please try again later."
             }
         },
         es: {
@@ -113,7 +117,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 sendMessage: "Enviar Mensaje",
                 namePlaceholder: "Tu Nombre",
                 emailPlaceholder: "Tu Email",
-                messagePlaceholder: "Tu Mensaje"
+                messagePlaceholder: "Tu Mensaje",
+                successMessage: "Mensaje enviado con éxito. ¡Gracias!",
+                errorMessage: "Por favor completa todos los campos antes de enviar.",
+                submitError: "Algo salió mal. Intenta de nuevo más tarde."
             }
         }
     };
@@ -196,6 +203,8 @@ document.addEventListener("DOMContentLoaded", () => {
     openBtn.addEventListener("click", () => {
         scrollPosition = window.pageYOffset;
         nav.classList.add("visible");
+        nav.setAttribute("aria-hidden", "false");
+        openBtn.setAttribute("aria-expanded", "true");
         document.body.style.overflow = "hidden";
         document.body.style.position = "fixed";
         document.body.style.top = `-${scrollPosition}px`;
@@ -218,6 +227,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function closeMenu() {
         nav.classList.remove("visible");
+        nav.setAttribute("aria-hidden", "true");
+        openBtn.setAttribute("aria-expanded", "false");
         document.body.style.removeProperty("overflow");
         document.body.style.removeProperty("position");
         document.body.style.removeProperty("top");
@@ -362,36 +373,67 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ===================
        8. CONTACT FORM HANDLER
        =================== */
-    if(contactForm) contactForm.addEventListener("submit", (e) => {
+    if(contactForm) contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         const name = document.getElementById("form-name").value.trim();
         const email = document.getElementById("form-email").value.trim();
         const message = document.getElementById("form-message").value.trim();
-
-        if (!name || !email || !message) return;
-
-        // Build mailto link with form data
-        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-        const body = encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-        );
-        const mailtoLink = `mailto:lazarojosemenesesperez@gmail.com?subject=${subject}&body=${body}`;
-
-        // Open email client
-        window.location.href = mailtoLink;
-
-        // Show success state
         const submitBtn = document.getElementById("form-submit");
-        submitBtn.innerHTML = '<i class="bi bi-check-lg"></i> Message Sent!';
-        contactForm.classList.add("success");
 
-        // Reset after 3 seconds
-        setTimeout(() => {
-            contactForm.reset();
-            submitBtn.innerHTML = '<i class="bi bi-send"></i> Send Message';
-            contactForm.classList.remove("success");
-        }, 3000);
+        if (!name || !email || !message) {
+            if (formStatusElement) {
+                formStatusElement.textContent = translations[currentLang].contact.errorMessage;
+                formStatusElement.classList.add("error");
+            }
+            return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
+        if (formStatusElement) {
+            formStatusElement.textContent = "";
+            formStatusElement.classList.remove("error", "success");
+        }
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+
+            submitBtn.innerHTML = '<i class="bi bi-check-lg"></i> Message Sent!';
+            contactForm.classList.add("success");
+            if (formStatusElement) {
+                formStatusElement.textContent = translations[currentLang].contact.successMessage;
+                formStatusElement.classList.add("success");
+            }
+
+            setTimeout(() => {
+                contactForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="bi bi-send"></i> ' + translations[currentLang].contact.sendMessage;
+                contactForm.classList.remove("success");
+                if (formStatusElement) {
+                    formStatusElement.textContent = "";
+                    formStatusElement.classList.remove("success");
+                }
+            }, 3000);
+        } catch (error) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="bi bi-send"></i> ' + translations[currentLang].contact.sendMessage;
+            if (formStatusElement) {
+                formStatusElement.textContent = translations[currentLang].contact.submitError;
+                formStatusElement.classList.add("error");
+            }
+        }
     });
 
     /* ===================

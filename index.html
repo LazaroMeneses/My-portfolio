@@ -21,7 +21,9 @@
     <meta property="og:url" content="https://lazaromeneses.vercel.app/">
     <meta property="og:image" content="/lazaro-og-image.png?v=2">
     <meta property="og:site_name" content="Lazaro Meneses">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@LazaroMeneses">
     <meta name="twitter:title" content="Lazaro Meneses | Front-End Developer & Web Portfolio">
     <meta name="twitter:description" content="I build modern, responsive and SEO-friendly web experiences with React.js, JavaScript, HTML and CSS.">
     <meta name="twitter:image" content="images/profile-img.jpeg">
@@ -52,7 +54,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Styles -->
@@ -64,8 +66,8 @@
     <!-- Header -->
     <header id="header">
         <a href="#hero" class="nav-brand">LM</a>
-        <nav class="nav" id="nav">
-            <button class="close-menu" id="close" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+        <nav class="nav" id="nav" aria-hidden="true">
+            <button class="close-menu" id="close" aria-label="Close menu" aria-controls="nav"><i class="bi bi-x-lg"></i></button>
             <ul class="nav-list">
                 <li><a href="#hero" class="nav-link active" data-i18n="nav.home">Home</a></li>
                 <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
@@ -79,7 +81,7 @@
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                 <i class="bi bi-moon-stars-fill"></i>
             </button>
-            <button class="open-menu" id="open" aria-label="Open menu"><i class="bi bi-list"></i></button>
+            <button class="open-menu" id="open" aria-label="Open menu" aria-controls="nav" aria-expanded="false"><i class="bi bi-list"></i></button>
         </div>
     </header>
 
@@ -262,6 +264,7 @@
                             <p class="project-period"><i class="bi bi-calendar3"></i> Aug 2025</p>
                             <p class="project-desc">Product landing page to practice React.js fundamentals and semantic
                                 HTML best practices.</p>
+                            <div class="project-meta">React.js · Semantic HTML · Responsive design · Performance-first</div>
                             <div class="project-links">
                                 <a href="pages/landing-page.html" class="project-btn details-btn"><i class="bi bi-info-circle"></i> Details</a>
                             </div>
@@ -301,7 +304,11 @@
                             </div>
                         </a>
                     </div>
-                    <form class="contact-form fade-in" id="contact-form">
+                    <form class="contact-form fade-in" id="contact-form" action="https://formsubmit.co/lazarojosemenesesperez@gmail.com" method="POST" data-formsubmit="true">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://lazaromeneses.vercel.app/?sent=true">
                         <div class="form-group">
                             <input type="text" id="form-name" name="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Your Name" required>
                         </div>
@@ -312,6 +319,7 @@
                             <textarea id="form-message" name="message" rows="5" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Your Message"
                                 required></textarea>
                         </div>
+                        <p class="form-message" id="form-status" aria-live="polite"></p>
                         <button type="submit" class="btn btn-primary btn-submit" id="form-submit">
                             <i class="bi bi-send"></i> <span data-i18n="contact.sendMessage">Send Message</span>
                         </button>
@@ -343,7 +351,7 @@
         <i class="bi bi-chevron-up"></i>
     </button>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>
