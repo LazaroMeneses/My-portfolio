@@ -6,47 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Lazaro Meneses is a front-end developer specializing in React.js, JavaScript, HTML, CSS, and modern responsive web experiences. Explore portfolio projects and get in touch.">
+        content="Lazaro Meneses is a front-end developer specializing in React.js, JavaScript, HTML, CSS, responsive design, and SEO-friendly web experiences. Explore portfolio projects and get in touch.">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="author" content="Lazaro Meneses">
     <meta name="keywords"
-        content="Lazaro Meneses, portafolio, desarrollador frontend, front-end developer, React.js, JavaScript, HTML, CSS, responsive web, UI UX, portafolio web, freelance desarrollador web, aplicaciones web modernas, landing page">
+        content="Lazaro Meneses, desarrollador frontend, front-end developer, React.js, JavaScript, HTML, CSS, responsive web design, SEO, portfolio web, freelance web developer, landing pages, aplicaciones web modernas, UI UX, diseño web profesional">
     <meta name="theme-color" content="#0f172a">
     <meta name="google-site-verification" content="8GUMG3O-Ii7naXjbSZMLb1A30n9WxqioGFkE4tBT_WY">
+    <meta name="format-detection" content="telephone=yes">
     <link rel="canonical" href="https://lazaromeneses.vercel.app/">
     <link rel="icon" href="/lazaro-favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/lazaro-favicon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="alternate" hreflang="en" href="https://lazaromeneses.vercel.app/">
+    <link rel="alternate" hreflang="es" href="https://lazaromeneses.vercel.app/">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="images/profile-img.jpeg" as="image" type="image/jpeg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Lazaro Meneses">
+    <meta name="application-name" content="Lazaro Meneses">
+    <meta name="subject" content="Front-End Developer Portfolio">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Lazaro Meneses | Front-End Developer & Web Portfolio">
-    <meta property="og:description" content="I build modern, responsive and SEO-friendly web experiences with React.js, JavaScript, HTML and CSS.">
+    <meta property="og:title" content="Lazaro Meneses | Front-End Developer React.js, JavaScript, HTML & CSS">
+    <meta property="og:description" content="I build fast, responsive, and SEO-friendly websites and React.js web applications with clean UI, great UX, and modern front-end best practices.">
     <meta property="og:url" content="https://lazaromeneses.vercel.app/">
     <meta property="og:image" content="https://lazaromeneses.vercel.app/lazaro-og-image.png?v=2">
+    <meta property="og:image:alt" content="Portfolio preview of Lazaro Meneses, front-end developer">
     <meta property="og:site_name" content="Lazaro Meneses">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@LazaroMeneses">
-    <meta name="twitter:title" content="Lazaro Meneses | Front-End Developer & Web Portfolio">
-    <meta name="twitter:description" content="I build modern, responsive and SEO-friendly web experiences with React.js, JavaScript, HTML and CSS.">
+    <meta name="twitter:title" content="Lazaro Meneses | Front-End Developer React.js, JavaScript, HTML & CSS">
+    <meta name="twitter:description" content="I build fast, responsive, and SEO-friendly websites and React.js web applications with clean UI, great UX, and modern front-end best practices.">
     <meta name="twitter:image" content="https://lazaromeneses.vercel.app/images/profile-img.jpeg">
-    <title>Lazaro Meneses | Front-End Developer</title>
+    <meta name="twitter:image:alt" content="Lazaro Meneses front-end developer portfolio preview">
+    <title>Lazaro Meneses | Front-End Developer React.js, JavaScript, HTML & CSS</title>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Person",
+            "@type": ["Person", "WebSite"],
             "name": "Lazaro Meneses",
+            "alternateName": ["Lázaro Meneses", "Lazaro Meneses P"],
             "jobTitle": "Front-End Developer",
-            "url": "./",
+            "description": "Front-end developer specializing in React.js, JavaScript, HTML, CSS, responsive web design, and SEO-friendly web experiences.",
+            "url": "https://lazaromeneses.vercel.app/",
             "sameAs": [
                 "https://github.com/LazaroMeneses"
             ],
-            "description": "Front-end developer specialized in React.js, JavaScript, HTML and CSS, creating modern and responsive web experiences.",
             "knowsAbout": [
                 "React.js",
                 "JavaScript",
                 "HTML5",
                 "CSS3",
                 "Responsive Web Design",
-                "SEO"
-            ]
+                "SEO",
+                "Web Performance"
+            ],
+            "mainEntityOfPage": "https://lazaromeneses.vercel.app/",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "lazarojosemenesesperez@gmail.com",
+                "contactType": "professional"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://lazaromeneses.vercel.app/#projects",
+                "query-input": "required name=searchTerm"
+            }
         }
     </script>
 
@@ -72,7 +98,9 @@
                 <li><a href="#hero" class="nav-link active" data-i18n="nav.home">Home</a></li>
                 <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
                 <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
@@ -94,32 +122,31 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <p class="hero-greeting fade-in" data-i18n="hero.greeting">Hello, I'm</p>
-                    <h1 class="fade-in">Lazaro <span class="gradient-text">Meneses P</span></h1>
+                    <h1 class="fade-in">Lazaro <span class="gradient-text">Meneses</span></h1>
                     <p class="role fade-in"><span id="typed-role"></span><span class="typing-cursor">|</span></p>
-                    <p class="hero-description fade-in" data-i18n="hero.description">Building dynamic and visually engaging web experiences with
-                        modern technologies.</p>
+                    <p class="hero-description fade-in" data-i18n="hero.description">I build fast, responsive, SEO-friendly websites and React.js web apps with modern UI, strong UX, and clean front-end architecture.</p>
                     <div class="hero-cta fade-in">
                         <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects"><i class="bi bi-grid"></i> View Projects</a>
                         <a href="#contact" class="btn btn-outline" data-i18n="hero.getInTouch"><i class="bi bi-chat-dots"></i> Get in Touch</a>
                     </div>
                     <div class="hero-stats fade-in">
                         <div class="stat">
-                            <span class="stat-number">5+</span>
+                            <span class="stat-number">11+</span>
                             <span class="stat-label" data-i18n="hero.projects">Projects</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">1+</span>
+                            <span class="stat-number">2+</span>
                             <span class="stat-label" data-i18n="hero.yearExp">Year Exp.</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">5+</span>
+                            <span class="stat-number">7+</span>
                             <span class="stat-label" data-i18n="hero.technologies">Technologies</span>
                         </div>
                     </div>
                 </div>
                 <div class="hero-img fade-in">
                     <div class="profile-ring">
-                        <img src="images/profile-img.jpeg" alt="Lazaro Meneses P" class="profile-img">
+                        <img src="images/profile-img.jpeg" alt="Lazaro Meneses front-end developer portfolio portrait" class="profile-img" width="480" height="480" loading="eager" decoding="async">
                     </div>
                 </div>
             </div>
@@ -131,15 +158,9 @@
                 <h2 class="section-title fade-in" data-i18n="about.title">About Me</h2>
                 <div class="about-content">
                     <div class="about-text fade-in">
-                        <p data-i18n="about.para1">I'm an intermediate-level frontend developer passionate about building dynamic and visually
-                            engaging web experiences. I work with HTML, CSS, and JavaScript, and I'm currently learning
-                            ReactJS to take my projects to the next level.</p>
-                        <p data-i18n="about.para2">What motivates me most about programming is understanding the language of the future. I'm
-                            fascinated by how, through code, we can communicate with computers and bring our ideas to
-                            life. What began as a simple curiosity has become a passion I can't let go of.</p>
-                        <p data-i18n="about.para3">My current goal is to grow as a freelancer, collaborating on real-world projects that
-                            challenge me and allow me to continue learning. In the long term, I aspire to develop my own
-                            web application that reflects everything I've learned along the way.</p>
+                        <p data-i18n="about.para1">I'm a front-end developer focused on creating modern, responsive, and search-engine-friendly websites and web applications. I work with React.js, JavaScript, HTML, CSS, and UI/UX best practices to turn ideas into fast and polished digital experiences.</p>
+                        <p data-i18n="about.para2">What motivates me most about programming is understanding the language of the future. I'm fascinated by how, through code, we can communicate with computers and bring ideas to life. What began as curiosity has become a long-term passion for building useful products.</p>
+                        <p data-i18n="about.para3">My current goal is to grow as a freelancer and collaborate on real-world projects that challenge me, improve user experience, and deliver measurable results. In the long term, I aspire to build my own web products with strong performance, accessibility, and SEO foundations.</p>
                     </div>
                 </div>
             </div>
@@ -179,6 +200,30 @@
                             <span class="skill-tag">UI / UX</span>
                             <span class="skill-tag">Web Semantics</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title fade-in">Services & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><i class="bi bi-window-stack"></i></div>
+                        <h3>Front-End Development</h3>
+                        <p>React.js, JavaScript, HTML and CSS solutions for modern web apps, dashboards, landing pages, and interactive interfaces.</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><i class="bi bi-phone"></i></div>
+                        <h3>Responsive UI/UX</h3>
+                        <p>Clean and mobile-friendly experiences designed to look great on desktop, tablet, and smartphone while keeping usability high.</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3>SEO & Performance</h3>
+                        <p>Semantic markup, optimized content structure, fast loading pages, and search-friendly architecture to improve visibility in Google.</p>
                     </div>
                 </div>
             </div>
@@ -270,6 +315,27 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 class="section-title fade-in" id="faq-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <article class="faq-card fade-in">
+                        <h3>What services do you offer?</h3>
+                        <p>I build modern front-end websites, responsive landing pages, and React.js web applications focused on usability, performance, and SEO.</p>
+                    </article>
+                    <article class="faq-card fade-in">
+                        <h3>Do you work with React.js?</h3>
+                        <p>Yes. I work with React.js and JavaScript to create interactive interfaces, reusable components, and modern web products.</p>
+                    </article>
+                    <article class="faq-card fade-in">
+                        <h3>Can you improve an existing website?</h3>
+                        <p>Absolutely. I can help redesign, optimize, and improve the structure, speed, and SEO of an existing website.</p>
+                    </article>
                 </div>
             </div>
         </section>

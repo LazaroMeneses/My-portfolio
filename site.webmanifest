@@ -1,0 +1,21 @@
+{
+  "name": "Lazaro Meneses Portfolio",
+  "short_name": "Lazaro",
+  "description": "Front-end developer portfolio showcasing React.js, JavaScript, HTML and CSS projects.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f1d",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/lazaro-favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/lazaro-favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
