@@ -40,13 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             about: {
                 title: "About Me",
-                para1: "I'm an intermediate-level frontend developer passionate about building dynamic and visually engaging web experiences. I work with HTML, CSS, and JavaScript, and I'm currently learning ReactJS to take my projects to the next level.",
-                para2: "What motivates me most about programming is understanding the language of the future. I'm fascinated by how, through code, we can communicate with computers and bring our ideas to life. What began as a simple curiosity has become a passion I can't let go of.",
-                para3: "My current goal is to grow as a freelancer, collaborating on real-world projects that challenge me and allow me to continue learning. In the long term, I aspire to develop my own web application that reflects everything I've learned along the way."
+                para1: "Soy Lázaro Meneses, Full-Stack Developer apasionado por crear soluciones digitales modernas y funcionales. Mi experiencia abarca desde el desarrollo de interfaces y experiencias de usuario hasta la creación de APIs, servidores y bases de datos.",
+                para2: "Trabajo principalmente con JavaScript, React, Node.js, Express, MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para transformar ideas en productos digitales reales.",
+                para3: "What motivates me most about programming is understanding the language of the future. I'm fascinated by how, through code, we can communicate with computers and bring ideas to life. What began as curiosity has become a long-term passion for building useful products."
             },
             skills: {
                 title: "Skills",
                 frontend: "Frontend",
+                backend: "Backend",
                 devTools: "Dev Tools",
                 design: "Design"
             },
@@ -91,13 +92,14 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             about: {
                 title: "Sobre Mí",
-                para1: "Soy un desarrollador frontend de nivel intermedio apasionado por construir experiencias web dinámicas y visualmente atractivas. Trabajo con HTML, CSS y JavaScript, y actualmente estoy aprendiendo ReactJS para llevar mis proyectos al siguiente nivel.",
-                para2: "Lo que más me motiva sobre la programación es entender el lenguaje del futuro. Me fascina cómo, a través del código, podemos comunicarnos con las computadoras y dar vida a nuestras ideas. Lo que comenzó como una simple curiosidad se ha convertido en una pasión que no puedo soltar.",
-                para3: "Mi objetivo actual es crecer como freelancer, colaborando en proyectos del mundo real que me desafíen y me permitan seguir aprendiendo. A largo plazo, aspiro a desarrollar mi propia aplicación web que refleje todo lo que he aprendido en el camino."
+                para1: "Soy Lázaro Meneses, Full-Stack Developer apasionado por crear soluciones digitales modernas y funcionales. Mi experiencia abarca desde el desarrollo de interfaces y experiencias de usuario hasta la creación de APIs, servidores y bases de datos.",
+                para2: "Trabajo principalmente con JavaScript, React, Node.js, Express, MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para transformar ideas en productos digitales reales.",
+                para3: "Lo que más me motiva sobre la programación es entender el lenguaje del futuro. Me fascina cómo, a través del código, podemos comunicarnos con las computadoras y dar vida a nuestras ideas. Lo que comenzó como curiosidad se ha convertido en una pasión a largo plazo por construir productos útiles."
             },
             skills: {
                 title: "Habilidades",
                 frontend: "Frontend",
+                backend: "Backend",
                 devTools: "Herramientas",
                 design: "Diseño"
             },
@@ -300,9 +302,9 @@ document.addEventListener("DOMContentLoaded", () => {
        6. TYPING EFFECT
        =================== */
     const roles = [
-        "Front-End Developer",
+        "Full-Stack Developer",
         "React.js Developer",
-        "UI / UX Enthusiast",
+        "Node.js Developer",
         "Freelancer",
     ];
     let roleIndex = 0;
