@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - 404 error. This page doesn't exist on Lazaro Meneses portfolio.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Lazaro Meneses">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="icon" href="/lazaro-favicon.png" type="image/png">
+    <title>404 - Page Not Found | Lazaro Meneses</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="nav-brand">LM</a>
+        <nav class="nav" id="nav" aria-hidden="true">
+            <button class="close-menu" id="close" aria-label="Close menu" aria-controls="nav"><i class="bi bi-x-lg"></i></button>
+            <ul class="nav-list">
+                <li><a href="index.html#hero" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <button class="open-menu" id="open" aria-label="Open menu" aria-controls="nav" aria-expanded="false"><i class="bi bi-list"></i></button>
+        </div>
+    </header>
+
+    <main class="error-page">
+        <section class="error-section">
+            <div class="container">
+                <div class="error-content">
+                    <div class="error-illustration">
+                        <div class="error-number">404</div>
+                        <div class="error-icon">
+                            <i class="bi bi-emoji-frown"></i>
+                        </div>
+                    </div>
+                    <h1 class="error-title">Page Not Found</h1>
+                    <p class="error-description">
+                        Oops! The page you're looking for doesn't exist or has been moved. 
+                        Let's get you back on track.
+                    </p>
+                    <div class="error-actions">
+                        <a href="index.html" class="btn btn-primary">
+                            <i class="bi bi-house"></i> Go Home
+                        </a>
+                        <a href="index.html#projects" class="btn btn-outline">
+                            <i class="bi bi-grid"></i> View Projects
+                        </a>
+                    </div>
+                    <div class="error-help">
+                        <p>If you think this is an error, feel free to <a href="index.html#contact">contact me</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-primary);
+        }
+
+        .error-section {
+            padding: var(--section-padding);
+            width: 100%;
+        }
+
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .error-illustration {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .error-number {
+            font-size: 8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent), #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .error-icon {
+            position: absolute;
+            bottom: -15px;
+            right: 15%;
+            font-size: 3.5rem;
+            color: var(--accent);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .error-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .error-help {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .error-help a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .error-help a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .error-number {
+                font-size: 7rem;
+            }
+
+            .error-icon {
+                font-size: 3rem;
+                right: 18%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .error-number {
+                font-size: 5rem;
+            }
+
+            .error-icon {
+                font-size: 2.5rem;
+                right: 12%;
+            }
+
+            .error-title {
+                font-size: 1.75rem;
+            }
+
+            .error-description {
+                font-size: 0.95rem;
+            }
+
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .error-actions .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .error-number {
+                font-size: 4rem;
+            }
+
+            .error-icon {
+                font-size: 2rem;
+                right: 10%;
+            }
+
+            .error-title {
+                font-size: 1.5rem;
+            }
+
+            .error-description {
+                font-size: 0.9rem;
+            }
+
+            .error-illustration {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
