@@ -84,69 +84,157 @@
         </div>
     </header>
 
-    <main class="project-vox">
-        <section class="project-hero">
-            <div class="container">
-                <h1 class="project-title"><span class="gradient-text">VOX Business Developer</span></h1>
-                <div class="project-meta">
-                    <span><i class="bi bi-calendar3"></i> August 2026</span>
-                    <span><i class="bi bi-tag"></i> Web Portal & Corporate Platform</span>
-                </div>
-                <p class="hero-description" style="max-width: 700px; margin: 0 auto;">
-                    Un portal corporativo premium de alto rendimiento diseñado y desarrollado para una agencia líder en
-                    desarrollo de negocios, marketing inmobiliario, arquitectura, branding y servicios legales
-                    corporativos en México.
-                </p>
-            </div>
-        </section>
+    <main class="project-landing">
+        <!-- Floating gradient orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-section">
-                    <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
-                    <p>
-                        VOX Business Developer requería una presencia en la web que reflejara su estatus como una
-                        agencia multidisciplinaria de alto nivel. El objetivo principal era construir una plataforma
-                        digital sofisticada y sumamente atractiva que unificara visualmente sus servicios en marketing,
-                        legal corporativo, branding, renders 3D y consultoría, facilitando a los clientes potenciales
-                        agendar reuniones y conocer su metodología de trabajo de 6 etapas de manera interactiva.
-                    </p>
-                </div>
+        <div class="container">
+            <div class="project-grid-layout">
+                <!-- Left Sidebar Column: Back navigation & Sticky details -->
+                <aside class="project-sidebar-sticky fade-in">
+                    <a href="../index.html#projects" class="back-to-portfolio-btn">
+                        <i class="bi bi-arrow-left"></i> <span data-i18n="projects.back">Back to Portfolio</span>
+                    </a>
+                    
+                    <div class="project-meta-card">
+                        <div class="project-meta-item">
+                            <i class="bi bi-calendar3"></i>
+                            <div>
+                                <h5 data-i18n="projects.dateLabel">Date</h5>
+                                <p>August 2026</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-tag"></i>
+                            <div>
+                                <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                <p>Web Portal</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-globe"></i>
+                            <div>
+                                <h5 data-i18n="projects.siteLabel">Website</h5>
+                                <p>voxbusinessdeveloper.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
-                    <p>
-                        El principal reto técnico fue optimizar los recursos pesados (como videos en el hero y secciones
-                        sobre nosotros, además de renders arquitectónicos en alta resolución) manteniendo una excelente
-                        velocidad de carga y fluidez en móviles. Para ello, se estructuró un sistema de preloader
-                        dinámico que mejora la percepción del usuario, y se aplicó desplazamiento suave avanzado (Lenis
-                        Scroll) junto con Intersection Observer para desencadenar animaciones pulidas al hacer scroll.
-                        Asimismo, se implementó un formulario de contacto interactivo de tres pasos con validaciones en
-                        tiempo real que mejora drásticamente las conversiones mediante FormSubmit y un enlace de
-                        continuidad por WhatsApp.
-                    </p>
-                </div>
+                <!-- Right Column: Case study content -->
+                <div class="project-main-column">
+                    <!-- Hero Title Header -->
+                    <div class="project-hero fade-in">
+                        <h1 class="project-title"><span class="gradient-text">VOX Business Developer</span></h1>
+                        
+                        <!-- Mobile Technical Details Card -->
+                        <div class="project-meta-mobile">
+                            <div class="project-meta-item">
+                                <i class="bi bi-calendar3"></i>
+                                <div>
+                                    <h5 data-i18n="projects.dateLabel">Date</h5>
+                                    <p>August 2026</p>
+                                </div>
+                            </div>
+                            <div class="project-meta-item">
+                                <i class="bi bi-tag"></i>
+                                <div>
+                                    <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                    <p>Web Portal</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="project-desc-intro">
+                            Un portal corporativo premium de alto rendimiento diseñado y desarrollado para una agencia líder en desarrollo de negocios, marketing inmobiliario, arquitectura, branding y servicios legales corporativos en México.
+                        </p>
+                    </div>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
-                    <div class="tech-stack">
-                        <span class="skill-tag">HTML5 Semántico</span>
-                        <span class="skill-tag">CSS3 (BEM & Flexbox/Grid)</span>
-                        <span class="skill-tag">JavaScript (Vanilla ES6+)</span>
-                        <span class="skill-tag">Lenis Smooth Scroll</span>
-                        <span class="skill-tag">Lucide Icons</span>
-                        <span class="skill-tag">FormSubmit Integration</span>
-                        <span class="skill-tag">SEO Structured Data (JSON-LD)</span>
+                    <!-- CSS macOS Browser Window Mockup -->
+                    <div class="macbook-mockup fade-in">
+                        <div class="macbook-header">
+                            <div class="macbook-dots">
+                                <div class="macbook-dot red"></div>
+                                <div class="macbook-dot yellow"></div>
+                                <div class="macbook-dot green"></div>
+                            </div>
+                            <div class="macbook-address">https://www.voxbusinessdeveloper.com</div>
+                        </div>
+                        <div class="macbook-body">
+                            <div class="mock-window-content">
+                                <div class="mock-sidebar">
+                                    <div class="mock-nav-dot active"><i class="bi bi-speedometer2"></i></div>
+                                    <div class="mock-nav-dot"><i class="bi bi-briefcase"></i></div>
+                                    <div class="mock-nav-dot"><i class="bi bi-people"></i></div>
+                                </div>
+                                <div class="mock-main">
+                                    <div class="mock-vox-dashboard">
+                                        <div class="mock-stats-row">
+                                            <div class="mock-stat-card">
+                                                <h6 class="mock-stat-title">Conversión</h6>
+                                                <span class="mock-stat-val">+34%</span>
+                                            </div>
+                                            <div class="mock-stat-card">
+                                                <h6 class="mock-stat-title">Velocidad</h6>
+                                                <span class="mock-stat-val">0.4s</span>
+                                            </div>
+                                            <div class="mock-stat-card">
+                                                <h6 class="mock-stat-title">Etapas</h6>
+                                                <span class="mock-stat-val">6 Pasos</span>
+                                            </div>
+                                        </div>
+                                        <div class="mock-chart-container">
+                                            <div class="mock-chart-bar" style="--height: 40%; background: var(--gradient);"></div>
+                                            <div class="mock-chart-bar" style="--height: 75%; background: var(--gradient);"></div>
+                                            <div class="mock-chart-bar" style="--height: 55%; background: var(--gradient);"></div>
+                                            <div class="mock-chart-bar" style="--height: 90%; background: var(--gradient);"></div>
+                                            <div class="mock-chart-bar" style="--height: 70%; background: var(--gradient);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Purpose Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
+                        <p>
+                            VOX Business Developer requería una presencia en la web que reflejara su estatus como una agencia multidisciplinaria de alto nivel. El objetivo principal era construir una plataforma digital sofisticada y sumamente atractiva que unificara visualmente sus servicios en marketing, legal corporativo, branding, renders 3D y consultoría, facilitando a los clientes potenciales agendar reuniones y conocer su metodología de trabajo de 6 etapas de manera interactiva.
+                        </p>
+                    </div>
+
+                    <!-- Challenges Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
+                        <p>
+                            El principal reto técnico fue optimizar los recursos pesados (como videos en el hero y secciones sobre nosotros, además de renders arquitectónicos en alta resolución) manteniendo una excelente velocidad de carga y fluidez en móviles. Para ello, se estructuró un sistema de preloader dinámico que mejora la percepción del usuario, y se aplicó desplazamiento suave avanzado (Lenis Scroll) junto con Intersection Observer para desencadenar animaciones pulidas al hacer scroll. Asimismo, se implementó un formulario de contacto interactivo de tres pasos con validaciones en tiempo real que mejora drásticamente las conversiones mediante FormSubmit y un enlace de continuidad por WhatsApp.
+                        </p>
+                    </div>
+
+                    <!-- Technologies Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
+                        <div class="tech-stack-row">
+                            <span class="tech-badge">HTML5 Semántico</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Lenis Scroll</span>
+                            <span class="tech-badge">Lucide Icons</span>
+                            <span class="tech-badge">JSON-LD</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons footer -->
+                    <div class="action-buttons fade-in">
+                        <a href="https://www.voxbusinessdeveloper.com" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="bi bi-globe"></i> <span data-i18n="projects.livePage">Ver Página en Vivo</span>
+                        </a>
                     </div>
                 </div>
-
-                <div class="action-buttons">
-                    <a href="https://www.voxbusinessdeveloper.com" target="_blank" rel="noopener"
-                        class="btn btn-primary"><i class="bi bi-globe"></i> <span data-i18n="projects.livePage">Ver
-                            Página en Vivo</span></a>
-                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <script src="../main.js"></script>

@@ -77,51 +77,157 @@
         </div>
     </header>
 
-    <main class="project-notes">
-        <section class="project-hero">
-            <div class="container">
-                <h1 class="project-title"><span class="gradient-text">Notes Blog</span></h1>
-                <div class="project-meta">
-                    <span><i class="bi bi-calendar3"></i> December 2025</span>
-                    <span><i class="bi bi-tag"></i> Productivity App</span>
-                </div>
-                <p class="hero-description" style="max-width: 700px; margin: 0 auto;">
-                    A JavaScript note-taking web app created to practice DOM manipulation, persistence with local storage, and a simple productivity-focused interface.
-                </p>
-            </div>
-        </section>
+    <main class="project-landing">
+        <!-- Floating gradient orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-section">
-                    <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
-                    <p>
-                        Notes Blog fue desarrollado como un proyecto práctico para consolidar conocimientos fundamentales de JavaScript, específicamente la manipulación del Modelo de Objetos del Documento (DOM) y el almacenamiento persistente en el navegador usando LocalStorage.
-                    </p>
-                </div>
+        <div class="container">
+            <div class="project-grid-layout">
+                <!-- Left Sidebar Column: Back navigation & Sticky details -->
+                <aside class="project-sidebar-sticky fade-in">
+                    <a href="../index.html#projects" class="back-to-portfolio-btn">
+                        <i class="bi bi-arrow-left"></i> <span data-i18n="projects.back">Back to Portfolio</span>
+                    </a>
+                    
+                    <div class="project-meta-card">
+                        <div class="project-meta-item">
+                            <i class="bi bi-calendar3"></i>
+                            <div>
+                                <h5 data-i18n="projects.dateLabel">Date</h5>
+                                <p>December 2025</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-tag"></i>
+                            <div>
+                                <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                <p>Productivity App</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-globe"></i>
+                            <div>
+                                <h5 data-i18n="projects.siteLabel">Website</h5>
+                                <p>scribe-notes-blog.vercel.app</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
-                    <p>
-                        El enfoque principal estuvo en crear una interfaz de usuario limpia e intuitiva donde se pudieran agregar, editar y eliminar notas dinámicamente. La persistencia de datos aseguró que las notas del usuario no se perdieran al recargar la página, ofreciendo una experiencia similar a una aplicación real de escritorio.
-                    </p>
-                </div>
+                <!-- Right Column: Case study content -->
+                <div class="project-main-column">
+                    <!-- Hero Title Header -->
+                    <div class="project-hero fade-in">
+                        <h1 class="project-title"><span class="gradient-text">Notes Blog</span></h1>
+                        
+                        <!-- Mobile Technical Details Card -->
+                        <div class="project-meta-mobile">
+                            <div class="project-meta-item">
+                                <i class="bi bi-calendar3"></i>
+                                <div>
+                                    <h5 data-i18n="projects.dateLabel">Date</h5>
+                                    <p>December 2025</p>
+                                </div>
+                            </div>
+                            <div class="project-meta-item">
+                                <i class="bi bi-tag"></i>
+                                <div>
+                                    <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                    <p>Productivity App</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="project-desc-intro">
+                            A JavaScript note-taking web app created to practice DOM manipulation, persistence with local storage, and a simple productivity-focused interface.
+                        </p>
+                    </div>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
-                    <div class="tech-stack">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">Vanilla JavaScript</span>
-                        <span class="skill-tag">DOM API</span>
+                    <!-- CSS macOS Browser Window Mockup -->
+                    <div class="macbook-mockup fade-in">
+                        <div class="macbook-header">
+                            <div class="macbook-dots">
+                                <div class="macbook-dot red"></div>
+                                <div class="macbook-dot yellow"></div>
+                                <div class="macbook-dot green"></div>
+                            </div>
+                            <div class="macbook-address">https://scribe-notes-blog.vercel.app</div>
+                        </div>
+                        <div class="macbook-body">
+                            <div class="mock-window-content">
+                                <div class="mock-sidebar">
+                                    <div class="mock-nav-dot active"><i class="bi bi-journal-check"></i></div>
+                                    <div class="mock-nav-dot"><i class="bi bi-trash"></i></div>
+                                    <div class="mock-nav-dot"><i class="bi bi-gear"></i></div>
+                                </div>
+                                <div class="mock-main">
+                                    <div class="mock-notes-grid">
+                                        <div class="mock-note-card c1">
+                                            <h6 class="mock-note-title">Idea Principal</h6>
+                                            <div class="mock-note-lines">
+                                                <div class="mock-note-line"></div>
+                                                <div class="mock-note-line"></div>
+                                                <div class="mock-note-line half"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mock-note-card c2">
+                                            <h6 class="mock-note-title">Lista de Pendientes</h6>
+                                            <div class="mock-note-lines">
+                                                <div class="mock-note-line"></div>
+                                                <div class="mock-note-line half"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mock-note-card c3">
+                                            <h6 class="mock-note-title">Inspiración</h6>
+                                            <div class="mock-note-lines">
+                                                <div class="mock-note-line"></div>
+                                                <div class="mock-note-line"></div>
+                                                <div class="mock-note-line half"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Purpose Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
+                        <p>
+                            Notes Blog fue desarrollado como un proyecto práctico para consolidar conocimientos fundamentales de JavaScript, específicamente la manipulación del Modelo de Objetos del Documento (DOM) y el almacenamiento persistente en el navegador usando LocalStorage.
+                        </p>
+                    </div>
+
+                    <!-- Challenges Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
+                        <p>
+                            El enfoque principal estuvo en crear una interfaz de usuario limpia e intuitiva donde se pudieran agregar, editar y eliminar notas dinámicamente. La persistencia de datos aseguró que las notas del usuario no se perdieran al recargar la página, ofreciendo una experiencia similar a una aplicación real de escritorio.
+                        </p>
+                    </div>
+
+                    <!-- Technologies Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
+                        <div class="tech-stack-row">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">Vanilla JavaScript</span>
+                            <span class="tech-badge">DOM API</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons footer -->
+                    <div class="action-buttons fade-in">
+                        <a href="https://scribe-notes-blog.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="bi bi-globe"></i> <span data-i18n="projects.liveDemo">Ver Demo en Vivo</span>
+                        </a>
                     </div>
                 </div>
-
-                <div class="action-buttons">
-                    <a href="https://scribe-notes-blog.vercel.app" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-globe"></i> <span data-i18n="projects.liveDemo">Ver Demo en Vivo</span></a>
-                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <script src="../main.js"></script>

@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Shine Up, a motivational quotes web app built with HTML, CSS, and JavaScript by Lazaro Meneses, later packaged as an Android app for daily inspiration.">
+    <meta name="description"
+        content="Explore Shine Up, a motivational quotes web app built with HTML, CSS, and JavaScript by Lazaro Meneses, later packaged as an Android app for daily inspiration.">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
     <meta name="author" content="Lazaro Meneses">
-    <meta name="keywords" content="Shine Up, motivational app, quotes app, JavaScript app, Lazaro Meneses, app motivacional, frontend developer, web app inspiration, Cordova APK, proyecto web">
+    <meta name="keywords"
+        content="Shine Up, motivational app, quotes app, JavaScript app, Lazaro Meneses, app motivacional, frontend developer, web app inspiration, Cordova APK, proyecto web">
     <link rel="canonical" href="https://lazaromeneses.com/pages/shineup.html">
     <link rel="icon" href="/lazaro-favicon.png" type="image/png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Shine Up | Motivational Quotes Web App by Lazaro Meneses">
-    <meta property="og:description" content="A motivational quotes web app built with HTML, CSS, and JavaScript for daily inspiration and mobile packaging.">
+    <meta property="og:description"
+        content="A motivational quotes web app built with HTML, CSS, and JavaScript for daily inspiration and mobile packaging.">
     <meta property="og:url" content="https://lazaromeneses.com/pages/shineup.html">
     <meta property="og:image" content="https://lazaromeneses.com/lazaro-og-image.png?v=2">
     <meta property="og:image:alt" content="Shine Up motivational quotes app by Lazaro Meneses">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Shine Up | Motivational Quotes Web App by Lazaro Meneses">
-    <meta name="twitter:description" content="A motivational quotes web app built with HTML, CSS, and JavaScript for daily inspiration and mobile packaging.">
+    <meta name="twitter:description"
+        content="A motivational quotes web app built with HTML, CSS, and JavaScript for daily inspiration and mobile packaging.">
     <meta name="twitter:image" content="https://lazaromeneses.com/lazaro-og-image.png?v=2">
     <title>Shine Up | Motivational Quotes Web App by Lazaro Meneses</title>
     <script type="application/ld+json">
@@ -46,12 +50,14 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    
+
 </head>
 
 <body>
@@ -77,56 +83,150 @@
         </div>
     </header>
 
-    <main class="project-shineup">
-        <section class="project-hero">
-            <div class="container">
-                <h1 class="project-title"><span class="gradient-text">Shine Up</span></h1>
-                <div class="project-meta">
-                    <span><i class="bi bi-calendar3"></i> April 2026</span>
-                    <span><i class="bi bi-tag"></i> Motivational App</span>
-                </div>
-                <p class="hero-description" style="max-width: 700px; margin: 0 auto;">
-                    A motivational quotes web app created by Lazaro Meneses to inspire users daily with a simple interface, fast loading experience, and Android-ready packaging.
-                </p>
-            </div>
-        </section>
+    <main class="project-landing">
+        <!-- Floating gradient orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-section">
-                    <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
-                    <p>
-                        Shine Up nació de la necesidad de proporcionar una herramienta sencilla y rápida para obtener motivación diaria. En un mundo lleno de distracciones, el objetivo era crear una plataforma limpia donde el usuario pudiera encontrar citas inspiradoras para empezar su día con energía positiva.
-                    </p>
-                </div>
+        <div class="container">
+            <div class="project-grid-layout">
+                <!-- Left Sidebar Column: Back navigation & Sticky details -->
+                <aside class="project-sidebar-sticky fade-in">
+                    <a href="../index.html#projects" class="back-to-portfolio-btn">
+                        <i class="bi bi-arrow-left"></i> <span data-i18n="projects.back">Back to Portfolio</span>
+                    </a>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
-                    <p>
-                        El principal desafío de este proyecto fue crear una interfaz de usuario atractiva y moderna utilizando únicamente HTML, CSS y JavaScript Vanilla. Se priorizó el rendimiento y las animaciones fluidas para asegurar una excelente experiencia de usuario. Posteriormente, se utilizó Apache Cordova para empaquetar la aplicación web en un archivo APK instalable en dispositivos Android.
-                    </p>
-                </div>
+                    <div class="project-meta-card">
+                        <div class="project-meta-item">
+                            <i class="bi bi-calendar3"></i>
+                            <div>
+                                <h5 data-i18n="projects.dateLabel">Date</h5>
+                                <p>April 2026</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-tag"></i>
+                            <div>
+                                <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                <p>Motivational App</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-globe"></i>
+                            <div>
+                                <h5 data-i18n="projects.siteLabel">Website</h5>
+                                <p>shineup-app.vercel.app</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
-                    <div class="tech-stack">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript Vanilla</span>
-                        <span class="skill-tag">Apache Cordova</span>
+                <!-- Right Column: Case study content -->
+                <div class="project-main-column">
+                    <!-- Hero Title Header -->
+                    <div class="project-hero fade-in">
+                        <h1 class="project-title"><span class="gradient-text">Shine Up</span></h1>
+
+                        <!-- Mobile Technical Details Card -->
+                        <div class="project-meta-mobile">
+                            <div class="project-meta-item">
+                                <i class="bi bi-calendar3"></i>
+                                <div>
+                                    <h5 data-i18n="projects.dateLabel">Date</h5>
+                                    <p>April 2026</p>
+                                </div>
+                            </div>
+                            <div class="project-meta-item">
+                                <i class="bi bi-tag"></i>
+                                <div>
+                                    <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                    <p>Motivational App</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="project-desc-intro">
+                            A motivational quotes web app created by Lazaro Meneses to inspire users daily with a simple
+                            interface, fast loading experience, and Android-ready packaging.
+                        </p>
+                    </div>
+
+                    <!-- CSS macOS Browser Window Mockup -->
+                    <div class="macbook-mockup fade-in">
+                        <div class="macbook-header">
+                            <div class="macbook-dots">
+                                <div class="macbook-dot red"></div>
+                                <div class="macbook-dot yellow"></div>
+                                <div class="macbook-dot green"></div>
+                            </div>
+                            <div class="macbook-address">https://shineup-app.vercel.app</div>
+                        </div>
+                        <div class="macbook-body">
+                            <div class="mock-window-content">
+                                <div class="mock-sidebar">
+                                    <div class="mock-nav-dot active"><i class="bi bi-patch-check"></i></div>
+                                    <div class="mock-nav-dot"><i class="bi bi-star"></i></div>
+                                </div>
+                                <div class="mock-main">
+                                    <div class="mock-quote-box">
+                                        <i class="bi bi-brightness-high mock-quote-icon"></i>
+                                        <p class="mock-quote-text">"No cuentes los días, haz que los días cuenten."</p>
+                                        <span class="mock-quote-author">— Muhammad Ali</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Purpose Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
+                        <p>
+                            Shine Up nació de la necesidad de proporcionar una herramienta sencilla y rápida para
+                            obtener motivación diaria. En un mundo lleno de distracciones, el objetivo era crear una
+                            plataforma limpia donde el usuario pudiera encontrar citas inspiradoras para empezar su día
+                            con energía positiva.
+                        </p>
+                    </div>
+
+                    <!-- Challenges Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
+                        <p>
+                            El principal desafío de este proyecto fue crear una interfaz de usuario atractiva y moderna
+                            utilizando únicamente HTML, CSS y JavaScript Vanilla. Se priorizó el rendimiento y las
+                            animaciones fluidas para asegurar una excelente experiencia de usuario. Posteriormente, se
+                            utilizó Apache Cordova para empaquetar la aplicación web en un archivo APK instalable en
+                            dispositivos Android.
+                        </p>
+                    </div>
+
+                    <!-- Technologies Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
+                        <div class="tech-stack-row">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript Vanilla</span>
+                            <span class="tech-badge">Apache Cordova</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons footer -->
+                    <div class="action-buttons fade-in">
+                        <a href="https://shineup-app.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="bi bi-globe"></i> <span data-i18n="projects.liveDemo">Ver Demo en Vivo</span>
+                        </a>
+                        <a href="../Apks/ShineUp.apk" class="btn btn-outline">
+                            <i class="bi bi-download"></i> <span data-i18n="projects.downloadApk">Descargar APK</span>
+                        </a>
                     </div>
                 </div>
-
-                <div class="action-buttons">
-                    <a href="https://shineup-app.vercel.app" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-globe"></i> <span data-i18n="projects.liveDemo">Ver Demo en Vivo</span></a>
-                    <a href="../Apks/ShineUp.apk" class="btn btn-outline"><i class="bi bi-download"></i> <span data-i18n="projects.downloadApk">Descargar APK</span></a>
-                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <script src="../main.js"></script>
 </body>
 
 </html>
-

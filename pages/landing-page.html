@@ -77,49 +77,152 @@
     </header>
 
     <main class="project-landing">
-        <section class="project-hero">
-            <div class="container">
-                <h1 class="project-title"><span class="gradient-text">Landing Page</span></h1>
-                <div class="project-meta">
-                    <span><i class="bi bi-calendar3"></i> August 2025</span>
-                    <span><i class="bi bi-tag"></i> UI / UX Design</span>
-                </div>
-                <p class="hero-description" style="max-width: 700px; margin: 0 auto;">
-                    A responsive React.js landing page project built to practice semantic HTML, modern UI design, accessibility, and SEO-friendly structure for conversion-focused web experiences.
-                </p>
-            </div>
-        </section>
+        <!-- Floating gradient orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-section">
-                    <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
-                    <p>
-                        Este proyecto nació de la necesidad de dominar el maquetado moderno y las bases de React.js aplicadas a un entorno de marketing digital (Landing Pages). El objetivo era crear una página que no solo se viera bien, sino que estuviera estructurada semánticamente para SEO y accesibilidad.
-                    </p>
-                </div>
+        <div class="container">
+            <div class="project-grid-layout">
+                <!-- Left Sidebar Column: Back navigation & Sticky details -->
+                <aside class="project-sidebar-sticky fade-in">
+                    <a href="../index.html#projects" class="back-to-portfolio-btn">
+                        <i class="bi bi-arrow-left"></i> <span data-i18n="projects.back">Back to Portfolio</span>
+                    </a>
+                    
+                    <div class="project-meta-card">
+                        <div class="project-meta-item">
+                            <i class="bi bi-calendar3"></i>
+                            <div>
+                                <h5 data-i18n="projects.dateLabel">Date</h5>
+                                <p>August 2025</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-tag"></i>
+                            <div>
+                                <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                <p>UI / UX Design</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-globe"></i>
+                            <div>
+                                <h5 data-i18n="projects.siteLabel">Website</h5>
+                                <p>neuroflow-ai-landing.vercel.app</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
-                    <p>
-                        El diseño responsive y la correcta utilización de componentes reutilizables en React fueron los principales focos del desarrollo. Se trabajó en lograr un balance entre un diseño atractivo que capturara la atención del usuario (para un producto de IA ficticio) y un código estructurado modularmente.
-                    </p>
-                </div>
+                <!-- Right Column: Case study content -->
+                <div class="project-main-column">
+                    <!-- Hero Title Header -->
+                    <div class="project-hero fade-in">
+                        <h1 class="project-title"><span class="gradient-text">Landing Page</span></h1>
+                        
+                        <!-- Mobile Technical Details Card -->
+                        <div class="project-meta-mobile">
+                            <div class="project-meta-item">
+                                <i class="bi bi-calendar3"></i>
+                                <div>
+                                    <h5 data-i18n="projects.dateLabel">Date</h5>
+                                    <p>August 2025</p>
+                                </div>
+                            </div>
+                            <div class="project-meta-item">
+                                <i class="bi bi-tag"></i>
+                                <div>
+                                    <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                    <p>UI / UX Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="project-desc-intro">
+                            A responsive React.js landing page project built to practice semantic HTML, modern UI design, accessibility, and SEO-friendly structure for conversion-focused web experiences.
+                        </p>
+                    </div>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
-                    <div class="tech-stack">
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">Semantic HTML</span>
+                    <!-- CSS macOS Browser Window Mockup -->
+                    <div class="macbook-mockup fade-in">
+                        <div class="macbook-header">
+                            <div class="macbook-dots">
+                                <div class="macbook-dot red"></div>
+                                <div class="macbook-dot yellow"></div>
+                                <div class="macbook-dot green"></div>
+                            </div>
+                            <div class="macbook-address">https://neuroflow-ai-landing-page.vercel.app</div>
+                        </div>
+                        <div class="macbook-body">
+                            <div class="mock-window-content">
+                                <div class="mock-sidebar">
+                                    <div class="mock-nav-dot active"><i class="bi bi-house-door"></i></div>
+                                    <div class="mock-nav-dot"><i class="bi bi-layout-three-columns"></i></div>
+                                </div>
+                                <div class="mock-main">
+                                    <div class="mock-vox-dashboard">
+                                        <div class="mock-stats-row">
+                                            <div class="mock-stat-card">
+                                                <h6 class="mock-stat-title">SEO Score</h6>
+                                                <span class="mock-stat-val">100/100</span>
+                                            </div>
+                                            <div class="mock-stat-card">
+                                                <h6 class="mock-stat-title">Speed Index</h6>
+                                                <span class="mock-stat-val">0.8s</span>
+                                            </div>
+                                            <div class="mock-stat-card">
+                                                <h6 class="mock-stat-title">Accesibilidad</h6>
+                                                <span class="mock-stat-val">100%</span>
+                                            </div>
+                                        </div>
+                                        <div class="mock-chart-container">
+                                            <div class="mock-chart-bar" style="--height: 50%; background: var(--gradient);"></div>
+                                            <div class="mock-chart-bar" style="--height: 60%; background: var(--gradient);"></div>
+                                            <div class="mock-chart-bar" style="--height: 80%; background: var(--gradient);"></div>
+                                            <div class="mock-chart-bar" style="--height: 95%; background: var(--gradient);"></div>
+                                            <div class="mock-chart-bar" style="--height: 85%; background: var(--gradient);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Purpose Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
+                        <p>
+                            Este proyecto nació de la necesidad de dominar el maquetado moderno y las bases de React.js aplicadas a un entorno de marketing digital (Landing Pages). El objetivo era crear una página que no solo se viera bien, sino que estuviera estructurada semánticamente para SEO y accesibilidad.
+                        </p>
+                    </div>
+
+                    <!-- Challenges Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
+                        <p>
+                            El diseño responsive y la correcta utilización de componentes reutilizables en React fueron los principales focos del desarrollo. Se trabajó en lograr un balance entre un diseño atractivo que capturara la atención del usuario (para un producto de IA ficticio) y un código estructurado modularmente.
+                        </p>
+                    </div>
+
+                    <!-- Technologies Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
+                        <div class="tech-stack-row">
+                            <span class="tech-badge">React.js</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">Semantic HTML</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons footer -->
+                    <div class="action-buttons fade-in">
+                        <a href="https://neuroflow-ai-landing-page.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="bi bi-globe"></i> <span data-i18n="projects.liveDemo">Ver Demo en Vivo</span>
+                        </a>
                     </div>
                 </div>
-
-                <div class="action-buttons">
-                    <a href="https://neuroflow-ai-landing-page.vercel.app" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-globe"></i> <span data-i18n="projects.liveDemo">Ver Demo en Vivo</span></a>
-                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <script src="../main.js"></script>

@@ -77,52 +77,139 @@
         </div>
     </header>
 
-    <main class="project-eunoia">
-        <section class="project-hero">
-            <div class="container">
-                <h1 class="project-title"><span class="gradient-text">Eunoia-App</span></h1>
-                <div class="project-meta">
-                    <span><i class="bi bi-calendar3"></i> April 2026 – May 2026</span>
-                    <span><i class="bi bi-tag"></i> Quotes App</span>
-                </div>
-                <p class="hero-description" style="max-width: 700px; margin: 0 auto;">
-                    A React.js philosophy quotes app created by Lazaro Meneses to deliver daily reflection, a calm user experience, and a polished mobile-ready experience.
-                </p>
-            </div>
-        </section>
+    <main class="project-landing">
+        <!-- Floating gradient orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-section">
-                    <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
-                    <p>
-                        Eunoia nació del interés personal por la filosofía y la necesidad de tener un espacio tranquilo para la reflexión diaria. El objetivo era recopilar citas de grandes pensadores estoicos y filósofos clásicos, presentándolas en una interfaz minimalista y libre de distracciones que invitara a la introspección.
-                    </p>
-                </div>
+        <div class="container">
+            <div class="project-grid-layout">
+                <!-- Left Sidebar Column: Back navigation & Sticky details -->
+                <aside class="project-sidebar-sticky fade-in">
+                    <a href="../index.html#projects" class="back-to-portfolio-btn">
+                        <i class="bi bi-arrow-left"></i> <span data-i18n="projects.back">Back to Portfolio</span>
+                    </a>
+                    
+                    <div class="project-meta-card">
+                        <div class="project-meta-item">
+                            <i class="bi bi-calendar3"></i>
+                            <div>
+                                <h5 data-i18n="projects.dateLabel">Date</h5>
+                                <p>May 2026</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-tag"></i>
+                            <div>
+                                <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                <p>Quotes App</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-globe"></i>
+                            <div>
+                                <h5 data-i18n="projects.siteLabel">Website</h5>
+                                <p>eunoia-app-five.vercel.app</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
-                    <p>
-                        Al ser construido con React.js, el principal desafío fue gestionar correctamente el estado de la aplicación para mostrar citas aleatorias de forma fluida. Además, se implementó un sistema para que los usuarios pudieran guardar sus citas favoritas usando LocalStorage. Finalmente, se integró con Capacitor para empaquetar el proyecto de React como una aplicación nativa para Android (APK).
-                    </p>
-                </div>
+                <!-- Right Column: Case study content -->
+                <div class="project-main-column">
+                    <!-- Hero Title Header -->
+                    <div class="project-hero fade-in">
+                        <h1 class="project-title"><span class="gradient-text">Eunoia-App</span></h1>
+                        
+                        <!-- Mobile Technical Details Card -->
+                        <div class="project-meta-mobile">
+                            <div class="project-meta-item">
+                                <i class="bi bi-calendar3"></i>
+                                <div>
+                                    <h5 data-i18n="projects.dateLabel">Date</h5>
+                                    <p>May 2026</p>
+                                </div>
+                            </div>
+                            <div class="project-meta-item">
+                                <i class="bi bi-tag"></i>
+                                <div>
+                                    <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                    <p>Quotes App</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="project-desc-intro">
+                            A React.js philosophy quotes app created by Lazaro Meneses to deliver daily reflection, a calm user experience, and a polished mobile-ready experience.
+                        </p>
+                    </div>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
-                    <div class="tech-stack">
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript (ES6+)</span>
-                        <span class="skill-tag">Capacitor</span>
+                    <!-- CSS macOS Browser Window Mockup -->
+                    <div class="macbook-mockup fade-in">
+                        <div class="macbook-header">
+                            <div class="macbook-dots">
+                                <div class="macbook-dot red"></div>
+                                <div class="macbook-dot yellow"></div>
+                                <div class="macbook-dot green"></div>
+                            </div>
+                            <div class="macbook-address">https://eunoia-app-five.vercel.app</div>
+                        </div>
+                        <div class="macbook-body">
+                            <div class="mock-window-content">
+                                <div class="mock-sidebar">
+                                    <div class="mock-nav-dot active"><i class="bi bi-chat-quote"></i></div>
+                                    <div class="mock-nav-dot"><i class="bi bi-heart"></i></div>
+                                </div>
+                                <div class="mock-main">
+                                    <div class="mock-quote-box">
+                                        <i class="bi bi-quote mock-quote-icon"></i>
+                                        <p class="mock-quote-text">"La felicidad de tu vida depende de la calidad de tus pensamientos."</p>
+                                        <span class="mock-quote-author">— Marco Aurelio</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Purpose Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
+                        <p>
+                            Eunoia nació del interés personal por la filosofía y la necesidad de tener un espacio tranquilo para la reflexión diaria. El objetivo era recopilar citas de grandes pensadores estoicos y filósofos clásicos, presentándolas en una interfaz minimalista y libre de distracciones que invitara a la introspección.
+                        </p>
+                    </div>
+
+                    <!-- Challenges Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
+                        <p>
+                            Al ser construido con React.js, el principal desafío fue gestionar correctamente el estado de la aplicación para mostrar citas aleatorias de forma fluida. Además, se implementó un sistema para que los usuarios pudieran guardar sus citas favoritas usando LocalStorage. Finalmente, se integró con Capacitor para empaquetar el proyecto de React como una aplicación nativa para Android (APK).
+                        </p>
+                    </div>
+
+                    <!-- Technologies Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
+                        <div class="tech-stack-row">
+                            <span class="tech-badge">React.js</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript (ES6+)</span>
+                            <span class="tech-badge">Capacitor</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons footer -->
+                    <div class="action-buttons fade-in">
+                        <a href="https://eunoia-app-five.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="bi bi-globe"></i> <span data-i18n="projects.liveDemo">Ver Demo en Vivo</span>
+                        </a>
+                        <a href="../Apks/Eunoia App_1.0.1.apk" class="btn btn-outline">
+                            <i class="bi bi-download"></i> <span data-i18n="projects.downloadApk">Descargar APK</span>
+                        </a>
                     </div>
                 </div>
-
-                <div class="action-buttons">
-                    <a href="https://eunoia-app-five.vercel.app" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-globe"></i> <span data-i18n="projects.liveDemo">Ver Demo en Vivo</span></a>
-                    <a href="../Apks/Eunoia App_1.0.1.apk" class="btn btn-outline"><i class="bi bi-download"></i> <span data-i18n="projects.downloadApk">Descargar APK</span></a>
-                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <script src="../main.js"></script>

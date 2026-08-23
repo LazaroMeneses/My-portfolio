@@ -77,51 +77,166 @@
         </div>
     </header>
 
-    <main class="project-elements">
-        <section class="project-hero">
-            <div class="container">
-                <h1 class="project-title"><span class="gradient-text">Elements Finder</span></h1>
-                <div class="project-meta">
-                    <span><i class="bi bi-calendar3"></i> Enero 2026</span>
-                    <span><i class="bi bi-tag"></i> Educational App</span>
-                </div>
-                <p class="hero-description" style="max-width: 700px; margin: 0 auto;">
-                    A React.js chemistry web app designed to help users quickly find element information, symbols, and descriptions from the periodic table.
-                </p>
-            </div>
-        </section>
+    <main class="project-landing">
+        <!-- Floating gradient orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-section">
-                    <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
-                    <p>
-                        Elements Finder fue diseñado como una herramienta educativa interactiva para estudiantes y entusiastas de la química. El objetivo era simplificar el acceso a la información de los elementos químicos, permitiendo búsquedas rápidas por nombre, símbolo o número atómico en una interfaz moderna y atractiva.
-                    </p>
-                </div>
+        <div class="container">
+            <div class="project-grid-layout">
+                <!-- Left Sidebar Column: Back navigation & Sticky details -->
+                <aside class="project-sidebar-sticky fade-in">
+                    <a href="../index.html#projects" class="back-to-portfolio-btn">
+                        <i class="bi bi-arrow-left"></i> <span data-i18n="projects.back">Back to Portfolio</span>
+                    </a>
+                    
+                    <div class="project-meta-card">
+                        <div class="project-meta-item">
+                            <i class="bi bi-calendar3"></i>
+                            <div>
+                                <h5 data-i18n="projects.dateLabel">Date</h5>
+                                <p>January 2026</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-tag"></i>
+                            <div>
+                                <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                <p>Educational App</p>
+                            </div>
+                        </div>
+                        <div class="project-meta-item">
+                            <i class="bi bi-globe"></i>
+                            <div>
+                                <h5 data-i18n="projects.siteLabel">Website</h5>
+                                <p>Case Study Only</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
-                    <p>
-                        El principal reto de este proyecto fue organizar y consumir una gran cantidad de datos estructurados sobre los elementos de la tabla periódica de manera eficiente. Al usar React.js, se aprovechó la renderización condicional y el manejo de listas para crear una experiencia de búsqueda instantánea y sin recargas de página.
-                    </p>
-                </div>
+                <!-- Right Column: Case study content -->
+                <div class="project-main-column">
+                    <!-- Hero Title Header -->
+                    <div class="project-hero fade-in">
+                        <h1 class="project-title"><span class="gradient-text">Elements Finder</span></h1>
+                        
+                        <!-- Mobile Technical Details Card -->
+                        <div class="project-meta-mobile">
+                            <div class="project-meta-item">
+                                <i class="bi bi-calendar3"></i>
+                                <div>
+                                    <h5 data-i18n="projects.dateLabel">Date</h5>
+                                    <p>January 2026</p>
+                                </div>
+                            </div>
+                            <div class="project-meta-item">
+                                <i class="bi bi-tag"></i>
+                                <div>
+                                    <h5 data-i18n="projects.categoryLabel">Category</h5>
+                                    <p>Educational App</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="project-desc-intro">
+                            A React.js chemistry web app designed to help users quickly find element information, symbols, and descriptions from the periodic table.
+                        </p>
+                    </div>
 
-                <div class="project-section">
-                    <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
-                    <div class="tech-stack">
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">JSON Data</span>
+                    <!-- CSS macOS Browser Window Mockup -->
+                    <div class="macbook-mockup fade-in">
+                        <div class="macbook-header">
+                            <div class="macbook-dots">
+                                <div class="macbook-dot red"></div>
+                                <div class="macbook-dot yellow"></div>
+                                <div class="macbook-dot green"></div>
+                            </div>
+                            <div class="macbook-address">https://elements-finder-demo.vercel.app</div>
+                        </div>
+                        <div class="macbook-body">
+                            <div class="mock-window-content">
+                                <div class="mock-sidebar">
+                                    <div class="mock-nav-dot active"><i class="bi bi-funnel"></i></div>
+                                    <div class="mock-nav-dot"><i class="bi bi-collection"></i></div>
+                                </div>
+                                <div class="mock-main">
+                                    <div class="mock-elements-grid">
+                                        <div class="mock-element-box active">
+                                            <span class="mock-element-num">1</span>
+                                            <span class="mock-element-sym">H</span>
+                                        </div>
+                                        <div class="mock-element-box">
+                                            <span class="mock-element-num">2</span>
+                                            <span class="mock-element-sym">He</span>
+                                        </div>
+                                        <div class="mock-element-box">
+                                            <span class="mock-element-num">3</span>
+                                            <span class="mock-element-sym">Li</span>
+                                        </div>
+                                        <div class="mock-element-box">
+                                            <span class="mock-element-num">4</span>
+                                            <span class="mock-element-sym">Be</span>
+                                        </div>
+                                        <div class="mock-element-box active">
+                                            <span class="mock-element-num">6</span>
+                                            <span class="mock-element-sym">C</span>
+                                        </div>
+                                        <div class="mock-element-box">
+                                            <span class="mock-element-num">7</span>
+                                            <span class="mock-element-sym">N</span>
+                                        </div>
+                                        <div class="mock-element-box active">
+                                            <span class="mock-element-num">8</span>
+                                            <span class="mock-element-sym">O</span>
+                                        </div>
+                                        <div class="mock-element-box">
+                                            <span class="mock-element-num">10</span>
+                                            <span class="mock-element-sym">Ne</span>
+                                        </div>
+                                        <div class="mock-element-box">
+                                            <span class="mock-element-num">11</span>
+                                            <span class="mock-element-sym">Na</span>
+                                        </div>
+                                        <div class="mock-element-box active">
+                                            <span class="mock-element-num">79</span>
+                                            <span class="mock-element-sym">Au</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Purpose Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.purpose">¿Por qué se hizo? (El Propósito)</h2>
+                        <p>
+                            Elements Finder fue diseñado como una herramienta educativa interactiva para estudiantes y entusiastas de la química. El objetivo era simplificar el acceso a la información de los elementos químicos, permitiendo búsquedas rápidas por nombre, símbolo o número atómico en una interfaz moderna y atractiva.
+                        </p>
+                    </div>
+
+                    <!-- Challenges Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.challenges">Desafíos y Desarrollo</h2>
+                        <p>
+                            El principal reto de este proyecto fue organizar y consumir una gran cantidad de datos estructurados sobre los elementos de la tabla periódica de manera eficiente. Al usar React.js, se aprovechó la renderización condicional y el manejo de listas para crear una experiencia de búsqueda instantánea y sin recargas de página.
+                        </p>
+                    </div>
+
+                    <!-- Technologies Section -->
+                    <div class="project-section-card fade-in">
+                        <h2 data-i18n="projects.technologies">Tecnologías Utilizadas</h2>
+                        <div class="tech-stack-row">
+                            <span class="tech-badge">React.js</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">JSON Data</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="action-buttons">
-                    <!-- Aún no hay enlaces configurados para Demo o APK en este proyecto -->
-                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <script src="../main.js"></script>

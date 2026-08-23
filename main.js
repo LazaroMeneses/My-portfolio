@@ -148,7 +148,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 downloadApk: "Download APK",
                 filterAll: "All",
                 filterReact: "React.js",
-                filterVanilla: "HTML / CSS / JS"
+                filterVanilla: "HTML / CSS / JS",
+                back: "Back to Portfolio",
+                dateLabel: "Date",
+                categoryLabel: "Category",
+                siteLabel: "Website"
             },
             faq: {
                 title: "Frequently Asked Questions",
@@ -182,6 +186,12 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             preloader: {
                 welcome: "Welcome"
+            },
+            footer: {
+                desc: "Full-stack developer focused on building high-performance, responsive web applications and elegant user interfaces.",
+                linksTitle: "Quick Links",
+                contactTitle: "Contact Info",
+                madeWith: "Made with ❤️ by Lazaro Meneses"
             }
         },
         es: {
@@ -251,7 +261,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 downloadApk: "Descargar APK",
                 filterAll: "Todos",
                 filterReact: "React.js",
-                filterVanilla: "HTML / CSS / JS"
+                filterVanilla: "HTML / CSS / JS",
+                back: "Volver al Portafolio",
+                dateLabel: "Fecha",
+                categoryLabel: "Categoría",
+                siteLabel: "Sitio Web"
             },
             faq: {
                 title: "Preguntas Frecuentes",
