@@ -705,21 +705,238 @@ header.scrolled {
     background: var(--bg-secondary);
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
+.about-split-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.about-bio-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .about-text p {
     margin-bottom: 1.5rem;
     color: var(--text-secondary);
     font-size: 1.05rem;
-    line-height: 1.9;
-    text-align: justify;
+    line-height: 1.8;
 }
 
 .about-text p:last-child {
     margin-bottom: 0;
+}
+
+.about-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* About Dashboard Panel */
+.about-dashboard-column {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    width: 100%;
+}
+
+[data-theme="light"] .about-dashboard-column {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.about-dash-tabs {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+.about-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.about-tab-btn:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="light"] .about-tab-btn:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.about-tab-btn.active {
+    color: var(--accent);
+    background: rgba(255, 0, 102, 0.06);
+}
+
+.about-dash-content {
+    position: relative;
+    width: 100%;
+}
+
+.about-group {
+    display: none;
+    animation: fadeInTab 0.5s ease forwards;
+}
+
+.about-group.active {
+    display: block;
+}
+
+/* Core Values Grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+[data-theme="light"] .value-card {
+    background: rgba(0, 0, 0, 0.01);
+    border-color: rgba(0, 0, 0, 0.03);
+}
+
+.value-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.value-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+}
+
+.value-card h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.value-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Journey Timeline Roadmap */
+.journey-roadmap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.journey-roadmap::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.roadmap-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.roadmap-badge {
+    position: absolute;
+    left: -2.35rem;
+    top: 0.15rem;
+    background: var(--bg-primary);
+    border: 2px solid var(--accent);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 999px;
+    z-index: 2;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+[data-theme="light"] .roadmap-badge {
+    background: var(--bg-secondary);
+}
+
+.roadmap-content {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+}
+
+[data-theme="light"] .roadmap-content {
+    background: rgba(0, 0, 0, 0.01);
+    border-color: rgba(0, 0, 0, 0.03);
+}
+
+.roadmap-content h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.25rem 0;
+}
+
+.roadmap-content p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .about-split-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ==========================
@@ -737,7 +954,107 @@ header.scrolled {
 }
 
 .services .section-title {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Service Card Design */
+.service-card {
+    background: rgba(30, 41, 59, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+[data-theme="light"] .service-card {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    border-color: var(--accent);
+}
+
+.service-icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--accent);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.75rem;
+    transition: var(--transition-fast);
+}
+
+[data-theme="light"] .service-icon-box {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover .service-icon-box {
+    background: var(--gradient);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 8px 16px var(--accent-glow);
+    transform: rotate(-6deg) scale(1.08);
+}
+
+.service-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+    flex-grow: 1;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.service-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.service-list li i {
+    color: var(--accent);
+    font-size: 0.95rem;
 }
 .skills-grid {
     display: grid;
@@ -1624,81 +1941,281 @@ header.scrolled {
 .contact-card {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1.25rem;
-    background: var(--bg-card);
-    border-radius: var(--radius-md);
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
-    transition: var(--transition);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
     color: inherit;
 }
 
-.contact-card:hover {
-    transform: translateX(6px);
-    border-color: var(--accent);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+[data-theme="light"] .contact-card {
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .contact-card i {
-    font-size: 1.4rem;
-    color: var(--accent);
+    font-size: 1.6rem;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
+    transition: var(--transition-fast);
 }
 
-.contact-card h4 {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 0.15rem;
+[data-theme="light"] .contact-card i {
+    background: rgba(0, 0, 0, 0.02);
 }
 
-.contact-card span {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    word-break: break-all;
+/* Individual Neon Hover Glows */
+.contact-card.card-email i {
+    color: var(--accent);
+}
+.contact-card.card-email:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(255, 0, 102, 0.2);
+}
+.contact-card.card-email:hover i {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 15px var(--accent-glow);
 }
 
-/* Contact Form */
+.contact-card.card-github i {
+    color: #3b82f6;
+}
+.contact-card.card-github:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+.contact-card.card-github:hover i {
+    background: #3b82f6;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.contact-card.card-phone i {
+    color: #10b981;
+}
+.contact-card.card-phone:hover {
+    transform: translateY(-4px);
+    border-color: #10b981;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+}
+.contact-card.card-phone:hover i {
+    background: #10b981;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+/* Contact Form Multi-step & Floating labels */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    background: rgba(30, 41, 59, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    width: 100%;
 }
 
-.form-group input,
-.form-group textarea {
+[data-theme="light"] .contact-form {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Floating Labels Layout */
+.floating-group {
+    position: relative;
+    margin-bottom: 0.25rem;
     width: 100%;
-    padding: 0.9rem 1.2rem;
+}
+
+.floating-group input,
+.floating-group textarea {
+    width: 100%;
+    padding: 1.25rem 1rem 0.75rem 1rem;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     color: var(--text-primary);
     font-family: inherit;
     font-size: 0.95rem;
-    transition: var(--transition);
     outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
+.floating-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1.05rem;
     color: var(--text-muted);
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: transform 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+    transform-origin: left top;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+/* Float animation triggers */
+.floating-group input:focus ~ label,
+.floating-group input:not(:placeholder-shown) ~ label,
+.floating-group textarea:focus ~ label,
+.floating-group textarea:not(:placeholder-shown) ~ label {
+    transform: translateY(-0.85rem) scale(0.8);
+    color: var(--accent);
+}
+
+.floating-group input:focus,
+.floating-group textarea:focus {
     border-color: var(--accent);
     box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
+.floating-group textarea {
+    resize: none;
+    min-height: 110px;
 }
 
-.btn-submit {
-    align-self: flex-start;
+/* Multi-step Form Progress Indicator */
+.form-steps-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    position: relative;
     width: 100%;
+}
+
+.step-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    z-index: 2;
+    cursor: default;
+}
+
+.step-number {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.step-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.step-progress-line {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: var(--border-color);
+    z-index: 1;
+}
+
+.step-line-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent-glow);
+    transition: width 0.3s ease;
+}
+
+/* Active & completed indicator statuses */
+.step-node.active .step-number {
+    border-color: var(--accent);
+    background: var(--bg-card);
+    color: var(--accent);
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.step-node.active .step-label {
+    color: var(--text-primary);
+}
+
+.step-node.completed .step-number {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.step-node.completed .step-label {
+    color: var(--accent);
+}
+
+/* Step Panes Display */
+.form-step-pane {
+    display: none;
+    width: 100%;
+}
+
+.form-step-pane.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: fadeInStep 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.step-pane-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.25rem 0;
+}
+
+.step-actions {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+.step-actions button {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+@keyframes fadeInStep {
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
     .form-message {

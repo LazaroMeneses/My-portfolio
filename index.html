@@ -197,19 +197,104 @@
         <section class="about" id="about">
             <div class="container">
                 <h2 class="section-title fade-in" data-i18n="about.title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text fade-in">
-                        <p data-i18n="about.para1">Soy Lázaro Meneses, Full-Stack Developer apasionado por crear
-                            soluciones digitales modernas y funcionales. Mi experiencia abarca desde el desarrollo de
-                            interfaces y experiencias de usuario hasta la creación de APIs, servidores y bases de datos.
-                        </p>
-                        <p data-i18n="about.para2">Trabajo principalmente con JavaScript, React, Node.js, Express,
-                            MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para
-                            transformar ideas en productos digitales reales.</p>
-                        <p data-i18n="about.para3">What motivates me most about programming is understanding the
-                            language of the future. I'm fascinated by how, through code, we can communicate with
-                            computers and bring ideas to life. What began as curiosity has become a long-term passion
-                            for building useful products.</p>
+
+                <div class="about-split-container">
+                    <!-- Left Column: Biography & CTA -->
+                    <div class="about-bio-column fade-in">
+                        <div class="about-text">
+                            <p data-i18n="about.para1">Soy Lázaro Meneses, Full-Stack Developer apasionado por crear
+                                soluciones digitales modernas y funcionales. Mi experiencia abarca desde el desarrollo
+                                de interfaces y experiencias de usuario hasta la creación de APIs, servidores y bases de
+                                datos.</p>
+                            <p data-i18n="about.para2">Trabajo principalmente con JavaScript, React, Node.js, Express,
+                                MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para
+                                transformar ideas en productos digitales reales.</p>
+                            <p data-i18n="about.para3">What motivates me most about programming is understanding the
+                                language of the future. I'm fascinated by how, through code, we can communicate with
+                                computers and bring ideas to life. What began as curiosity has become a long-term
+                                passion for building useful products.</p>
+                        </div>
+                        <div class="about-ctas">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="bi bi-chat-dots"></i> <span data-i18n="about.collab">Let's Collaborate</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Interactive Dashboard (Values & Journey Tabs) -->
+                    <div class="about-dashboard-column fade-in">
+                        <!-- Dashboard Tabs -->
+                        <div class="about-dash-tabs">
+                            <button class="about-tab-btn active" data-about-tab="values">
+                                <i class="bi bi-shield-check"></i> <span data-i18n="about.tabValues">Core Values</span>
+                            </button>
+                            <button class="about-tab-btn" data-about-tab="journey">
+                                <i class="bi bi-compass"></i> <span data-i18n="about.tabJourney">My Journey</span>
+                            </button>
+                        </div>
+
+                        <!-- Dashboard Content Groups -->
+                        <div class="about-dash-content">
+                            <!-- Group 1: Core Values -->
+                            <div class="about-group active" id="about-tab-values">
+                                <div class="values-grid">
+                                    <div class="value-card">
+                                        <div class="value-icon"><i class="bi bi-braces"></i></div>
+                                        <h4 data-i18n="about.val1Title">Clean Code</h4>
+                                        <p data-i18n="about.val1Desc">Writing readable, maintainable, and structured
+                                            code following industry standards.</p>
+                                    </div>
+                                    <div class="value-card">
+                                        <div class="value-icon"><i class="bi bi-lightning-charge"></i></div>
+                                        <h4 data-i18n="about.val2Title">Performance</h4>
+                                        <p data-i18n="about.val2Desc">Optimizing loading speeds, logic cycles, and API
+                                            response times for fast products.</p>
+                                    </div>
+                                    <div class="value-card">
+                                        <div class="value-icon"><i class="bi bi-window-fullscreen"></i></div>
+                                        <h4 data-i18n="about.val3Title">UX / UI focus</h4>
+                                        <p data-i18n="about.val3Desc">Creating fully responsive interfaces that look
+                                            polished and feel intuitive on any device.</p>
+                                    </div>
+                                    <div class="value-card">
+                                        <div class="value-icon"><i class="bi bi-arrow-repeat"></i></div>
+                                        <h4 data-i18n="about.val4Title">Adaptability</h4>
+                                        <p data-i18n="about.val4Desc">Constantly learning and adapting to new web
+                                            standards and libraries to solve problems.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Group 2: My Journey -->
+                            <div class="about-group" id="about-tab-journey">
+                                <div class="journey-roadmap">
+                                    <div class="roadmap-item">
+                                        <div class="roadmap-badge">2023</div>
+                                        <div class="roadmap-content">
+                                            <h4 data-i18n="about.j1Title">The Spark</h4>
+                                            <p data-i18n="about.j1Desc">Started building landing pages and responsive
+                                                layouts, discovering deep passion for coding and logic.</p>
+                                        </div>
+                                    </div>
+                                    <div class="roadmap-item">
+                                        <div class="roadmap-badge">2025</div>
+                                        <div class="roadmap-content">
+                                            <h4 data-i18n="about.j2Title">Full-Stack Scale</h4>
+                                            <p data-i18n="about.j2Desc">Mastered React.js and backend integrations
+                                                (Node, Express, MongoDB) to build complete applications.</p>
+                                        </div>
+                                    </div>
+                                    <div class="roadmap-item">
+                                        <div class="roadmap-badge">2026</div>
+                                        <div class="roadmap-content">
+                                            <h4 data-i18n="about.j3Title">High-End Products</h4>
+                                            <p data-i18n="about.j3Desc">Creating advanced portfolios, scalable
+                                                databases, and rich custom animations for top-tier websites.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -544,25 +629,54 @@
         <!-- Services Section -->
         <section class="services" id="services">
             <div class="container">
-                <h2 class="section-title fade-in">Services & Expertise</h2>
-                <div class="skills-grid">
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="bi bi-server"></i></div>
-                        <h3>Back-End Development</h3>
-                        <p>Node.js, Express, MongoDB, and Firebase solutions for APIs, servers, databases, and complete
-                            full-stack applications.</p>
+                <h2 class="section-title fade-in" data-i18n="services.title">Services & Expertise</h2>
+                <div class="services-grid">
+                    <!-- Service 1: Back-End -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon-box">
+                            <i class="bi bi-server"></i>
+                        </div>
+                        <h3 data-i18n="services.s1Title">Back-End Development</h3>
+                        <p data-i18n="services.s1Desc">Node.js, Express, MongoDB, and Firebase solutions for APIs,
+                            servers, databases, and complete full-stack applications.</p>
+                        <ul class="service-list">
+                            <li><i class="bi bi-patch-check"></i> RESTful API Design</li>
+                            <li><i class="bi bi-patch-check"></i> Database Architecture</li>
+                            <li><i class="bi bi-patch-check"></i> Secure Authentication</li>
+                            <li><i class="bi bi-patch-check"></i> Cloud Integrations</li>
+                        </ul>
                     </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="bi bi-phone"></i></div>
-                        <h3>Responsive UI/UX</h3>
-                        <p>Clean and mobile-friendly experiences designed to look great on desktop, tablet, and
-                            smartphone while keeping usability high.</p>
+
+                    <!-- Service 2: Responsive UI/UX -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon-box">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h3 data-i18n="services.s2Title">Responsive UI/UX</h3>
+                        <p data-i18n="services.s2Desc">Clean and mobile-friendly experiences designed to look great on
+                            desktop, tablet, and smartphone while keeping usability high.</p>
+                        <ul class="service-list">
+                            <li><i class="bi bi-patch-check"></i> Mobile-First Design</li>
+                            <li><i class="bi bi-patch-check"></i> Interactive Prototypes</li>
+                            <li><i class="bi bi-patch-check"></i> Fluid CSS Layouts</li>
+                            <li><i class="bi bi-patch-check"></i> Custom Web Animations</li>
+                        </ul>
                     </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="bi bi-graph-up-arrow"></i></div>
-                        <h3>SEO & Performance</h3>
-                        <p>Semantic markup, optimized content structure, fast loading pages, and search-friendly
-                            architecture to improve visibility in Google.</p>
+
+                    <!-- Service 3: SEO & Performance -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon-box">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h3 data-i18n="services.s3Title">SEO & Performance</h3>
+                        <p data-i18n="services.s3Desc">Semantic markup, optimized content structure, fast loading pages,
+                            and search-friendly architecture to improve visibility in Google.</p>
+                        <ul class="service-list">
+                            <li><i class="bi bi-patch-check"></i> Semantic HTML5</li>
+                            <li><i class="bi bi-patch-check"></i> Core Web Vitals</li>
+                            <li><i class="bi bi-patch-check"></i> Page Speed Optimization</li>
+                            <li><i class="bi bi-patch-check"></i> Search Engine Indexing</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -847,21 +961,22 @@
                     life.</p>
                 <div class="contact-wrapper">
                     <div class="contact-info fade-in">
-                        <a href="mailto:lazarojosemenesesperez@gmail.com" class="contact-card">
+                        <a href="mailto:lazarojosemenesesperez@gmail.com" class="contact-card card-email">
                             <i class="bi bi-envelope"></i>
                             <div>
                                 <h4 data-i18n="contact.email">Email</h4>
                                 <span>lazarojosemenesesperez@gmail.com</span>
                             </div>
                         </a>
-                        <a href="https://github.com/LazaroMeneses" target="_blank" rel="noopener" class="contact-card">
+                        <a href="https://github.com/LazaroMeneses" target="_blank" rel="noopener"
+                            class="contact-card card-github">
                             <i class="bi bi-github"></i>
                             <div>
                                 <h4>GitHub</h4>
                                 <span>github.com/LazaroMeneses</span>
                             </div>
                         </a>
-                        <a href="tel:+584142011437" class="contact-card">
+                        <a href="tel:+584142011437" class="contact-card card-phone">
                             <i class="bi bi-telephone"></i>
                             <div>
                                 <h4 data-i18n="contact.phone">Phone</h4>
@@ -869,30 +984,80 @@
                             </div>
                         </a>
                     </div>
-                    <form class="contact-form fade-in" id="contact-form"
-                        action="https://formsubmit.co/lazarojosemenesesperez@gmail.com" method="POST"
-                        data-formsubmit="true">
-                        <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://lazaromeneses.com/?sent=true">
-                        <div class="form-group">
-                            <input type="text" id="form-name" name="name"
-                                data-i18n-placeholder="contact.namePlaceholder" placeholder="Your Name" required>
+                    <form class="contact-form fade-in" id="contact-form" novalidate>
+
+                        <!-- Form Steps Progress Indicator -->
+                        <div class="form-steps-indicator">
+                            <!-- Background Track Line -->
+                            <div class="step-progress-line">
+                                <div class="step-line-fill" id="step-line-fill"></div>
+                            </div>
+
+                            <div class="step-node active" data-step="1" id="step-node-1">
+                                <span class="step-number">1</span>
+                                <span class="step-label" data-i18n="contact.stepName">Name</span>
+                            </div>
+                            <div class="step-node" data-step="2" id="step-node-2">
+                                <span class="step-number">2</span>
+                                <span class="step-label" data-i18n="contact.stepEmail">Email</span>
+                            </div>
+                            <div class="step-node" data-step="3" id="step-node-3">
+                                <span class="step-number">3</span>
+                                <span class="step-label" data-i18n="contact.stepMsg">Message</span>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="form-email" name="email"
-                                data-i18n-placeholder="contact.emailPlaceholder" placeholder="Your Email" required>
+
+                        <!-- Step 1 Content -->
+                        <div class="form-step-pane active" id="step-pane-1">
+                            <h3 class="step-pane-title" data-i18n="contact.step1Title">Let's start! What is your name?
+                            </h3>
+                            <div class="form-group floating-group">
+                                <input type="text" id="form-name" name="name" required placeholder=" ">
+                                <label for="form-name" data-i18n="contact.namePlaceholder">Your Name</label>
+                            </div>
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-primary btn-next" data-next-step="2">
+                                    <span data-i18n="contact.next">Next</span> <i class="bi bi-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <textarea id="form-message" name="message" rows="5"
-                                data-i18n-placeholder="contact.messagePlaceholder" placeholder="Your Message"
-                                required></textarea>
+
+                        <!-- Step 2 Content -->
+                        <div class="form-step-pane" id="step-pane-2">
+                            <h3 class="step-pane-title" data-i18n="contact.step2Title">Awesome! Where can we reply back?
+                            </h3>
+                            <div class="form-group floating-group">
+                                <input type="email" id="form-email" name="email" required placeholder=" ">
+                                <label for="form-email" data-i18n="contact.emailPlaceholder">Your Email</label>
+                            </div>
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-outline btn-prev" data-prev-step="1">
+                                    <i class="bi bi-arrow-left"></i> <span data-i18n="contact.back">Back</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-next" data-next-step="3">
+                                    <span data-i18n="contact.next">Next</span> <i class="bi bi-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
-                        <p class="form-message" id="form-status" aria-live="polite"></p>
-                        <button type="submit" class="btn btn-primary btn-submit" id="form-submit">
-                            <i class="bi bi-send"></i> <span data-i18n="contact.sendMessage">Send Message</span>
-                        </button>
+
+                        <!-- Step 3 Content -->
+                        <div class="form-step-pane" id="step-pane-3">
+                            <h3 class="step-pane-title" data-i18n="contact.step3Title">Almost there! Write down your
+                                message or idea.</h3>
+                            <div class="form-group floating-group">
+                                <textarea id="form-message" name="message" required placeholder=" "></textarea>
+                                <label for="form-message" data-i18n="contact.messagePlaceholder">Your Message</label>
+                            </div>
+                            <p class="form-message" id="form-status" aria-live="polite"></p>
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-outline btn-prev" data-prev-step="2">
+                                    <i class="bi bi-arrow-left"></i> <span data-i18n="contact.back">Back</span>
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-submit" id="form-submit">
+                                    <i class="bi bi-send"></i> <span data-i18n="contact.sendMessage">Send Message</span>
+                                </button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

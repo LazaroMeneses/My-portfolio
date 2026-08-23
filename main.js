@@ -100,9 +100,27 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             about: {
                 title: "About Me",
-                para1: "Soy Lázaro Meneses, Full-Stack Developer apasionado por crear soluciones digitales modernas y funcionales. Mi experiencia abarca desde el desarrollo de interfaces y experiencias de usuario hasta la creación de APIs, servidores y bases de datos.",
-                para2: "Trabajo principalmente con JavaScript, React, Node.js, Express, MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para transformar ideas en productos digitales reales.",
-                para3: "What motivates me most about programming is understanding the language of the future. I'm fascinated by how, through code, we can communicate with computers and bring ideas to life. What began as curiosity has become a long-term passion for building useful products."
+                para1: "I am Lázaro Meneses, a passionate Full-Stack Developer dedicated to creating modern, functional, and user-centric digital solutions. My expertise ranges from developing interfaces and user experiences to building APIs, servers, and database architectures.",
+                para2: "I work primarily with JavaScript, React.js, Node.js, Express, MongoDB, and Firebase, blending engineering, creativity, and constant learning to transform ideas into high-quality digital products.",
+                para3: "What motivates me most about programming is understanding the language of the future. I am fascinated by how, through code, we can communicate with machines and bring ideas to life. What began as curiosity has become a long-term passion for building useful, scalable products.",
+                downloadCv: "Download CV",
+                collab: "Let's Collaborate",
+                tabValues: "Core Values",
+                tabJourney: "My Journey",
+                val1Title: "Clean Code",
+                val1Desc: "Writing readable, maintainable, and structured code following industry standards.",
+                val2Title: "Performance",
+                val2Desc: "Optimizing loading speeds, logic cycles, and API response times for fast products.",
+                val3Title: "UX / UI Focus",
+                val3Desc: "Creating fully responsive interfaces that look polished and feel intuitive on any device.",
+                val4Title: "Adaptability",
+                val4Desc: "Constantly learning and adapting to new web standards and libraries to solve problems.",
+                j1Title: "The Spark",
+                j1Desc: "Started building landing pages and responsive layouts, discovering deep passion for coding and logic.",
+                j2Title: "Full-Stack Scale",
+                j2Desc: "Mastered React.js and backend integrations (Node, Express, MongoDB) to build complete applications.",
+                j3Title: "High-End Products",
+                j3Desc: "Creating advanced portfolios, scalable databases, and rich custom animations for top-tier websites."
             },
             skills: {
                 title: "Skills",
@@ -110,6 +128,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 backend: "Backend",
                 devTools: "Dev Tools",
                 design: "Design"
+            },
+            services: {
+                title: "Services & Expertise",
+                s1Title: "Back-End Development",
+                s1Desc: "Node.js, Express, MongoDB, and Firebase solutions for APIs, servers, databases, and complete full-stack applications.",
+                s2Title: "Responsive UI/UX",
+                s2Desc: "Clean and mobile-friendly experiences designed to look great on desktop, tablet, and smartphone while keeping usability high.",
+                s3Title: "SEO & Performance",
+                s3Desc: "Semantic markup, optimized content structure, fast loading pages, and search-friendly architecture to improve visibility in Google."
             },
             projects: {
                 title: "Projects",
@@ -141,9 +168,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 namePlaceholder: "Your Name",
                 emailPlaceholder: "Your Email",
                 messagePlaceholder: "Your Message",
-                successMessage: "Message sent successfully. Thank you!",
+                successMessage: "Email client opened! Please send the draft.",
                 errorMessage: "Please complete all fields before sending.",
-                submitError: "Something went wrong. Please try again later."
+                submitError: "Something went wrong. Please try again later.",
+                stepName: "Name",
+                stepEmail: "Email",
+                stepMsg: "Message",
+                step1Title: "Let's start! What is your name?",
+                step2Title: "Awesome! Where can we reply back?",
+                step3Title: "Almost there! Write down your message or idea.",
+                next: "Next",
+                back: "Back"
             },
             preloader: {
                 welcome: "Welcome"
@@ -170,7 +205,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 title: "Sobre Mí",
                 para1: "Soy Lázaro Meneses, Full-Stack Developer apasionado por crear soluciones digitales modernas y funcionales. Mi experiencia abarca desde el desarrollo de interfaces y experiencias de usuario hasta la creación de APIs, servidores y bases de datos.",
                 para2: "Trabajo principalmente con JavaScript, React, Node.js, Express, MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para transformar ideas en productos digitales reales.",
-                para3: "Lo que más me motiva sobre la programación es entender el lenguaje del futuro. Me fascina cómo, a través del código, podemos comunicarnos con las computadoras y dar vida a nuestras ideas. Lo que comenzó como curiosidad se ha convertido en una pasión a largo plazo por construir productos útiles."
+                para3: "Lo que más me motiva sobre la programación es entender el lenguaje del futuro. Me fascina cómo, a través del código, podemos comunicarnos con las computadoras y dar vida a nuestras ideas. Lo que comenzó como curiosidad se ha convertido en una pasión a largo plazo por construir productos útiles.",
+                downloadCv: "Descargar CV",
+                collab: "Colaboremos",
+                tabValues: "Valores Clave",
+                tabJourney: "Mi Trayectoria",
+                val1Title: "Código Limpio",
+                val1Desc: "Escribir código legible, mantenible y estructurado siguiendo los estándares de la industria.",
+                val2Title: "Rendimiento",
+                val2Desc: "Optimizar la velocidad de carga, lógica de ejecución y llamadas a APIs para un rendimiento veloz.",
+                val3Title: "Enfoque UI/UX",
+                val3Desc: "Diseñar interfaces responsivas, atractivas e intuitivas que se adapten a cualquier pantalla.",
+                val4Title: "Adaptabilidad",
+                val4Desc: "Aprendizaje continuo para dominar nuevas tecnologías y resolver problemas de forma óptima.",
+                j1Title: "La Chispa",
+                j1Desc: "Comencé a crear maquetaciones responsivas descubriendo una fuerte pasión por el desarrollo web.",
+                j2Title: "Escala Full-Stack",
+                j2Desc: "Enfoque en React.js y el backend (Node, Express, MongoDB) para el desarrollo de aplicaciones completas.",
+                j3Title: "Soluciones Avanzadas",
+                j3Desc: "Desarrollo de portafolios, arquitecturas de bases de datos y animaciones premium a medida."
             },
             skills: {
                 title: "Habilidades",
@@ -178,6 +231,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 backend: "Backend",
                 devTools: "Herramientas",
                 design: "Diseño"
+            },
+            services: {
+                title: "Servicios y Especialidades",
+                s1Title: "Desarrollo Back-End",
+                s1Desc: "Soluciones con Node.js, Express, MongoDB y Firebase para la creación de APIs, servidores, bases de datos y aplicaciones robustas.",
+                s2Title: "UI/UX Responsivo",
+                s2Desc: "Experiencias optimizadas para dispositivos móviles diseñadas para verse increíbles en computadoras, tabletas y celulares.",
+                s3Title: "SEO y Rendimiento",
+                s3Desc: "Estructuración semántica, optimización de velocidad de carga y configuración SEO para mejorar tu posicionamiento en Google."
             },
             projects: {
                 title: "Proyectos",
@@ -209,9 +271,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 namePlaceholder: "Tu Nombre",
                 emailPlaceholder: "Tu Email",
                 messagePlaceholder: "Tu Mensaje",
-                successMessage: "Mensaje enviado con éxito. ¡Gracias!",
+                successMessage: "¡Bandeja de correo abierta! Envía el borrador creado.",
                 errorMessage: "Por favor completa todos los campos antes de enviar.",
-                submitError: "Algo salió mal. Intenta de nuevo más tarde."
+                submitError: "Algo salió mal. Intenta de nuevo más tarde.",
+                stepName: "Nombre",
+                stepEmail: "Correo",
+                stepMsg: "Mensaje",
+                step1Title: "¡Comencemos! ¿Cómo te llamas?",
+                step2Title: "¡Genial! ¿A qué correo te respondemos?",
+                step3Title: "¡Ya casi! Cuéntanos tu mensaje o idea.",
+                next: "Siguiente",
+                back: "Atrás"
             },
             preloader: {
                 welcome: "¡Bienvenido!"
@@ -771,24 +841,112 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ===================
-       11. CONTACT FORM HANDLER
+       11. CONTACT FORM HANDLER & MULTI-STEP NAVIGATION
        =================== */
     if (contactForm) {
+        const stepPanes = document.querySelectorAll(".form-step-pane");
+        const stepNodes = document.querySelectorAll(".step-node");
+        const stepLineFill = document.getElementById("step-line-fill");
+        const nextButtons = document.querySelectorAll(".btn-next");
+        const prevButtons = document.querySelectorAll(".btn-prev");
+
+        // Helper function to update step visual indicator states
+        function goToStep(stepNum) {
+            // Update panes
+            stepPanes.forEach(pane => pane.classList.remove("active"));
+            const targetPane = document.getElementById(`step-pane-${stepNum}`);
+            if (targetPane) targetPane.classList.add("active");
+
+            // Update Nodes
+            stepNodes.forEach(node => {
+                const nodeStep = parseInt(node.getAttribute("data-step"));
+                if (nodeStep < stepNum) {
+                    node.classList.add("completed");
+                    node.classList.remove("active");
+                } else if (nodeStep === stepNum) {
+                    node.classList.add("active");
+                    node.classList.remove("completed");
+                } else {
+                    node.classList.remove("active", "completed");
+                }
+            });
+
+            // Update connector line width
+            if (stepLineFill) {
+                const fillPct = ((stepNum - 1) / (stepNodes.length - 1)) * 100;
+                stepLineFill.style.width = `${fillPct}%`;
+            }
+        }
+
+        // Validate current step fields
+        function validateStep(stepNum) {
+            if (stepNum === 1) {
+                const nameInput = document.getElementById("form-name");
+                if (!nameInput.value.trim()) {
+                    nameInput.reportValidity();
+                    return false;
+                }
+            } else if (stepNum === 2) {
+                const emailInput = document.getElementById("form-email");
+                if (!emailInput.value.trim() || !emailInput.checkValidity()) {
+                    emailInput.reportValidity();
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Next Buttons click listener
+        nextButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const currentStepPane = btn.closest(".form-step-pane");
+                if (currentStepPane) {
+                    const currentStepNum = parseInt(currentStepPane.id.replace("step-pane-", ""));
+                    const nextStepNum = parseInt(btn.getAttribute("data-next-step"));
+                    
+                    if (validateStep(currentStepNum)) {
+                        goToStep(nextStepNum);
+                    }
+                }
+            });
+        });
+
+        // Prev Buttons click listener
+        prevButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const prevStepNum = parseInt(btn.getAttribute("data-prev-step"));
+                goToStep(prevStepNum);
+            });
+        });
+
+        // Handle Submission
         contactForm.addEventListener("submit", async (e) => {
             e.preventDefault();
 
-            const name = document.getElementById("form-name").value.trim();
-            const email = document.getElementById("form-email").value.trim();
-            const message = document.getElementById("form-message").value.trim();
+            const nameInput = document.getElementById("form-name");
+            const emailInput = document.getElementById("form-email");
+            const messageInput = document.getElementById("form-message");
             const submitBtn = document.getElementById("form-submit");
 
-            if (!name || !email || !message) {
-                if (formStatusElement) {
-                    formStatusElement.textContent = translations[currentLang].contact.errorMessage;
-                    formStatusElement.classList.add("error");
-                }
+            // Final step checks for validity
+            if (!nameInput.value.trim()) {
+                goToStep(1);
+                nameInput.reportValidity();
                 return;
             }
+            if (!emailInput.value.trim() || !emailInput.checkValidity()) {
+                goToStep(2);
+                emailInput.reportValidity();
+                return;
+            }
+            if (!messageInput.value.trim()) {
+                messageInput.reportValidity();
+                return;
+            }
+
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const message = messageInput.value.trim();
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
@@ -798,25 +956,27 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             try {
-                const response = await fetch(contactForm.action, {
-                    method: "POST",
-                    body: new FormData(contactForm),
-                    headers: {
-                        Accept: "application/json"
-                    }
-                });
+                const emailRecipient = "lazarojosemenesesperez@gmail.com";
+                const subjectText = currentLang === "en" 
+                    ? `New Portfolio Message from ${name}` 
+                    : `Nuevo mensaje del Portafolio de ${name}`;
+                
+                const bodyText = currentLang === "en"
+                    ? `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+                    : `Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`;
+                
+                const mailtoUrl = `mailto:${emailRecipient}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+                
+                window.location.href = mailtoUrl;
 
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
-
-                submitBtn.innerHTML = '<i class="bi bi-check-lg"></i> Message Sent!';
+                submitBtn.innerHTML = '<i class="bi bi-check-lg"></i> Opened!';
                 contactForm.classList.add("success");
                 if (formStatusElement) {
                     formStatusElement.textContent = translations[currentLang].contact.successMessage;
                     formStatusElement.classList.add("success");
                 }
 
+                // Reset and go back to step 1
                 setTimeout(() => {
                     contactForm.reset();
                     submitBtn.disabled = false;
@@ -826,6 +986,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         formStatusElement.textContent = "";
                         formStatusElement.classList.remove("success");
                     }
+                    goToStep(1);
                 }, 3000);
             } catch (error) {
                 submitBtn.disabled = false;
@@ -916,6 +1077,31 @@ document.addEventListener("DOMContentLoaded", () => {
             // Toggle groups active state
             skillsGroups.forEach(group => {
                 if (group.id === `tab-${tabId}`) {
+                    group.classList.add("active");
+                } else {
+                    group.classList.remove("active");
+                }
+            });
+        });
+    });
+
+    /* ===================
+       15. ABOUT ME TABS HANDLER
+       =================== */
+    const aboutTabButtons = document.querySelectorAll(".about-tab-btn");
+    const aboutGroups = document.querySelectorAll(".about-group");
+
+    aboutTabButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const tabId = btn.getAttribute("data-about-tab");
+
+            // Toggle buttons active state
+            aboutTabButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            // Toggle groups active state
+            aboutGroups.forEach(group => {
+                if (group.id === `about-tab-${tabId}`) {
                     group.classList.add("active");
                 } else {
                     group.classList.remove("active");
