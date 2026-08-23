@@ -782,6 +782,10 @@ header.scrolled {
     background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
 }
 
+.gradient-vox {
+    background: linear-gradient(135deg, #1e2328 0%, #b8975a 100%);
+}
+
 .project-info {
     padding: 1.5rem;
     display: flex;

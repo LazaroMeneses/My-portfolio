@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 challenges: "Challenges & Development",
                 technologies: "Technologies Used",
                 liveDemo: "Live Demo",
+                livePage: "Live Website",
                 downloadApk: "Download APK"
             },
             contact: {
@@ -109,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 challenges: "Desafíos y Desarrollo",
                 technologies: "Tecnologías Utilizadas",
                 liveDemo: "Ver Demo en Vivo",
+                livePage: "Ver Página en Vivo",
                 downloadApk: "Descargar APK"
             },
             contact: {
@@ -130,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ===================
        0. LANGUAGE TOGGLE
        =================== */
-    let currentLang = localStorage.getItem("portfolio-lang") || "en";
+    let currentLang = localStorage.getItem("portfolio-lang") || "es";
 
     function applyLanguage(lang) {
         // Handle text content translations
@@ -266,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ===================
        4. SCROLL TO TOP
        =================== */
-    if(scrollTopBtn) scrollTopBtn.addEventListener("click", () => {
+    if(scrollTopBtn) if(scrollTopBtn) if(scrollTopBtn) scrollTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
@@ -315,6 +317,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const pauseBetween = 2000;
 
     function typeEffect() {
+        if (!typedRole) return;
+        if (!typedRole) return;
         if (!typedRole) return;
         const currentRole = roles[roleIndex];
 
@@ -375,7 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ===================
        8. CONTACT FORM HANDLER
        =================== */
-    if(contactForm) contactForm.addEventListener("submit", async (e) => {
+    if(contactForm) if(contactForm) if(contactForm) contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         const name = document.getElementById("form-name").value.trim();

@@ -7,8 +7,8 @@ mainJs = mainJs.replace(/function typeEffect\(\) \{/g, 'function typeEffect() {\
 mainJs = mainJs.replace(/contactForm\.addEventListener/g, 'if(contactForm) contactForm.addEventListener');
 
 // Add translations for project pages
-const enProjects = `projects: {\n                title: "Projects",\n                purpose: "Why was it made? (Purpose)",\n                challenges: "Challenges & Development",\n                technologies: "Technologies Used",\n                liveDemo: "Live Demo",\n                downloadApk: "Download APK"\n            }`;
-const esProjects = `projects: {\n                title: "Proyectos",\n                purpose: "¿Por qué se hizo? (El Propósito)",\n                challenges: "Desafíos y Desarrollo",\n                technologies: "Tecnologías Utilizadas",\n                liveDemo: "Ver Demo en Vivo",\n                downloadApk: "Descargar APK"\n            }`;
+const enProjects = `projects: {\n                title: "Projects",\n                purpose: "Why was it made? (Purpose)",\n                challenges: "Challenges & Development",\n                technologies: "Technologies Used",\n                liveDemo: "Live Demo",\n                livePage: "Live Website",\n                downloadApk: "Download APK"\n            }`;
+const esProjects = `projects: {\n                title: "Proyectos",\n                purpose: "¿Por qué se hizo? (El Propósito)",\n                challenges: "Desafíos y Desarrollo",\n                technologies: "Tecnologías Utilizadas",\n                liveDemo: "Ver Demo en Vivo",\n                livePage: "Ver Página en Vivo",\n                downloadApk: "Descargar APK"\n            }`;
 mainJs = mainJs.replace(/projects:\s*\{\s*title:\s*"Projects"\s*\}/g, enProjects);
 mainJs = mainJs.replace(/projects:\s*\{\s*title:\s*"Proyectos"\s*\}/g, esProjects);
 
@@ -16,6 +16,7 @@ fs.writeFileSync('main.js', mainJs);
 
 // 2. Fix HTML files
 const files = [
+    'pages/vox.html',
     'pages/shineup.html',
     'pages/eunoia.html',
     'pages/elements-finder.html',
