@@ -18,49 +18,60 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section[id]");
 
     /* ===================
-       0. PRELOADER ANIMATION
+       0. PRELOADER ANIMATION (Synchronized Progress Line with Welcome Transition)
        =================== */
     const preloader = document.getElementById("preloader");
     const letters = document.querySelectorAll(".loader-brand-text .letter");
-    const spark = document.querySelector(".loader-spark");
+    const loaderBar = document.querySelector(".loader-bar");
+    const logoWrapper = document.querySelector(".loader-logo-wrapper");
+    const welcomeText = document.getElementById("loader-welcome");
     
     document.body.classList.add("preloader-active");
 
-    if (preloader && letters.length > 0 && spark) {
+    if (preloader && letters.length > 0 && loaderBar && logoWrapper && welcomeText) {
         let currentLetterIdx = 0;
         
-        // Short timeout to allow initial render
+        // Initial setup after a short delay
         setTimeout(() => {
-            spark.style.opacity = "1";
-            
             const revealInterval = setInterval(() => {
                 if (currentLetterIdx < letters.length) {
                     const letter = letters[currentLetterIdx];
                     letter.classList.add("reveal");
                     
-                    // Move spark to the right of the current letter
-                    const offsetLeft = letter.offsetLeft + letter.offsetWidth;
-                    spark.style.left = `${offsetLeft}px`;
+                    // Synchronize progress line width with the count of letters written
+                    const progressPercentage = ((currentLetterIdx + 1) / letters.length) * 100;
+                    loaderBar.style.width = `${progressPercentage}%`;
                     
                     currentLetterIdx++;
                 } else {
                     clearInterval(revealInterval);
                     
-                    // Fade out spark
-                    spark.style.opacity = "0";
-                    spark.style.transform = "translate(-50%, -50%) scale(0)";
-                    
-                    // Dismiss preloader
+                    // 1. Wait a moment at 100% load
                     setTimeout(() => {
-                        preloader.classList.add("fade-out");
-                        document.body.classList.remove("preloader-active");
+                        // 2. Fade out logo, name and progress line
+                        logoWrapper.classList.add("fade-out-content");
+                        
+                        // 3. Set translated welcome message
+                        const preloaderLang = localStorage.getItem("portfolio-lang") || "es";
+                        welcomeText.textContent = preloaderLang === "en" ? "Welcome" : "¡Bienvenido!";
+                        
+                        // 4. Fade in Welcome text
                         setTimeout(() => {
-                            preloader.style.display = "none";
-                        }, 600);
-                    }, 600);
+                            welcomeText.classList.add("reveal");
+                            
+                            // 5. Dismiss preloader after reading the message
+                            setTimeout(() => {
+                                preloader.classList.add("fade-out");
+                                document.body.classList.remove("preloader-active");
+                                setTimeout(() => {
+                                    preloader.style.display = "none";
+                                }, 600);
+                            }, 1200);
+                        }, 200);
+                    }, 400);
                 }
-            }, 100); // writing speed (Disney spark trail tempo)
-        }, 300);
+            }, 80); // fast typing speed
+        }, 400);
     } else {
         document.body.classList.remove("preloader-active");
         if (preloader) preloader.style.display = "none";
@@ -133,6 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 successMessage: "Message sent successfully. Thank you!",
                 errorMessage: "Please complete all fields before sending.",
                 submitError: "Something went wrong. Please try again later."
+            },
+            preloader: {
+                welcome: "Welcome"
             }
         },
         es: {
@@ -198,6 +212,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 successMessage: "Mensaje enviado con éxito. ¡Gracias!",
                 errorMessage: "Por favor completa todos los campos antes de enviar.",
                 submitError: "Algo salió mal. Intenta de nuevo más tarde."
+            },
+            preloader: {
+                welcome: "¡Bienvenido!"
             }
         }
     };
