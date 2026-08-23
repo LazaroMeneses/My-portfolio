@@ -91,6 +91,36 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo-wrapper">
+                <div class="loader-logo">LM</div>
+                <div class="loader-brand-text" id="loader-brand-text">
+                    <span class="letter">L</span>
+                    <span class="letter">a</span>
+                    <span class="letter">z</span>
+                    <span class="letter">a</span>
+                    <span class="letter">r</span>
+                    <span class="letter">o</span>
+                    <span class="letter">&nbsp;</span>
+                    <span class="letter">M</span>
+                    <span class="letter">e</span>
+                    <span class="letter">n</span>
+                    <span class="letter">e</span>
+                    <span class="letter">s</span>
+                    <span class="letter">e</span>
+                    <span class="letter">s</span>
+                </div>
+                <!-- The magical spark that writes the letters -->
+                <div class="loader-spark"><i class="bi bi-star-fill"></i></div>
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header id="header">
         <a href="#hero" class="nav-brand">LM</a>
@@ -128,7 +158,9 @@
                     <p class="hero-greeting fade-in" data-i18n="hero.greeting">Hello, I'm</p>
                     <h1 class="fade-in">Lazaro <span class="gradient-text">Meneses</span></h1>
                     <p class="role fade-in"><span id="typed-role"></span><span class="typing-cursor">|</span></p>
-                    <p class="hero-description fade-in" data-i18n="hero.description">I build robust and scalable full-stack web applications, connecting fast, intuitive frontends with secure APIs and databases.</p>
+                    <p class="hero-description fade-in" data-i18n="hero.description">I build robust and scalable
+                        full-stack web applications, connecting fast, intuitive frontends with secure APIs and
+                        databases.</p>
                     <div class="hero-cta fade-in">
                         <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects"><i
                                 class="bi bi-grid"></i> View Projects</a>
@@ -185,45 +217,322 @@
         <section class="skills" id="skills">
             <div class="container">
                 <h2 class="section-title fade-in" data-i18n="skills.title">Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="bi bi-code-slash"></i></div>
-                        <h3 data-i18n="skills.frontend">Frontend</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React.js</span>
+
+                <!-- Skills Category Tabs -->
+                <div class="skills-tabs fade-in">
+                    <button class="skills-tab-btn active" data-tab="frontend">
+                        <i class="bi bi-code-slash"></i> Frontend
+                    </button>
+                    <button class="skills-tab-btn" data-tab="backend">
+                        <i class="bi bi-server"></i> Backend
+                    </button>
+                    <button class="skills-tab-btn" data-tab="tools-design">
+                        <i class="bi bi-tools"></i> Tools & Design
+                    </button>
+                </div>
+
+                <!-- Skills Dashboard Grid -->
+                <div class="skills-dashboard fade-in">
+                    <!-- Frontend Group -->
+                    <div class="skills-group active" id="tab-frontend">
+                        <div class="skills-grid">
+                            <!-- Skill Card: HTML5 -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-filetype-html"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>HTML5</h3>
+                                        <span class="skill-experience">3+ Years Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">6 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">95%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Card: CSS3 -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-filetype-css"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>CSS3</h3>
+                                        <span class="skill-experience">3+ Years Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">6 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">90%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Card: JavaScript -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-filetype-js"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>JavaScript</h3>
+                                        <span class="skill-experience">3+ Years Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">6 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">90%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Card: React.js -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-code-square"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>React.js</h3>
+                                        <span class="skill-experience">1.5+ Years Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">4 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">85%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="bi bi-server"></i></div>
-                        <h3>Backend</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Express</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">Firebase</span>
+
+                    <!-- Backend Group -->
+                    <div class="skills-group" id="tab-backend">
+                        <div class="skills-grid">
+                            <!-- Node.js -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-server"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>Node.js</h3>
+                                        <span class="skill-experience">1.5+ Years Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">3 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">80%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Express -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-cpu"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>Express</h3>
+                                        <span class="skill-experience">1.5+ Years Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">3 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">80%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- MongoDB -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-database"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>MongoDB</h3>
+                                        <span class="skill-experience">1+ Year Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">3 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">75%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Firebase -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-cloud-check"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>Firebase</h3>
+                                        <span class="skill-experience">1+ Year Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">2 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">75%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="bi bi-tools"></i></div>
-                        <h3 data-i18n="skills.devTools">Dev Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">GitHub</span>
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">Cordova</span>
-                            <span class="skill-tag">Capacitor</span>
-                        </div>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="bi bi-palette"></i></div>
-                        <h3 data-i18n="skills.design">Design</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Responsive Design</span>
-                            <span class="skill-tag">UI / UX</span>
-                            <span class="skill-tag">Web Semantics</span>
+
+                    <!-- Tools & Design Group -->
+                    <div class="skills-group" id="tab-tools-design">
+                        <div class="skills-grid">
+                            <!-- Git/GitHub -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-git"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>Git & GitHub</h3>
+                                        <span class="skill-experience">3+ Years Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">8 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">85%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Dev -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-phone-vibrate"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>Mobile Dev</h3>
+                                        <span class="skill-experience">1+ Year Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">2 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">70%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- UI/UX Design -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-palette"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>UI/UX Design</h3>
+                                        <span class="skill-experience">2+ Years Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">6 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">80%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Web Semantics / SEO -->
+                            <div class="skill-dash-card">
+                                <div class="skill-card-header">
+                                    <div class="skill-badge-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                    <div class="skill-title-block">
+                                        <h3>SEO & Semantics</h3>
+                                        <span class="skill-experience">2+ Years Exp</span>
+                                    </div>
+                                </div>
+                                <div class="skill-stats-row">
+                                    <span class="stat-lbl">Projects:</span>
+                                    <span class="stat-val">6 Completed</span>
+                                </div>
+                                <div class="skill-progress-block">
+                                    <div class="progress-lbl-row">
+                                        <span>Proficiency</span>
+                                        <span class="progress-pct">85%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="--progress-val: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -259,138 +568,270 @@
 
         <!-- Projects Section -->
         <section class="projects" id="projects">
+            <!-- Section Dividers for Skew Effect -->
+            <div class="projects-skew-top"></div>
+
             <div class="container">
                 <h2 class="section-title fade-in" data-i18n="projects.title">Projects</h2>
-                <div class="projects-grid">
-                    <!-- Project: VOX Business Developer -->
-                    <div class="project-card fade-in">
-                        <div class="project-preview gradient-vox">
-                            <i class="bi bi-briefcase project-preview-icon"></i>
-                            <span class="project-badge">HTML / CSS / JS</span>
-                        </div>
-                        <div class="project-info">
-                            <h3>VOX Business Developer</h3>
-                            <p class="project-period"><i class="bi bi-calendar3"></i> Aug 2026</p>
-                            <p class="project-desc">A premium corporate web portal developed for a business development
-                                agency. Features advanced smooth scrolling, dynamic carousels, and interactive
-                                multi-step contact forms.</p>
-                            <div class="project-links">
-                                <a href="pages/vox.html" class="project-btn details-btn"><i
-                                        class="bi bi-info-circle"></i> Details</a>
+
+                <!-- Project Filters -->
+                <div class="project-filters fade-in">
+                    <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">All</button>
+                    <button class="filter-btn" data-filter="react" data-i18n="projects.filterReact">React.js</button>
+                    <button class="filter-btn" data-filter="vanilla" data-i18n="projects.filterVanilla">HTML / CSS /
+                        JS</button>
+                </div>
+
+                <div class="projects-split-container">
+                    <!-- Left Side Sticky Showcase -->
+                    <div class="projects-showcase-sidebar">
+                        <div class="showcase-sticky">
+                            <div class="device-mockup">
+                                <div class="device-reflection"></div>
+                                <div class="device-screen">
+                                    <div class="showcase-carousel" id="showcase-carousel">
+                                        <div class="showcase-slide active gradient-vox" data-slide="vox">
+                                            <div class="slide-mockup-inner">
+                                                <i class="bi bi-briefcase slide-icon"></i>
+                                                <h4>VOX Business Developer</h4>
+                                                <p>Premium Corporate Portal</p>
+                                            </div>
+                                        </div>
+                                        <div class="showcase-slide gradient-purple" data-slide="eunoia">
+                                            <div class="slide-mockup-inner">
+                                                <i class="bi bi-chat-quote slide-icon"></i>
+                                                <h4>Eunoia-App</h4>
+                                                <p>Philosophical Quote App</p>
+                                            </div>
+                                        </div>
+                                        <div class="showcase-slide gradient-pink" data-slide="shineup">
+                                            <div class="slide-mockup-inner">
+                                                <i class="bi bi-sun slide-icon"></i>
+                                                <h4>Shine Up</h4>
+                                                <p>Motivational Affirmations</p>
+                                            </div>
+                                        </div>
+                                        <div class="showcase-slide gradient-blue" data-slide="elements">
+                                            <div class="slide-mockup-inner">
+                                                <i class="bi bi-search slide-icon"></i>
+                                                <h4>Elements Finder</h4>
+                                                <p>Educational Chemistry Tool</p>
+                                            </div>
+                                        </div>
+                                        <div class="showcase-slide gradient-green" data-slide="notes">
+                                            <div class="slide-mockup-inner">
+                                                <i class="bi bi-journal-text slide-icon"></i>
+                                                <h4>Notes Blog</h4>
+                                                <p>Interactive Notes Board</p>
+                                            </div>
+                                        </div>
+                                        <div class="showcase-slide gradient-orange" data-slide="landing">
+                                            <div class="slide-mockup-inner">
+                                                <i class="bi bi-window-desktop slide-icon"></i>
+                                                <h4>Landing Page</h4>
+                                                <p>SEO & Responsive Showcase</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="device-home-button"></div>
                             </div>
                         </div>
                     </div>
-                    <!-- Project 1 -->
-                    <div class="project-card fade-in">
-                        <div class="project-preview gradient-purple">
-                            <i class="bi bi-chat-quote project-preview-icon"></i>
-                            <span class="project-badge">React.js</span>
-                        </div>
-                        <div class="project-info">
-                            <h3>Eunoia-App</h3>
-                            <p class="project-period"><i class="bi bi-calendar3"></i> Apr 2026 – May 2026</p>
-                            <p class="project-desc">A philosophical quotes application built with React.js. Later used
-                                Capacitor to generate an APK file.</p>
-                            <div class="project-links">
-                                <a href="pages/eunoia.html" class="project-btn details-btn"><i
-                                        class="bi bi-info-circle"></i> Details</a>
+
+                    <!-- Right Side Timeline Content -->
+                    <div class="projects-timeline-column">
+                        <!-- Featured Project (VOX) -->
+                        <div class="featured-project-container fade-in" data-category="vanilla">
+                            <div class="project-card featured-card">
+                                <div class="project-preview gradient-vox">
+                                    <i class="bi bi-briefcase project-preview-icon"></i>
+                                    <span class="project-badge">HTML / CSS / JS</span>
+                                </div>
+                                <div class="project-info">
+                                    <span class="featured-tag"><i class="bi bi-star-fill"></i> Featured Project</span>
+                                    <h3>VOX Business Developer</h3>
+                                    <p class="project-period"><i class="bi bi-calendar3"></i> Aug 2026</p>
+                                    <p class="project-desc">A premium corporate web portal developed for a business
+                                        development agency. Features advanced smooth scrolling, dynamic carousels, and
+                                        interactive multi-step contact forms.</p>
+                                    <div class="project-links">
+                                        <button class="project-btn details-btn" data-project="vox"><i
+                                                class="bi bi-info-circle"></i> Details</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="project-card fade-in">
-                        <div class="project-preview gradient-pink">
-                            <i class="bi bi-sun project-preview-icon"></i>
-                            <span class="project-badge">HTML / CSS / JS</span>
-                        </div>
-                        <div class="project-info">
-                            <h3>Shine Up</h3>
-                            <p class="project-period"><i class="bi bi-calendar3"></i> Apr 2026</p>
-                            <p class="project-desc">A motivational quotes web app using HTML, CSS, and JavaScript. Also
-                                converted to APK with Cordova.</p>
-                            <div class="project-links">
-                                <a href="pages/shineup.html" class="project-btn details-btn"><i
-                                        class="bi bi-info-circle"></i> Details</a>
+
+                        <!-- Timeline Section for Other Projects -->
+                        <div class="projects-timeline">
+                            <div class="timeline-line"></div>
+
+                            <!-- Project 1: Eunoia-App -->
+                            <div class="timeline-item fade-in" data-category="react">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-date">Apr 2026 – May 2026</div>
+                                <div class="timeline-content">
+                                    <div class="project-card">
+                                        <div class="project-preview gradient-purple">
+                                            <i class="bi bi-chat-quote project-preview-icon"></i>
+                                            <span class="project-badge">React.js</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>Eunoia-App</h3>
+                                            <p class="project-period"><i class="bi bi-calendar3"></i> Apr 2026 – May
+                                                2026</p>
+                                            <p class="project-desc">A philosophical quotes application built with
+                                                React.js. Later used Capacitor to generate an APK file.</p>
+                                            <div class="project-links">
+                                                <button class="project-btn details-btn" data-project="eunoia"><i
+                                                        class="bi bi-info-circle"></i> Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="project-card fade-in">
-                        <div class="project-preview gradient-blue">
-                            <i class="bi bi-search project-preview-icon"></i>
-                            <span class="project-badge">React.js</span>
-                        </div>
-                        <div class="project-info">
-                            <h3>Elements Finder</h3>
-                            <p class="project-period"><i class="bi bi-calendar3"></i> Jan 2026</p>
-                            <p class="project-desc">Dynamic web application to search descriptions of elements in the
-                                periodic table. Built with React.js.</p>
-                            <div class="project-links">
-                                <a href="pages/elements-finder.html" class="project-btn details-btn"><i
-                                        class="bi bi-info-circle"></i> Details</a>
+
+                            <!-- Project 2: Shine Up -->
+                            <div class="timeline-item fade-in" data-category="vanilla">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-date">Apr 2026</div>
+                                <div class="timeline-content">
+                                    <div class="project-card">
+                                        <div class="project-preview gradient-pink">
+                                            <i class="bi bi-sun project-preview-icon"></i>
+                                            <span class="project-badge">HTML / CSS / JS</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>Shine Up</h3>
+                                            <p class="project-period"><i class="bi bi-calendar3"></i> Apr 2026</p>
+                                            <p class="project-desc">A motivational quotes web app using HTML, CSS, and
+                                                JavaScript. Also converted to APK with Cordova.</p>
+                                            <div class="project-links">
+                                                <button class="project-btn details-btn" data-project="shineup"><i
+                                                        class="bi bi-info-circle"></i> Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Project 4 -->
-                    <div class="project-card fade-in">
-                        <div class="project-preview gradient-green">
-                            <i class="bi bi-journal-text project-preview-icon"></i>
-                            <span class="project-badge">HTML / CSS / JS</span>
-                        </div>
-                        <div class="project-info">
-                            <h3>Notes Blog</h3>
-                            <p class="project-period"><i class="bi bi-calendar3"></i> Dec 2025</p>
-                            <p class="project-desc">A notepad web app for practicing DOM manipulation. Save notes
-                                locally and view them later.</p>
-                            <div class="project-links">
-                                <a href="pages/notes-blog.html" class="project-btn details-btn"><i
-                                        class="bi bi-info-circle"></i> Details</a>
+
+                            <!-- Project 3: Elements Finder -->
+                            <div class="timeline-item fade-in" data-category="react">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-date">Jan 2026</div>
+                                <div class="timeline-content">
+                                    <div class="project-card">
+                                        <div class="project-preview gradient-blue">
+                                            <i class="bi bi-search project-preview-icon"></i>
+                                            <span class="project-badge">React.js</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>Elements Finder</h3>
+                                            <p class="project-period"><i class="bi bi-calendar3"></i> Jan 2026</p>
+                                            <p class="project-desc">Dynamic web application to search descriptions of
+                                                elements in the periodic table. Built with React.js.</p>
+                                            <div class="project-links">
+                                                <button class="project-btn details-btn" data-project="elements"><i
+                                                        class="bi bi-info-circle"></i> Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Project 5 -->
-                    <div class="project-card fade-in">
-                        <div class="project-preview gradient-orange">
-                            <i class="bi bi-window-desktop project-preview-icon"></i>
-                            <span class="project-badge">React.js</span>
-                        </div>
-                        <div class="project-info">
-                            <h3>Landing Page</h3>
-                            <p class="project-period"><i class="bi bi-calendar3"></i> Aug 2025</p>
-                            <p class="project-desc">Product landing page to practice React.js fundamentals and semantic
-                                HTML best practices.</p>
-                            <div class="project-meta">React.js · Semantic HTML · Responsive design · Performance-first
+
+                            <!-- Project 4: Notes Blog -->
+                            <div class="timeline-item fade-in" data-category="vanilla">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-date">Dec 2025</div>
+                                <div class="timeline-content">
+                                    <div class="project-card">
+                                        <div class="project-preview gradient-green">
+                                            <i class="bi bi-journal-text project-preview-icon"></i>
+                                            <span class="project-badge">HTML / CSS / JS</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>Notes Blog</h3>
+                                            <p class="project-period"><i class="bi bi-calendar3"></i> Dec 2025</p>
+                                            <p class="project-desc">A notepad web app for practicing DOM manipulation.
+                                                Save notes locally and view them later.</p>
+                                            <div class="project-links">
+                                                <button class="project-btn details-btn" data-project="notes"><i
+                                                        class="bi bi-info-circle"></i> Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="pages/landing-page.html" class="project-btn details-btn"><i
-                                        class="bi bi-info-circle"></i> Details</a>
+
+                            <!-- Project 5: Landing Page -->
+                            <div class="timeline-item fade-in" data-category="react">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-date">Aug 2025</div>
+                                <div class="timeline-content">
+                                    <div class="project-card">
+                                        <div class="project-preview gradient-orange">
+                                            <i class="bi bi-window-desktop project-preview-icon"></i>
+                                            <span class="project-badge">React.js</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>Landing Page</h3>
+                                            <p class="project-period"><i class="bi bi-calendar3"></i> Aug 2025</p>
+                                            <p class="project-desc">Product landing page to practice React.js
+                                                fundamentals and semantic HTML best practices.</p>
+                                            <div class="project-links">
+                                                <button class="project-btn details-btn" data-project="landing"><i
+                                                        class="bi bi-info-circle"></i> Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="projects-skew-bottom"></div>
         </section>
 
         <!-- FAQ Section -->
         <section class="faq" id="faq" aria-labelledby="faq-title">
             <div class="container">
-                <h2 class="section-title fade-in" id="faq-title">Frequently Asked Questions</h2>
-                <div class="faq-grid">
-                    <article class="faq-card fade-in">
-                        <h3>What services do you offer?</h3>
-                        <p>I build modern full-stack web applications, responsive landing pages, and complete digital
-                            solutions with React.js, Node.js, Express, MongoDB, and Firebase.</p>
-                    </article>
-                    <article class="faq-card fade-in">
-                        <h3>Do you work with both frontend and backend?</h3>
-                        <p>Yes. As a full-stack developer, I handle everything from user interfaces and experiences to
-                            APIs, servers, databases, and complete application architecture.</p>
-                    </article>
-                    <article class="faq-card fade-in">
-                        <h3>Can you improve an existing website?</h3>
-                        <p>Absolutely. I can help redesign, optimize, and improve the structure, speed, SEO, and
-                            functionality of existing websites or applications.</p>
-                    </article>
+                <h2 class="section-title fade-in" id="faq-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+                <div class="faq-accordion fade-in">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-1">
+                            <span data-i18n="faq.q1">What services do you offer?</span>
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-ans-1" aria-hidden="true">
+                            <p data-i18n="faq.a1">I build modern full-stack web applications, responsive landing pages,
+                                and complete digital solutions with React.js, Node.js, Express, MongoDB, and Firebase.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-2">
+                            <span data-i18n="faq.q2">Do you work with both frontend and backend?</span>
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-ans-2" aria-hidden="true">
+                            <p data-i18n="faq.a2">Yes. As a full-stack developer, I handle everything from user
+                                interfaces and experiences to APIs, servers, databases, and complete application
+                                architecture.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-3">
+                            <span data-i18n="faq.q3">Can you improve an existing website?</span>
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-ans-3" aria-hidden="true">
+                            <p data-i18n="faq.a3">Absolutely. I can help redesign, optimize, and improve the structure,
+                                speed, SEO, and functionality of existing websites or applications.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -472,6 +913,46 @@
             </div>
         </div>
     </footer>
+
+    <!-- Project Details Modal -->
+    <div class="project-modal" id="project-modal" role="dialog" aria-hidden="true" aria-modal="true" tabindex="-1">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close" aria-label="Close details dialog">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-header-preview" id="modal-preview-bg">
+                    <span class="modal-badge" id="modal-badge"></span>
+                </div>
+                <div class="modal-info-content">
+                    <h3 class="modal-title" id="modal-title">Project Name</h3>
+                    <p class="modal-period" id="modal-period"><i class="bi bi-calendar3"></i> Aug 2026</p>
+
+                    <div class="modal-section">
+                        <h4 data-i18n="projects.purpose">Why was it made? (Purpose)</h4>
+                        <p id="modal-purpose"></p>
+                    </div>
+
+                    <div class="modal-section">
+                        <h4 data-i18n="projects.challenges">Challenges & Development</h4>
+                        <p id="modal-challenges"></p>
+                    </div>
+
+                    <div class="modal-section">
+                        <h4 data-i18n="projects.technologies">Technologies Used</h4>
+                        <div class="modal-tags" id="modal-tags">
+                            <!-- Tags will be dynamically generated -->
+                        </div>
+                    </div>
+
+                    <div class="modal-actions" id="modal-actions">
+                        <!-- Action links will be dynamically populated -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
