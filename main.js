@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             hero: {
                 greeting: "Hello, I'm",
-                description: "Building dynamic and visually engaging web experiences with modern technologies.",
+                description: "I build robust and scalable full-stack web applications, connecting fast, intuitive frontends with secure APIs and databases.",
                 viewProjects: "View Projects",
                 getInTouch: "Get in Touch",
                 projects: "Projects",
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             hero: {
                 greeting: "Hola, soy",
-                description: "Construyendo experiencias web dinámicas y visualmente atractivas con tecnologías modernas.",
+                description: "Desarrollo aplicaciones web full-stack robustas y escalables, conectando interfaces rápidas e intuitivas con APIs y bases de datos seguras.",
                 viewProjects: "Ver Proyectos",
                 getInTouch: "Contáctame",
                 projects: "Proyectos",
