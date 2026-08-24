@@ -16,6 +16,7 @@ fs.writeFileSync('main.js', mainJs);
 
 // 2. Fix HTML files
 const files = [
+    'pages/casa-diseno.html',
     'pages/vox.html',
     'pages/shineup.html',
     'pages/eunoia.html',

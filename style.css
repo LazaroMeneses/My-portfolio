@@ -1815,6 +1815,10 @@ header.scrolled {
     background: linear-gradient(135deg, #1e2328 0%, #b8975a 100%);
 }
 
+.gradient-casa {
+    background: linear-gradient(135deg, #1a1a1a 0%, #c5a880 100%);
+}
+
 .project-info {
     padding: 1.5rem;
     display: flex;

@@ -457,7 +457,7 @@ document.addEventListener("DOMContentLoaded", () => {
        4. SCROLL TO TOP
        =================== */
     if (scrollTopBtn) {
-        scrollTopBtn.addEventListener("click", () => {
+        if(scrollTopBtn) scrollTopBtn.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
@@ -507,6 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pauseBetween = 2000;
 
     function typeEffect() {
+        if (!typedRole) return;
         if (!typedRole) return;
         const currentRole = roles[roleIndex];
 
@@ -659,6 +660,26 @@ document.addEventListener("DOMContentLoaded", () => {
             actions: [
                 { textKey: "projects.livePage", url: "https://www.voxbusinessdeveloper.com", icon: "bi-globe" },
                 { textKey: "projects.liveDemo", url: "pages/vox.html", icon: "bi-info-circle" }
+            ]
+        },
+        casa: {
+            title: "Casa de Diseño",
+            period: { en: "Aug 2026", es: "Ago 2026" },
+            badge: "HTML / CSS / JS",
+            bgClass: "gradient-casa",
+            icon: "bi-house-heart",
+            purpose: {
+                en: "Create a modern, high-converting digital storefront for a boutique interior design studio based in Puebla, Mexico, reflecting its luxury approach and 12-year history.",
+                es: "Crear un escaparate digital moderno y de alta conversión para un estudio boutique de diseño de interiores en Puebla, México, que refleje su enfoque de lujo y trayectoria de 12 años."
+            },
+            challenges: {
+                en: "Integrating smooth performance for heavy multimedia content such as background videos and high-definition project galleries, while optimizing SEO structured data and mobile responsivity.",
+                es: "Integrar un rendimiento fluido para contenido multimedia pesado como videos de fondo y galerías en alta definición, optimizando a su vez datos estructurados de SEO y responsividad móvil."
+            },
+            tags: ["HTML5", "CSS3", "JavaScript", "JSON-LD SEO", "HTML5 Video", "Responsive Layout"],
+            actions: [
+                { textKey: "projects.livePage", url: "https://casadedisenodeinteriores.com.mx", icon: "bi-globe" },
+                { textKey: "projects.liveDemo", url: "pages/casa-diseno.html", icon: "bi-info-circle" }
             ]
         },
         eunoia: {
@@ -934,7 +955,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Handle Submission
-        contactForm.addEventListener("submit", async (e) => {
+        if(contactForm) contactForm.addEventListener("submit", async (e) => {
             e.preventDefault();
 
             const nameInput = document.getElementById("form-name");
