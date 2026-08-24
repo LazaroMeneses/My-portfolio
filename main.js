@@ -444,10 +444,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Show/hide scroll-to-top
-        if (scrollY > 500) {
-            scrollTopBtn.classList.add("visible");
-        } else {
-            scrollTopBtn.classList.remove("visible");
+        if (scrollTopBtn) {
+            if (scrollY > 500) {
+                scrollTopBtn.classList.add("visible");
+            } else {
+                scrollTopBtn.classList.remove("visible");
+            }
         }
 
         lastScroll = scrollY;
@@ -787,69 +789,84 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function populateModal(projectId) {
         const data = projectsData[projectId];
-        if (!data) return;
+        if (!data || !modal) return;
 
         // Set static state attributes
         modal.setAttribute("data-active-project", projectId);
 
         // Header Background & Badge & Icon
         const previewBg = document.getElementById("modal-preview-bg");
-        previewBg.className = "modal-header-preview " + data.bgClass;
+        if (previewBg) previewBg.className = "modal-header-preview " + data.bgClass;
         
         const badge = document.getElementById("modal-badge");
-        badge.textContent = data.badge;
+        if (badge) badge.textContent = data.badge;
 
         // Textual info
-        document.getElementById("modal-title").textContent = data.title;
-        document.getElementById("modal-period").innerHTML = `<i class="bi bi-calendar3"></i> ${currentLang === "en" ? data.period.en : data.period.es}`;
-        document.getElementById("modal-purpose").textContent = currentLang === "en" ? data.purpose.en : data.purpose.es;
-        document.getElementById("modal-challenges").textContent = currentLang === "en" ? data.challenges.en : data.challenges.es;
+        const titleEl = document.getElementById("modal-title");
+        if (titleEl) titleEl.textContent = data.title;
+        
+        const periodEl = document.getElementById("modal-period");
+        if (periodEl) periodEl.innerHTML = `<i class="bi bi-calendar3"></i> ${currentLang === "en" ? data.period.en : data.period.es}`;
+        
+        const purposeEl = document.getElementById("modal-purpose");
+        if (purposeEl) purposeEl.textContent = currentLang === "en" ? data.purpose.en : data.purpose.es;
+        
+        const challengesEl = document.getElementById("modal-challenges");
+        if (challengesEl) challengesEl.textContent = currentLang === "en" ? data.challenges.en : data.challenges.es;
 
         // Tags List
         const tagsContainer = document.getElementById("modal-tags");
-        tagsContainer.innerHTML = "";
-        data.tags.forEach(tag => {
-            const span = document.createElement("span");
-            span.className = "modal-tag";
-            span.textContent = tag;
-            tagsContainer.appendChild(span);
-        });
+        if (tagsContainer) {
+            tagsContainer.innerHTML = "";
+            data.tags.forEach(tag => {
+                const span = document.createElement("span");
+                span.className = "modal-tag";
+                span.textContent = tag;
+                tagsContainer.appendChild(span);
+            });
+        }
 
         // Action Buttons
         const actionsContainer = document.getElementById("modal-actions");
-        actionsContainer.innerHTML = "";
-        data.actions.forEach(act => {
-            const link = document.createElement("a");
-            link.href = act.url;
-            if (act.url.startsWith("http")) {
-                link.target = "_blank";
-                link.rel = "noopener";
-            }
-            link.className = "btn " + (act.textKey.includes("livePage") || act.textKey.includes("downloadApk") ? "btn-primary" : "btn-outline");
-            
-            // Translate the button label text
-            const labelKey = act.textKey.split(".");
-            let labelText = translations[currentLang];
-            labelKey.forEach(k => { if(labelText) labelText = labelText[k]; });
-            
-            link.innerHTML = `<i class="bi ${act.icon}"></i> ${labelText || act.textKey}`;
-            actionsContainer.appendChild(link);
-        });
+        if (actionsContainer) {
+            actionsContainer.innerHTML = "";
+            data.actions.forEach(act => {
+                const link = document.createElement("a");
+                link.href = act.url;
+                if (act.url.startsWith("http")) {
+                    link.target = "_blank";
+                    link.rel = "noopener";
+                }
+                link.className = "btn " + (act.textKey.includes("livePage") || act.textKey.includes("downloadApk") ? "btn-primary" : "btn-outline");
+                
+                // Translate the button label text
+                const labelKey = act.textKey.split(".");
+                let labelText = translations[currentLang];
+                labelKey.forEach(k => { if(labelText) labelText = labelText[k]; });
+                
+                link.innerHTML = `<i class="bi ${act.icon}"></i> ${labelText || act.textKey}`;
+                actionsContainer.appendChild(link);
+            });
+        }
     }
 
     function openModal(projectId) {
         populateModal(projectId);
-        modal.classList.add("open");
-        modal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-        modal.focus();
+        if (modal) {
+            modal.classList.add("open");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            modal.focus();
+        }
     }
 
     function closeModal() {
-        modal.classList.remove("open");
-        modal.setAttribute("aria-hidden", "true");
-        modal.removeAttribute("data-active-project");
-        document.body.style.removeProperty("overflow");
+        if (modal) {
+            modal.classList.remove("open");
+            modal.setAttribute("aria-hidden", "true");
+            modal.removeAttribute("data-active-project");
+            document.body.style.removeProperty("overflow");
+        }
     }
 
     detailsButtons.forEach(btn => {
@@ -863,14 +880,14 @@ document.addEventListener("DOMContentLoaded", () => {
         modalClose.addEventListener("click", closeModal);
     }
 
-    const modalOverlay = modal.querySelector(".modal-overlay");
+    const modalOverlay = modal ? modal.querySelector(".modal-overlay") : null;
     if (modalOverlay) {
         modalOverlay.addEventListener("click", closeModal);
     }
 
     // Modal accessibility Esc key close
     document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && modal.classList.contains("open")) {
+        if (e.key === "Escape" && modal && modal.classList.contains("open")) {
             closeModal();
         }
     });
