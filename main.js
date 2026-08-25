@@ -547,6 +547,138 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
 
     /* ===================
+       6b. HERO STATS COUNTER ANIMATION
+       =================== */
+    const statsNumbers = document.querySelectorAll(".stat-number");
+    
+    const animateCounter = (el) => {
+        const target = +el.getAttribute("data-target");
+        const duration = 1500; // 1.5s animation duration
+        const startTime = performance.now();
+        
+        const update = (now) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Ease out quad formula
+            const easeProgress = progress * (2 - progress);
+            const value = Math.floor(easeProgress * target);
+            
+            el.textContent = `${value}+`;
+            
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                el.textContent = `${target}+`;
+            }
+        };
+        
+        requestAnimationFrame(update);
+    };
+
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                animateCounter(el);
+                statsObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    statsNumbers.forEach((num) => statsObserver.observe(num));
+
+    /* ===================
+       6c. HERO MOUSE PARALLAX EFFECT (Interactive SVG Head-Turn & Eye-Tracking)
+       =================== */
+    const heroSection = document.getElementById("hero");
+    const profileRing = document.querySelector(".profile-ring");
+    const avatarPupils = document.getElementById("avatar-pupils");
+    const avatarHead = document.getElementById("avatar-head-group");
+    const avatarGlasses = document.getElementById("avatar-glasses");
+    const avatarHair = document.getElementById("avatar-hair");
+    
+    if (heroSection && window.innerWidth > 768) {
+        // Variables for smooth interpolation (Lerp)
+        let mouseX = 0, mouseY = 0;
+        let targetX = 0, targetY = 0;
+        let isHovering = false;
+        
+        // Target offsets per layer
+        const pupilMax = 6;
+        const glassesMax = 4;
+        const headMax = 3.5;
+        const hairMax = 2.5;
+
+        // Linear interpolation factor
+        const lerpFactor = 0.08;
+
+        const updateAvatarTracking = () => {
+            // Apply LERP transition to actual values
+            mouseX += (targetX - mouseX) * lerpFactor;
+            mouseY += (targetY - mouseY) * lerpFactor;
+
+            // Apply displacement to SVG elements
+            if (avatarPupils) {
+                avatarPupils.style.transform = `translate(${mouseX * pupilMax}px, ${mouseY * pupilMax}px)`;
+            }
+            if (avatarGlasses) {
+                avatarGlasses.style.transform = `translate(${mouseX * glassesMax}px, ${mouseY * glassesMax}px)`;
+            }
+            if (avatarHead) {
+                avatarHead.style.transform = `translate(${mouseX * headMax}px, ${mouseY * headMax}px)`;
+            }
+            if (avatarHair) {
+                avatarHair.style.transform = `translate(${mouseX * hairMax}px, ${mouseY * hairMax}px)`;
+            }
+
+            // Keep animating as long as values have not fully settled or user is hovering
+            if (isHovering || Math.abs(targetX - mouseX) > 0.001 || Math.abs(targetY - mouseY) > 0.001) {
+                requestAnimationFrame(updateAvatarTracking);
+            } else {
+                // Hard snap to center to release CPU cycles when completely still
+                mouseX = targetX;
+                mouseY = targetY;
+            }
+        };
+
+        heroSection.addEventListener("mousemove", (e) => {
+            const rect = heroSection.getBoundingClientRect();
+            
+            // Normalize cursor position inside container from -1.0 to 1.0
+            const relX = e.clientX - rect.left;
+            const relY = e.clientY - rect.top;
+            
+            targetX = (relX / rect.width) * 2 - 1;
+            targetY = (relY / rect.height) * 2 - 1;
+
+            if (!isHovering) {
+                isHovering = true;
+                requestAnimationFrame(updateAvatarTracking);
+            }
+        });
+        
+        heroSection.addEventListener("mouseleave", () => {
+            isHovering = false;
+            targetX = 0;
+            targetY = 0;
+        });
+
+        // Add subtle constant pulse movement to the profile ring itself
+        if (profileRing) {
+            heroSection.addEventListener("mousemove", (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 12 - 6;
+                const y = ((e.clientY - rect.top) / rect.height) * 12 - 6;
+                profileRing.style.transform = `translate(${x}px, ${y}px)`;
+            });
+            heroSection.addEventListener("mouseleave", () => {
+                profileRing.style.transform = "translate(0, 0)";
+            });
+        }
+    }
+
+    /* ===================
        7. INTERSECTION OBSERVER — Scroll Animations
        =================== */
     const fadeElements = document.querySelectorAll(".fade-in");

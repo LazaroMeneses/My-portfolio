@@ -21,7 +21,7 @@
     <link rel="alternate" hreflang="en" href="https://lazaromeneses.com/">
     <link rel="alternate" hreflang="es" href="https://lazaromeneses.com/">
     <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="images/profile-img.jpeg" as="image" type="image/jpeg">
+    <link rel="preload" href="images/profile-image.png" as="image" type="image/png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Lazaro Meneses">
     <meta name="application-name" content="Lazaro Meneses">
@@ -40,7 +40,7 @@
     <meta name="twitter:title" content="Lazaro Meneses | Full-Stack Developer React.js, Node.js, MongoDB & Firebase">
     <meta name="twitter:description"
         content="I build fast, responsive, and scalable full-stack web applications with React.js, Node.js, Express, MongoDB, Firebase, and modern web development best practices.">
-    <meta name="twitter:image" content="https://lazaromeneses.com/images/profile-img.jpeg">
+    <meta name="twitter:image" content="https://lazaromeneses.com/images/profile-image.png">
     <meta name="twitter:image:alt" content="Lazaro Meneses front-end developer portfolio preview">
     <title>Lazaro Meneses | Full-Stack Developer React.js, Node.js, MongoDB & Firebase</title>
     <script type="application/ld+json">
@@ -157,7 +157,10 @@
             <div class="hero-orb hero-orb-3"></div>
             <div class="hero-content">
                 <div class="hero-text">
-                    <p class="hero-greeting fade-in" data-i18n="hero.greeting">Hello, I'm</p>
+                    <div class="hero-badge fade-in">
+                        <span class="badge-dot"></span>
+                        <span data-i18n="hero.greeting">Hello, I'm</span>
+                    </div>
                     <h1 class="fade-in">Lazaro <span class="gradient-text">Meneses</span></h1>
                     <p class="role fade-in"><span id="typed-role"></span><span class="typing-cursor">|</span></p>
                     <p class="hero-description fade-in" data-i18n="hero.description">I build robust and scalable
@@ -171,25 +174,38 @@
                     </div>
                     <div class="hero-stats fade-in">
                         <div class="stat">
-                            <span class="stat-number">11+</span>
+                            <span class="stat-number" data-target="11">0+</span>
                             <span class="stat-label" data-i18n="hero.projects">Projects</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">2+</span>
+                            <span class="stat-number" data-target="2">0+</span>
                             <span class="stat-label" data-i18n="hero.yearExp">Year Exp.</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">7+</span>
+                            <span class="stat-number" data-target="7">0+</span>
                             <span class="stat-label" data-i18n="hero.technologies">Technologies</span>
                         </div>
+                    </div>
+                    <div class="hero-socials fade-in">
+                        <a href="https://github.com/LazaroMeneses" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                class="bi bi-github"></i></a>
+                        <a href="mailto:lazarojosemenesesperez@gmail.com" aria-label="Email"><i
+                                class="bi bi-envelope-fill"></i></a>
+                        <a href="tel:+584142011437" aria-label="Phone"><i class="bi bi-telephone-fill"></i></a>
                     </div>
                 </div>
                 <div class="hero-img fade-in">
                     <div class="profile-ring">
-                        <img src="images/profile-img.jpeg" alt="Lazaro Meneses front-end developer portfolio portrait"
-                            class="profile-img" width="480" height="480" loading="eager" decoding="async">
+                        <img src="images/profile-image.png" alt="Lázaro Meneses" class="profile-img">
                     </div>
                 </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span data-i18n="hero.scroll"
+                    style="font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); opacity: 0.8;">Scroll</span>
             </div>
         </section>
 
@@ -199,20 +215,25 @@
                 <h2 class="section-title fade-in" data-i18n="about.title">About Me</h2>
 
                 <div class="about-split-container">
-                    <!-- Left Column: Biography & CTA -->
+                    <!-- Left Column: Biography & Photo & CTA -->
                     <div class="about-bio-column fade-in">
-                        <div class="about-text">
-                            <p data-i18n="about.para1">Soy Lázaro Meneses, Full-Stack Developer apasionado por crear
-                                soluciones digitales modernas y funcionales. Mi experiencia abarca desde el desarrollo
-                                de interfaces y experiencias de usuario hasta la creación de APIs, servidores y bases de
-                                datos.</p>
-                            <p data-i18n="about.para2">Trabajo principalmente con JavaScript, React, Node.js, Express,
-                                MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para
-                                transformar ideas en productos digitales reales.</p>
-                            <p data-i18n="about.para3">What motivates me most about programming is understanding the
-                                language of the future. I'm fascinated by how, through code, we can communicate with
-                                computers and bring ideas to life. What began as curiosity has become a long-term
-                                passion for building useful products.</p>
+                        <div class="about-bio-photo-wrapper">
+                            <div class="about-text">
+                                <p data-i18n="about.para1">Soy Lázaro Meneses, Full-Stack Developer apasionado por crear
+                                    soluciones digitales modernas y funcionales. Mi experiencia abarca desde el
+                                    desarrollo
+                                    de interfaces y experiencias de usuario hasta la creación de APIs, servidores y
+                                    bases de
+                                    datos.</p>
+                                <p data-i18n="about.para2">Trabajo principalmente con JavaScript, React, Node.js,
+                                    Express,
+                                    MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para
+                                    transformar ideas en productos digitales reales.</p>
+                                <p data-i18n="about.para3">What motivates me most about programming is understanding the
+                                    language of the future. I'm fascinated by how, through code, we can communicate with
+                                    computers and bring ideas to life. What began as curiosity has become a long-term
+                                    passion for building useful products.</p>
+                            </div>
                         </div>
                         <div class="about-ctas">
                             <a href="#contact" class="btn btn-primary">
