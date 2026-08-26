@@ -896,6 +896,30 @@ header.scrolled {
 .about {
     padding: var(--section-padding);
     background: var(--bg-secondary);
+    position: relative;
+    z-index: 2;
+}
+
+.about::before,
+.about::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4.5vw;
+    background: var(--bg-secondary);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.about::before {
+    top: 0;
+    transform: translateY(-50%) skewY(-2deg);
+}
+
+.about::after {
+    bottom: 0;
+    transform: translateY(50%) skewY(-2deg);
 }
 
 .about-split-container {
@@ -1207,6 +1231,21 @@ header.scrolled {
     padding: var(--section-padding);
     background: linear-gradient(180deg, rgba(255, 0, 102, 0.04), transparent);
     margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.5vw;
+    background: var(--bg-primary);
+    transform: translateY(-50%) skewY(-2deg);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .services .section-title {

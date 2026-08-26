@@ -381,12 +381,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function applyTheme(theme) {
+        const heroProfileImg = document.querySelector(".profile-img");
         if (theme === "light") {
             document.documentElement.setAttribute("data-theme", "light");
             themeToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
+            if (heroProfileImg) {
+                heroProfileImg.src = "images/profile-img.jpeg";
+            }
         } else {
             document.documentElement.removeAttribute("data-theme");
             themeToggle.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
+            if (heroProfileImg) {
+                heroProfileImg.src = "images/profile-img-dark.png";
+            }
         }
     }
 
