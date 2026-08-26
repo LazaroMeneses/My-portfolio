@@ -86,7 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 home: "Home",
                 about: "About",
                 skills: "Skills",
+                services: "Services",
                 projects: "Projects",
+                faq: "FAQ",
                 contact: "Contact"
             },
             hero: {
@@ -199,7 +201,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 home: "Inicio",
                 about: "Sobre Mí",
                 skills: "Habilidades",
+                services: "Servicios",
                 projects: "Proyectos",
+                faq: "Preguntas Frecuentes",
                 contact: "Contacto"
             },
             hero: {
