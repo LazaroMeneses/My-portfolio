@@ -3,6 +3,19 @@
    ============================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+    /* ---- EmailJS Configuration ---- */
+    // Initialize EmailJS with your public key
+    // Get your credentials from https://dashboard.emailjs.com/
+    const EMAILJS_PUBLIC_KEY = "fgMHfGsfMeq9suUxL"; // Replace with your actual public key
+    const EMAILJS_SERVICE_ID = "service_ltfwx5v"; // Replace with your service ID
+    const EMAILJS_TEMPLATE_ID = "template_s08qj59"; // Replace with your template ID
+    
+    // Initialize EmailJS
+    if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== "YOUR_EMAILJS_PUBLIC_KEY") {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+        console.log("EmailJS initialized successfully");
+    }
+    
     /* ---- DOM References ---- */
     const header = document.getElementById("header");
     const nav = document.getElementById("nav");
@@ -174,9 +187,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 namePlaceholder: "Your Name",
                 emailPlaceholder: "Your Email",
                 messagePlaceholder: "Your Message",
-                successMessage: "Email client opened! Please send the draft.",
+                successMessage: "Message sent successfully! I'll get back to you soon.",
                 errorMessage: "Please complete all fields before sending.",
-                submitError: "Something went wrong. Please try again later.",
+                submitError: "Failed to send message. Please try again or contact me directly via email.",
                 stepName: "Name",
                 stepEmail: "Email",
                 stepMsg: "Message",
@@ -289,9 +302,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 namePlaceholder: "Tu Nombre",
                 emailPlaceholder: "Tu Email",
                 messagePlaceholder: "Tu Mensaje",
-                successMessage: "¡Bandeja de correo abierta! Envía el borrador creado.",
+                successMessage: "¡Mensaje enviado con éxito! Te responderé pronto.",
                 errorMessage: "Por favor completa todos los campos antes de enviar.",
-                submitError: "Algo salió mal. Intenta de nuevo más tarde.",
+                submitError: "Error al enviar el mensaje. Intenta de nuevo o contáctame directamente por correo.",
                 stepName: "Nombre",
                 stepEmail: "Correo",
                 stepMsg: "Mensaje",
@@ -1151,43 +1164,60 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             try {
-                const emailRecipient = "lazarojosemenesesperez@gmail.com";
-                const subjectText = currentLang === "en" 
-                    ? `New Portfolio Message from ${name}` 
-                    : `Nuevo mensaje del Portafolio de ${name}`;
-                
-                const bodyText = currentLang === "en"
-                    ? `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-                    : `Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`;
-                
-                const mailtoUrl = `mailto:${emailRecipient}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
-                
-                window.location.href = mailtoUrl;
-
-                submitBtn.innerHTML = '<i class="bi bi-check-lg"></i> Opened!';
-                contactForm.classList.add("success");
-                if (formStatusElement) {
-                    formStatusElement.textContent = translations[currentLang].contact.successMessage;
-                    formStatusElement.classList.add("success");
+                // Check if EmailJS is properly configured
+                if (typeof emailjs === 'undefined' || EMAILJS_PUBLIC_KEY === "YOUR_EMAILJS_PUBLIC_KEY") {
+                    throw new Error("EmailJS not configured. Please add your EmailJS credentials.");
                 }
 
-                // Reset and go back to step 1
-                setTimeout(() => {
-                    contactForm.reset();
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = '<i class="bi bi-send"></i> ' + translations[currentLang].contact.sendMessage;
-                    contactForm.classList.remove("success");
+                // Send email using EmailJS to the client
+                const templateParams = {
+                    name: name,
+                    email: email,
+                    title: "Portfolio Contact",
+                    message: message
+                };
+
+                const response = await emailjs.send(
+                    EMAILJS_SERVICE_ID,
+                    EMAILJS_TEMPLATE_ID,
+                    templateParams
+                );
+
+                if (response.status === 200) {
+                    submitBtn.innerHTML = '<i class="bi bi-check-lg"></i> Sent!';
+                    contactForm.classList.add("success");
                     if (formStatusElement) {
-                        formStatusElement.textContent = "";
-                        formStatusElement.classList.remove("success");
+                        const successMsg = currentLang === "en" 
+                            ? "Thank you for visiting my portfolio." 
+                            : "Gracias por visitar mi portafolio.";
+                        formStatusElement.textContent = successMsg;
+                        formStatusElement.classList.add("success");
                     }
-                    goToStep(1);
-                }, 3000);
+
+                    // Reset and go back to step 1
+                    setTimeout(() => {
+                        contactForm.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<i class="bi bi-send"></i> ' + translations[currentLang].contact.sendMessage;
+                        contactForm.classList.remove("success");
+                        if (formStatusElement) {
+                            formStatusElement.textContent = "";
+                            formStatusElement.classList.remove("success");
+                        }
+                        goToStep(1);
+                    }, 3000);
+                } else {
+                    throw new Error("Failed to send email");
+                }
             } catch (error) {
+                console.error("EmailJS Error:", error);
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<i class="bi bi-send"></i> ' + translations[currentLang].contact.sendMessage;
                 if (formStatusElement) {
-                    formStatusElement.textContent = translations[currentLang].contact.submitError;
+                    const errorMsg = currentLang === "en" 
+                        ? "Failed to send message. Please try again or contact me directly via email." 
+                        : "Error al enviar el mensaje. Intenta de nuevo o contáctame directamente por correo.";
+                    formStatusElement.textContent = errorMsg;
                     formStatusElement.classList.add("error");
                 }
             }
