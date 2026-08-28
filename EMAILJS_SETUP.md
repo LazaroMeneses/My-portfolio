@@ -22,14 +22,28 @@ This portfolio now includes EmailJS integration for automated email sending thro
 - Follow the authentication steps (you'll need to connect your Gmail account)
 - Once created, copy the Service ID
 
-#### Template ID
+#### Template IDs
+You'll need two templates:
+
+**Template 1: Confirmation email to client**
 - Go to Email Templates → Create New Template
 - Design your email template with the following variables:
-  - `{{from_name}}` - Sender's name
-  - `{{from_email}}` - Sender's email
+  - `{{name}}` - Client's name
+  - `{{email}}` - Client's email (for To Email field)
+  - `{{title}}` - Email title/subject
   - `{{message}}` - The message content
-  - `{{to_name}}` - Recipient name (Lazaro Meneses)
-  - `{{reply_to}}` - Reply-to email address
+- Configure To Email as `{{email}}`
+- Configure From Name as "Lazaro Meneses"
+- Configure Reply To as your email
+- Copy the Template ID
+
+**Template 2: Message notification to you**
+- Create another new template
+- Design it to receive messages from clients
+- Use the same variables: `{{name}}`, `{{email}}`, `{{message}}`
+- Configure To Email as your email address
+- Configure From Name as `{{name}}`
+- Configure Reply To as `{{email}}`
 - Copy the Template ID
 
 ### 3. Configure in main.js
@@ -39,7 +53,8 @@ Open `main.js` and replace the placeholder values around line 8:
 ```javascript
 const EMAILJS_PUBLIC_KEY = "YOUR_EMAILJS_PUBLIC_KEY"; // Replace with your actual public key
 const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // Replace with your service ID
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // Replace with your template ID
+const EMAILJS_TEMPLATE_ID_CLIENT = "YOUR_CLIENT_TEMPLATE_ID"; // Template for confirmation to client
+const EMAILJS_TEMPLATE_ID_OWNER = "YOUR_OWNER_TEMPLATE_ID"; // Template for message to you
 ```
 
 ### 4. Test the Integration
@@ -57,27 +72,38 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // Replace with your template ID
 - Consider implementing rate limiting on your form to prevent abuse
 - The free tier has limits, monitor your usage
 
-## Template Example
+## Template Examples
 
-Here's a suggested email template (configured to send confirmation to the client):
-
-**Subject:** Thank you for visiting my portfolio - {{client_name}}
+### Template 1: Confirmation to Client
+**Subject:** Thank you for visiting my portfolio
 
 **Body:**
-Hi {{client_name}},
+Hi {{name}},
 
 Thank you for visiting my portfolio and taking the time to reach out!
 
-I have received your message:
-{{message}}
-
-I'll get back to you as soon as possible.
+I have received your message and will get back to you as soon as possible (usually within 24-48 hours).
 
 Best regards,
 Lazaro Meneses
 
 ---
 This is an automated confirmation from my portfolio contact form.
+
+### Template 2: Message Notification to You
+**Subject:** Nuevo mensaje del portafolio - {{name}}
+
+**Body:**
+Has recibido un nuevo mensaje de tu portafolio:
+
+**Nombre:** {{name}}
+**Email:** {{email}}
+
+**Mensaje:**
+{{message}}
+
+---
+Este mensaje fue enviado desde el formulario de contacto de tu portafolio.
 
 ## Troubleshooting
 

@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get your credentials from https://dashboard.emailjs.com/
     const EMAILJS_PUBLIC_KEY = "fgMHfGsfMeq9suUxL"; // Replace with your actual public key
     const EMAILJS_SERVICE_ID = "service_ltfwx5v"; // Replace with your service ID
-    const EMAILJS_TEMPLATE_ID = "template_s08qj59"; // Replace with your template ID
+    const EMAILJS_TEMPLATE_ID_CLIENT = "template_s08qj59"; // Template for confirmation email to client
+    const EMAILJS_TEMPLATE_ID_OWNER = "template_vexxutp"; // Template for message to you
     
     // Initialize EmailJS
     if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== "YOUR_EMAILJS_PUBLIC_KEY") {
@@ -1169,21 +1170,34 @@ document.addEventListener("DOMContentLoaded", () => {
                     throw new Error("EmailJS not configured. Please add your EmailJS credentials.");
                 }
 
-                // Send email using EmailJS to the client
-                const templateParams = {
+                // Send email to client (confirmation)
+                const clientParams = {
                     name: name,
                     email: email,
                     title: "Portfolio Contact",
                     message: message
                 };
 
-                const response = await emailjs.send(
+                const clientResponse = await emailjs.send(
                     EMAILJS_SERVICE_ID,
-                    EMAILJS_TEMPLATE_ID,
-                    templateParams
+                    EMAILJS_TEMPLATE_ID_CLIENT,
+                    clientParams
                 );
 
-                if (response.status === 200) {
+                // Send email to you (message notification)
+                const ownerParams = {
+                    name: name,
+                    email: email,
+                    message: message
+                };
+
+                const ownerResponse = await emailjs.send(
+                    EMAILJS_SERVICE_ID,
+                    EMAILJS_TEMPLATE_ID_OWNER,
+                    ownerParams
+                );
+
+                if (clientResponse.status === 200 && ownerResponse.status === 200) {
                     submitBtn.innerHTML = '<i class="bi bi-check-lg"></i> Sent!';
                     contactForm.classList.add("success");
                     if (formStatusElement) {
