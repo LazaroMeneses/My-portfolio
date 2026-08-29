@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const EMAILJS_SERVICE_ID = "service_ltfwx5v"; // Replace with your service ID
     const EMAILJS_TEMPLATE_ID_CLIENT = "template_s08qj59"; // Template for confirmation email to client
     const EMAILJS_TEMPLATE_ID_OWNER = "template_vexxutp"; // Template for message to you
-    
+
     // Initialize EmailJS
     if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== "YOUR_EMAILJS_PUBLIC_KEY") {
         emailjs.init(EMAILJS_PUBLIC_KEY);
         console.log("EmailJS initialized successfully");
     }
-    
+
     /* ---- DOM References ---- */
     const header = document.getElementById("header");
     const nav = document.getElementById("nav");
@@ -39,40 +39,40 @@ document.addEventListener("DOMContentLoaded", () => {
     const loaderBar = document.querySelector(".loader-bar");
     const logoWrapper = document.querySelector(".loader-logo-wrapper");
     const welcomeText = document.getElementById("loader-welcome");
-    
+
     document.body.classList.add("preloader-active");
 
     if (preloader && letters.length > 0 && loaderBar && logoWrapper && welcomeText) {
         let currentLetterIdx = 0;
-        
+
         // Initial setup after a short delay
         setTimeout(() => {
             const revealInterval = setInterval(() => {
                 if (currentLetterIdx < letters.length) {
                     const letter = letters[currentLetterIdx];
                     letter.classList.add("reveal");
-                    
+
                     // Synchronize progress line width with the count of letters written
                     const progressPercentage = ((currentLetterIdx + 1) / letters.length) * 100;
                     loaderBar.style.width = `${progressPercentage}%`;
-                    
+
                     currentLetterIdx++;
                 } else {
                     clearInterval(revealInterval);
-                    
+
                     // 1. Wait a moment at 100% load
                     setTimeout(() => {
                         // 2. Fade out logo, name and progress line
                         logoWrapper.classList.add("fade-out-content");
-                        
+
                         // 3. Set translated welcome message
                         const preloaderLang = localStorage.getItem("portfolio-lang") || "es";
                         welcomeText.textContent = preloaderLang === "en" ? "Welcome" : "¡Bienvenido!";
-                        
+
                         // 4. Fade in Welcome text
                         setTimeout(() => {
                             welcomeText.classList.add("reveal");
-                            
+
                             // 5. Dismiss preloader after reading the message
                             setTimeout(() => {
                                 preloader.classList.add("fade-out");
@@ -485,7 +485,7 @@ document.addEventListener("DOMContentLoaded", () => {
        4. SCROLL TO TOP
        =================== */
     if (scrollTopBtn) {
-        if(scrollTopBtn) scrollTopBtn.addEventListener("click", () => {
+        if (scrollTopBtn) scrollTopBtn.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
@@ -576,29 +576,29 @@ document.addEventListener("DOMContentLoaded", () => {
        6b. HERO STATS COUNTER ANIMATION
        =================== */
     const statsNumbers = document.querySelectorAll(".stat-number");
-    
+
     const animateCounter = (el) => {
         const target = +el.getAttribute("data-target");
         const duration = 1500; // 1.5s animation duration
         const startTime = performance.now();
-        
+
         const update = (now) => {
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            
+
             // Ease out quad formula
             const easeProgress = progress * (2 - progress);
             const value = Math.floor(easeProgress * target);
-            
+
             el.textContent = `${value}+`;
-            
+
             if (progress < 1) {
                 requestAnimationFrame(update);
             } else {
                 el.textContent = `${target}+`;
             }
         };
-        
+
         requestAnimationFrame(update);
     };
 
@@ -623,13 +623,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const avatarHead = document.getElementById("avatar-head-group");
     const avatarGlasses = document.getElementById("avatar-glasses");
     const avatarHair = document.getElementById("avatar-hair");
-    
+
     if (heroSection && window.innerWidth > 768) {
         // Variables for smooth interpolation (Lerp)
         let mouseX = 0, mouseY = 0;
         let targetX = 0, targetY = 0;
         let isHovering = false;
-        
+
         // Target offsets per layer
         const pupilMax = 6;
         const glassesMax = 4;
@@ -670,11 +670,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         heroSection.addEventListener("mousemove", (e) => {
             const rect = heroSection.getBoundingClientRect();
-            
+
             // Normalize cursor position inside container from -1.0 to 1.0
             const relX = e.clientX - rect.left;
             const relY = e.clientY - rect.top;
-            
+
             targetX = (relX / rect.width) * 2 - 1;
             targetY = (relY / rect.height) * 2 - 1;
 
@@ -683,7 +683,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 requestAnimationFrame(updateAvatarTracking);
             }
         });
-        
+
         heroSection.addEventListener("mouseleave", () => {
             isHovering = false;
             targetX = 0;
@@ -955,20 +955,20 @@ document.addEventListener("DOMContentLoaded", () => {
         // Header Background & Badge & Icon
         const previewBg = document.getElementById("modal-preview-bg");
         if (previewBg) previewBg.className = "modal-header-preview " + data.bgClass;
-        
+
         const badge = document.getElementById("modal-badge");
         if (badge) badge.textContent = data.badge;
 
         // Textual info
         const titleEl = document.getElementById("modal-title");
         if (titleEl) titleEl.textContent = data.title;
-        
+
         const periodEl = document.getElementById("modal-period");
         if (periodEl) periodEl.innerHTML = `<i class="bi bi-calendar3"></i> ${currentLang === "en" ? data.period.en : data.period.es}`;
-        
+
         const purposeEl = document.getElementById("modal-purpose");
         if (purposeEl) purposeEl.textContent = currentLang === "en" ? data.purpose.en : data.purpose.es;
-        
+
         const challengesEl = document.getElementById("modal-challenges");
         if (challengesEl) challengesEl.textContent = currentLang === "en" ? data.challenges.en : data.challenges.es;
 
@@ -996,12 +996,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     link.rel = "noopener";
                 }
                 link.className = "btn " + (act.textKey.includes("livePage") || act.textKey.includes("downloadApk") ? "btn-primary" : "btn-outline");
-                
+
                 // Translate the button label text
                 const labelKey = act.textKey.split(".");
                 let labelText = translations[currentLang];
-                labelKey.forEach(k => { if(labelText) labelText = labelText[k]; });
-                
+                labelKey.forEach(k => { if (labelText) labelText = labelText[k]; });
+
                 link.innerHTML = `<i class="bi ${act.icon}"></i> ${labelText || act.textKey}`;
                 actionsContainer.appendChild(link);
             });
@@ -1113,7 +1113,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (currentStepPane) {
                     const currentStepNum = parseInt(currentStepPane.id.replace("step-pane-", ""));
                     const nextStepNum = parseInt(btn.getAttribute("data-next-step"));
-                    
+
                     if (validateStep(currentStepNum)) {
                         goToStep(nextStepNum);
                     }
@@ -1130,7 +1130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Handle Submission
-        if(contactForm) contactForm.addEventListener("submit", async (e) => {
+        if (contactForm) contactForm.addEventListener("submit", async (e) => {
             e.preventDefault();
 
             const nameInput = document.getElementById("form-name");
@@ -1202,8 +1202,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     submitBtn.innerHTML = '<i class="bi bi-check-lg"></i> Sent!';
                     contactForm.classList.add("success");
                     if (formStatusElement) {
-                        const successMsg = currentLang === "en" 
-                            ? "Thank you for visiting my portfolio." 
+                        const successMsg = currentLang === "en"
+                            ? "Thank you for visiting my portfolio."
                             : "Gracias por visitar mi portafolio.";
                         formStatusElement.textContent = successMsg;
                         formStatusElement.classList.add("success");
@@ -1229,8 +1229,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<i class="bi bi-send"></i> ' + translations[currentLang].contact.sendMessage;
                 if (formStatusElement) {
-                    const errorMsg = currentLang === "en" 
-                        ? "Failed to send message. Please try again or contact me directly via email." 
+                    const errorMsg = currentLang === "en"
+                        ? "Failed to send message. Please try again or contact me directly via email."
                         : "Error al enviar el mensaje. Intenta de nuevo o contáctame directamente por correo.";
                     formStatusElement.textContent = errorMsg;
                     formStatusElement.classList.add("error");
@@ -1309,7 +1309,7 @@ document.addEventListener("DOMContentLoaded", () => {
     skillsTabButtons.forEach(btn => {
         btn.addEventListener("click", () => {
             const tabId = btn.getAttribute("data-tab");
-            
+
             // Toggle buttons active state
             skillsTabButtons.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
