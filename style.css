@@ -700,14 +700,18 @@ header.scrolled {
 
 .hero-stats {
     display: flex;
-    gap: 2.5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
     margin-bottom: 2.5rem;
+    max-width: 550px;
 }
 
 .stat {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex: 1 1 150px;
+    min-width: 140px;
 }
 
 .stat-header {
@@ -1106,7 +1110,6 @@ header.scrolled {
     display: block;
 }
 
-/* Core Values Grid */
 .values-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1121,6 +1124,7 @@ header.scrolled {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    height: 100%;
     transition: var(--transition);
 }
 
