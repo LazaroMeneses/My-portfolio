@@ -110,9 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 description: "I build robust and scalable full-stack web applications, connecting fast, intuitive frontends with secure APIs and databases.",
                 viewProjects: "View Projects",
                 getInTouch: "Get in Touch",
-                projects: "Projects",
-                yearExp: "Year Exp.",
-                technologies: "Technologies"
+                projects: "Projects Completed",
+                yearExp: "Years of Experience",
+                technologies: "Tech Skills"
             },
             about: {
                 title: "About Me",
@@ -225,9 +225,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 description: "Desarrollo aplicaciones web full-stack robustas y escalables, conectando interfaces rápidas e intuitivas con APIs y bases de datos seguras.",
                 viewProjects: "Ver Proyectos",
                 getInTouch: "Contáctame",
-                projects: "Proyectos",
-                yearExp: "Año Exp.",
-                technologies: "Tecnologías"
+                projects: "Proyectos Realizados",
+                yearExp: "Años de Experiencia",
+                technologies: "Habilidades Técnicas"
             },
             about: {
                 title: "Sobre Mí",

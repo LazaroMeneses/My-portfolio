@@ -710,6 +710,19 @@ header.scrolled {
     align-items: flex-start;
 }
 
+.stat-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--accent);
+    opacity: 0.85;
+}
+
 .stat-number {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
