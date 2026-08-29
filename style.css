@@ -3926,7 +3926,14 @@ footer {
     }
 
     .hero-stats .stat {
+        flex: 0 1 auto;
+        min-width: auto;
         align-items: center;
+        text-align: center;
+    }
+
+    .hero-stats .stat .stat-header {
+        justify-content: center;
     }
 
     .profile-ring {
