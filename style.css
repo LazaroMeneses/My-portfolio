@@ -3909,6 +3909,19 @@ footer {
         gap: 2.5rem;
     }
 
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .hero-description {
         margin-left: auto;
         margin-right: auto;
@@ -3923,6 +3936,9 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1.5rem 2.5rem;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-stats .stat {
@@ -3930,10 +3946,14 @@ footer {
         min-width: auto;
         align-items: center;
         text-align: center;
+        margin: 0 auto;
     }
 
     .hero-stats .stat .stat-header {
+        display: flex;
         justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .profile-ring {

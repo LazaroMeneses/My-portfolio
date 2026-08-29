@@ -360,6 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         langToggle.textContent = lang === "en" ? "ES" : "EN";
+        document.documentElement.setAttribute("lang", lang);
         currentLang = lang;
 
         // If the details modal is currently open, refresh its static text titles
