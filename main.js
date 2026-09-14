@@ -112,10 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 getInTouch: "Get in Touch",
                 projects: "Projects Completed",
                 yearExp: "Years of Experience",
-                technologies: "Tech Skills"
+                technologies: "Tech Skills",
+                scroll: "Scroll"
             },
             about: {
                 title: "About Me",
+                roleSubtitle: "Full-Stack & Creative Developer",
+                coreStack: "Core Tech Stack",
                 para1: "I am Lázaro Meneses, a passionate Full-Stack Developer dedicated to creating modern, functional, and user-centric digital solutions. My expertise ranges from developing interfaces and user experiences to building APIs, servers, and database architectures.",
                 para2: "I work primarily with JavaScript, React.js, Node.js, Express, MongoDB, and Firebase, blending engineering, creativity, and constant learning to transform ideas into high-quality digital products.",
                 para3: "What motivates me most about programming is understanding the language of the future. I am fascinated by how, through code, we can communicate with machines and bring ideas to life. What began as curiosity has become a long-term passion for building useful, scalable products.",
@@ -142,8 +145,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 title: "Skills",
                 frontend: "Frontend",
                 backend: "Backend",
-                devTools: "Dev Tools",
-                design: "Design"
+                devTools: "Tools & Design",
+                reactExp: "Hooks, SPAs & Architecture",
+                reactDesc: "Building component-driven applications, state management, custom hooks, and dynamic client routing.",
+                jsExp: "Core Logic & Asynchrony",
+                jsDesc: "Deep understanding of closures, async/await, promises, DOM manipulation, and modern ES6+ paradigms.",
+                htmlExp: "Structure & Accessibility",
+                htmlDesc: "Clean semantic architecture, accessible web elements (ARIA), and structured markup for maximum SEO visibility.",
+                cssExp: "Layouts & Motion Design",
+                cssDesc: "Flexbox, CSS Grid, responsive media queries, CSS variables, glassmorphism, and hardware-accelerated animations.",
+                nodeExp: "Server Runtime & Event Loop",
+                nodeDesc: "Building high-concurrency backend services, handling middleware, file systems, and server configurations.",
+                expressExp: "RESTful APIs & Middleware",
+                expressDesc: "Developing scalable REST APIs, authentication layers, CORS policies, and clean endpoint routing architectures.",
+                mongoExp: "NoSQL & Data Modeling",
+                mongoDesc: "Designing flexible document schemas, indexing for performance, aggregation pipelines, and Mongoose integration.",
+                firebaseExp: "Cloud & Realtime Backend",
+                firebaseDesc: "Firestore databases, Firebase Authentication, Cloud Storage, and serverless hosting deployment.",
+                gitExp: "Version Control & CI/CD",
+                gitDesc: "Branch management, pull requests, semantic versioning, and deploying through GitHub Pages and Cloud platforms.",
+                designExp: "Visual Hierarchy & Systems",
+                designDesc: "Crafting high-converting layouts, micro-interactions, responsive design systems, typography, and contrast harmony.",
+                mobileExp: "Cordova, Capacitor & RWD",
+                mobileDesc: "Porting web applications to mobile APK packages via Capacitor/Cordova with touch gestures and responsive layouts.",
+                seoExp: "JSON-LD, Meta & Speed",
+                seoDesc: "Implementing structured JSON-LD schemas, OpenGraph tags, Core Web Vitals optimization, and audit scores."
             },
             services: {
                 title: "Services & Expertise",
@@ -227,10 +253,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 getInTouch: "Contáctame",
                 projects: "Proyectos Realizados",
                 yearExp: "Años de Experiencia",
-                technologies: "Habilidades Técnicas"
+                technologies: "Habilidades Técnicas",
+                scroll: "Desplazar"
             },
             about: {
                 title: "Sobre Mí",
+                roleSubtitle: "Desarrollador Full-Stack & Creativo",
+                coreStack: "Stack Tecnológico Principal",
                 para1: "Soy Lázaro Meneses, Full-Stack Developer apasionado por crear soluciones digitales modernas y funcionales. Mi experiencia abarca desde el desarrollo de interfaces y experiencias de usuario hasta la creación de APIs, servidores y bases de datos.",
                 para2: "Trabajo principalmente con JavaScript, React, Node.js, Express, MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para transformar ideas en productos digitales reales.",
                 para3: "Lo que más me motiva sobre la programación es entender el lenguaje del futuro. Me fascina cómo, a través del código, podemos comunicarnos con las computadoras y dar vida a nuestras ideas. Lo que comenzó como curiosidad se ha convertido en una pasión a largo plazo por construir productos útiles.",
@@ -257,8 +286,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 title: "Habilidades",
                 frontend: "Frontend",
                 backend: "Backend",
-                devTools: "Herramientas",
-                design: "Diseño"
+                devTools: "Herramientas & Diseño",
+                reactExp: "Hooks, SPAs & Arquitectura",
+                reactDesc: "Desarrollo de aplicaciones modulares basadas en componentes, manejo de estado, hooks personalizados y enrutamiento dinámico.",
+                jsExp: "Lógica & Asincronía",
+                jsDesc: "Dominio de closures, async/await, promesas, manipulación avanzada del DOM y estándares modernos de ES6+.",
+                htmlExp: "Estructura & Accesibilidad",
+                htmlDesc: "Arquitectura semántica limpia, estándares de accesibilidad (ARIA) y estructuración para máxima visibilidad SEO.",
+                cssExp: "Diseño & Animaciones",
+                cssDesc: "Flexbox, CSS Grid, diseño responsivo fluido, variables CSS, glassmorphism y micro-animaciones aceleradas por GPU.",
+                nodeExp: "Servidores & Event Loop",
+                nodeDesc: "Construcción de servicios backend escalables, middlewares, manejo de archivos y configuración de entornos de servidor.",
+                expressExp: "APIs REST & Middleware",
+                expressDesc: "Creación de APIs REST seguras, capas de autenticación, políticas CORS y arquitectura modular de endpoints.",
+                mongoExp: "NoSQL & Modelado de Datos",
+                mongoDesc: "Diseño de esquemas flexibles, optimización mediante índices, pipelines de agregación e integración con Mongoose.",
+                firebaseExp: "Cloud & Tiempo Real",
+                firebaseDesc: "Bases de datos Firestore, Firebase Authentication, Cloud Storage y despliegue continuo de aplicaciones.",
+                gitExp: "Control de Versiones & CI/CD",
+                gitDesc: "Gestión de ramas, pull requests, versionado semántico y despliegue a través de plataformas Cloud y GitHub Pages.",
+                designExp: "Jerarquía Visual & Sistemas",
+                designDesc: "Creación de interfaces atractivas de alta conversión, micro-interacciones, diseño responsivo, tipografía y balance visual.",
+                mobileExp: "Cordova, Capacitor & RWD",
+                mobileDesc: "Empaquetado de aplicaciones web a formato APK nativo para Android mediante Capacitor y Cordova con diseño adaptable.",
+                seoExp: "JSON-LD, Metadatos & Rendimiento",
+                seoDesc: "Implementación de datos estructurados JSON-LD, etiquetas OpenGraph, optimización de Core Web Vitals y velocidad."
             },
             services: {
                 title: "Servicios y Especialidades",
@@ -317,6 +369,12 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             preloader: {
                 welcome: "¡Bienvenido!"
+            },
+            footer: {
+                desc: "Desarrollador full-stack enfocado en crear aplicaciones web de alto rendimiento, interfaces responsivas y diseño moderno.",
+                linksTitle: "Enlaces Rápidos",
+                contactTitle: "Contacto",
+                madeWith: "Hecho con ❤️ por Lazaro Meneses"
             }
         }
     };
@@ -1326,7 +1384,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ===================
-       15. ABOUT ME TABS HANDLER
+       15. ABOUT ME TABS HANDLER (Fallback for tab buttons if present)
        =================== */
     const aboutTabButtons = document.querySelectorAll(".about-tab-btn");
     const aboutGroups = document.querySelectorAll(".about-group");
@@ -1335,11 +1393,9 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("click", () => {
             const tabId = btn.getAttribute("data-about-tab");
 
-            // Toggle buttons active state
             aboutTabButtons.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
 
-            // Toggle groups active state
             aboutGroups.forEach(group => {
                 if (group.id === `about-tab-${tabId}`) {
                     group.classList.add("active");
@@ -1347,6 +1403,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     group.classList.remove("active");
                 }
             });
+        });
+    });
+
+    /* ===================
+       16. SPOTLIGHT CARD MOUSE GLOW
+       =================== */
+    const spotlightCards = document.querySelectorAll(".spotlight-card");
+    spotlightCards.forEach(card => {
+        card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
         });
     });
 });

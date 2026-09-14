@@ -31,8 +31,8 @@
     <meta property="og:description"
         content="I build fast, responsive, and scalable full-stack web applications with React.js, Node.js, Express, MongoDB, Firebase, and modern web development best practices.">
     <meta property="og:url" content="https://lazaromeneses.com/">
-    <meta property="og:image" content="https://lazaromeneses.com/lazaro-og-image.png?v=2">
-    <meta property="og:image:alt" content="Portfolio preview of Lazaro Meneses, front-end developer">
+    <meta property="og:image" content="https://lazaromeneses.com/lazaro-og-image.png?v=3">
+    <meta property="og:image:alt" content="Portfolio preview of Lazaro Meneses, Full-Stack Developer">
     <meta property="og:site_name" content="Lazaro Meneses">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
@@ -40,7 +40,7 @@
     <meta name="twitter:title" content="Lazaro Meneses | Full-Stack Developer React.js, Node.js, MongoDB & Firebase">
     <meta name="twitter:description"
         content="I build fast, responsive, and scalable full-stack web applications with React.js, Node.js, Express, MongoDB, Firebase, and modern web development best practices.">
-    <meta name="twitter:image" content="https://lazaromeneses.com/images/profile-image.png">
+    <meta name="twitter:image" content="https://lazaromeneses.com/lazaro-og-image.png?v=3">
     <meta name="twitter:image:alt" content="Lazaro Meneses front-end developer portfolio preview">
     <title>Lazaro Meneses | Full-Stack Developer React.js, Node.js, MongoDB & Firebase</title>
     <script type="application/ld+json">
@@ -82,7 +82,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Styles -->
@@ -245,105 +245,126 @@
             <div class="container">
                 <h2 class="section-title fade-in" data-i18n="about.title">About Me</h2>
 
-                <div class="about-split-container">
-                    <!-- Left Column: Biography & Photo & CTA -->
-                    <div class="about-bio-column fade-in">
-                        <div class="about-bio-photo-wrapper">
-                            <div class="about-text">
-                                <p data-i18n="about.para1">Soy Lázaro Meneses, Full-Stack Developer apasionado por crear
-                                    soluciones digitales modernas y funcionales. Mi experiencia abarca desde el
-                                    desarrollo
-                                    de interfaces y experiencias de usuario hasta la creación de APIs, servidores y
-                                    bases de
-                                    datos.</p>
-                                <p data-i18n="about.para2">Trabajo principalmente con JavaScript, React, Node.js,
-                                    Express,
-                                    MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para
-                                    transformar ideas en productos digitales reales.</p>
-                                <p data-i18n="about.para3">What motivates me most about programming is understanding the
-                                    language of the future. I'm fascinated by how, through code, we can communicate with
-                                    computers and bring ideas to life. What began as curiosity has become a long-term
-                                    passion for building useful products.</p>
+                <div class="bento-grid fade-in">
+                    <!-- Bento Item 1: Bio Story Card (Span 7) -->
+                    <div class="bento-card bento-bio spotlight-card">
+                        <div class="bento-header">
+                            <img src="images/profile-img-dark.png" alt="Lazaro Meneses" class="bento-avatar">
+                            <div class="bento-bio-titles">
+                                <h3>Lazaro Meneses</h3>
+                                <span data-i18n="about.roleSubtitle">Full-Stack & Creative Developer</span>
                             </div>
                         </div>
-                        <div class="about-ctas">
+                        <div class="bento-text">
+                            <p data-i18n="about.para1">Soy Lázaro Meneses, Full-Stack Developer apasionado por crear
+                                soluciones digitales modernas y funcionales. Mi experiencia abarca desde el
+                                desarrollo
+                                de interfaces y experiencias de usuario hasta la creación de APIs, servidores y
+                                bases de
+                                datos.</p>
+                            <p data-i18n="about.para2">Trabajo principalmente con JavaScript, React, Node.js,
+                                Express,
+                                MongoDB y Firebase, combinando desarrollo, creatividad y aprendizaje constante para
+                                transformar ideas en productos digitales reales.</p>
+                            <p data-i18n="about.para3">What motivates me most about programming is understanding the
+                                language of the future. I'm fascinated by how, through code, we can communicate with
+                                computers and bring ideas to life. What began as curiosity has become a long-term
+                                passion for building useful products.</p>
+                        </div>
+                        <div class="bento-ctas">
                             <a href="#contact" class="btn btn-primary">
                                 <i class="bi bi-chat-dots"></i> <span data-i18n="about.collab">Let's Collaborate</span>
+                            </a>
+                            <a href="#projects" class="btn btn-outline">
+                                <i class="bi bi-grid"></i> <span data-i18n="hero.viewProjects">View Projects</span>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Right Column: Interactive Dashboard (Values & Journey Tabs) -->
-                    <div class="about-dashboard-column fade-in">
-                        <!-- Dashboard Tabs -->
-                        <div class="about-dash-tabs">
-                            <button class="about-tab-btn active" data-about-tab="values">
-                                <i class="bi bi-shield-check"></i> <span data-i18n="about.tabValues">Core Values</span>
-                            </button>
-                            <button class="about-tab-btn" data-about-tab="journey">
-                                <i class="bi bi-compass"></i> <span data-i18n="about.tabJourney">My Journey</span>
-                            </button>
+                    <!-- Bento Item 2: Core Stack Matrix (Span 5) -->
+                    <div class="bento-card bento-tech spotlight-card">
+                        <div class="bento-card-title">
+                            <i class="bi bi-stack"></i>
+                            <span data-i18n="about.coreStack">Core Tech Stack</span>
                         </div>
+                        <div class="tech-pills-grid">
+                            <div class="tech-pill"><i class="bi bi-code-square"></i> React.js</div>
+                            <div class="tech-pill"><i class="bi bi-filetype-js"></i> JavaScript ES6+</div>
+                            <div class="tech-pill"><i class="bi bi-server"></i> Node.js</div>
+                            <div class="tech-pill"><i class="bi bi-cpu"></i> Express</div>
+                            <div class="tech-pill"><i class="bi bi-database"></i> MongoDB</div>
+                            <div class="tech-pill"><i class="bi bi-cloud-check"></i> Firebase</div>
+                            <div class="tech-pill"><i class="bi bi-filetype-html"></i> HTML5</div>
+                            <div class="tech-pill"><i class="bi bi-filetype-css"></i> CSS3 / Modern UI</div>
+                            <div class="tech-pill"><i class="bi bi-git"></i> Git & GitHub</div>
+                            <div class="tech-pill"><i class="bi bi-phone-vibrate"></i> Responsive & Mobile</div>
+                            <div class="tech-pill"><i class="bi bi-graph-up-arrow"></i> SEO / JSON-LD</div>
+                        </div>
+                    </div>
 
-                        <!-- Dashboard Content Groups -->
-                        <div class="about-dash-content">
-                            <!-- Group 1: Core Values -->
-                            <div class="about-group active" id="about-tab-values">
-                                <div class="values-grid">
-                                    <div class="value-card">
-                                        <div class="value-icon"><i class="bi bi-braces"></i></div>
-                                        <h4 data-i18n="about.val1Title">Clean Code</h4>
-                                        <p data-i18n="about.val1Desc">Writing readable, maintainable, and structured
-                                            code following industry standards.</p>
-                                    </div>
-                                    <div class="value-card">
-                                        <div class="value-icon"><i class="bi bi-lightning-charge"></i></div>
-                                        <h4 data-i18n="about.val2Title">Performance</h4>
-                                        <p data-i18n="about.val2Desc">Optimizing loading speeds, logic cycles, and API
-                                            response times for fast products.</p>
-                                    </div>
-                                    <div class="value-card">
-                                        <div class="value-icon"><i class="bi bi-window-fullscreen"></i></div>
-                                        <h4 data-i18n="about.val3Title">UX / UI focus</h4>
-                                        <p data-i18n="about.val3Desc">Creating fully responsive interfaces that look
-                                            polished and feel intuitive on any device.</p>
-                                    </div>
-                                    <div class="value-card">
-                                        <div class="value-icon"><i class="bi bi-arrow-repeat"></i></div>
-                                        <h4 data-i18n="about.val4Title">Adaptability</h4>
-                                        <p data-i18n="about.val4Desc">Constantly learning and adapting to new web
-                                            standards and libraries to solve problems.</p>
-                                    </div>
+                    <!-- Bento Item 3: Core Engineering Values (Span 6) -->
+                    <div class="bento-card bento-values spotlight-card">
+                        <div class="bento-card-title">
+                            <i class="bi bi-shield-check"></i>
+                            <span data-i18n="about.tabValues">Core Values</span>
+                        </div>
+                        <div class="values-compact-grid">
+                            <div class="value-box">
+                                <i class="bi bi-braces"></i>
+                                <h4 data-i18n="about.val1Title">Clean Code</h4>
+                                <p data-i18n="about.val1Desc">Writing readable, maintainable, and structured
+                                    code following industry standards.</p>
+                            </div>
+                            <div class="value-box">
+                                <i class="bi bi-lightning-charge"></i>
+                                <h4 data-i18n="about.val2Title">Performance</h4>
+                                <p data-i18n="about.val2Desc">Optimizing loading speeds, logic cycles, and API
+                                    response times for fast products.</p>
+                            </div>
+                            <div class="value-box">
+                                <i class="bi bi-window-fullscreen"></i>
+                                <h4 data-i18n="about.val3Title">UX / UI focus</h4>
+                                <p data-i18n="about.val3Desc">Creating fully responsive interfaces that look
+                                    polished and feel intuitive on any device.</p>
+                            </div>
+                            <div class="value-box">
+                                <i class="bi bi-arrow-repeat"></i>
+                                <h4 data-i18n="about.val4Title">Adaptability</h4>
+                                <p data-i18n="about.val4Desc">Constantly learning and adapting to new web
+                                    standards and libraries to solve problems.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bento Item 4: Career Journey Milestones (Span 6) -->
+                    <div class="bento-card bento-journey spotlight-card">
+                        <div class="bento-card-title">
+                            <i class="bi bi-compass"></i>
+                            <span data-i18n="about.tabJourney">My Journey</span>
+                        </div>
+                        <div class="journey-compact-list">
+                            <div class="journey-step">
+                                <span class="step-year">2023</span>
+                                <div class="step-info">
+                                    <h4 data-i18n="about.j1Title">The Spark</h4>
+                                    <p data-i18n="about.j1Desc">Started building landing pages and responsive
+                                        layouts, discovering deep passion for coding and logic.</p>
                                 </div>
                             </div>
-
-                            <!-- Group 2: My Journey -->
-                            <div class="about-group" id="about-tab-journey">
-                                <div class="journey-roadmap">
-                                    <div class="roadmap-item">
-                                        <div class="roadmap-badge">2023</div>
-                                        <div class="roadmap-content">
-                                            <h4 data-i18n="about.j1Title">The Spark</h4>
-                                            <p data-i18n="about.j1Desc">Started building landing pages and responsive
-                                                layouts, discovering deep passion for coding and logic.</p>
-                                        </div>
-                                    </div>
-                                    <div class="roadmap-item">
-                                        <div class="roadmap-badge">2025</div>
-                                        <div class="roadmap-content">
-                                            <h4 data-i18n="about.j2Title">Full-Stack Scale</h4>
-                                            <p data-i18n="about.j2Desc">Mastered React.js and backend integrations
-                                                (Node, Express, MongoDB) to build complete applications.</p>
-                                        </div>
-                                    </div>
-                                    <div class="roadmap-item">
-                                        <div class="roadmap-badge">2026</div>
-                                        <div class="roadmap-content">
-                                            <h4 data-i18n="about.j3Title">High-End Products</h4>
-                                            <p data-i18n="about.j3Desc">Creating advanced portfolios, scalable
-                                                databases, and rich custom animations for top-tier websites.</p>
-                                        </div>
-                                    </div>
+                            <div class="journey-step">
+                                <span class="step-year">2025</span>
+                                <div class="step-info">
+                                    <h4 data-i18n="about.j2Title">Full-Stack Scale</h4>
+                                    <p data-i18n="about.j2Desc">Mastered React.js and backend integrations
+                                        (Node, Express, MongoDB) to build complete applications.</p>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <span class="step-year">2026</span>
+                                <div class="step-info">
+                                    <h4 data-i18n="about.j3Title">High-End Products</h4>
+                                    <p data-i18n="about.j3Desc">Creating advanced portfolios, scalable
+                                        databases, and rich custom animations for top-tier websites.</p>
                                 </div>
                             </div>
                         </div>
@@ -358,7 +379,7 @@
                 <h2 class="section-title fade-in" data-i18n="skills.title">Skills</h2>
 
                 <!-- Skills Category Tabs -->
-                <div class="skills-tabs fade-in">
+                <div class="skills-category-tabs fade-in">
                     <button class="skills-tab-btn active" data-tab="frontend">
                         <i class="bi bi-code-slash"></i> Frontend
                     </button>
@@ -374,100 +395,81 @@
                 <div class="skills-dashboard fade-in">
                     <!-- Frontend Group -->
                     <div class="skills-group active" id="tab-frontend">
-                        <div class="skills-grid">
-                            <!-- Skill Card: HTML5 -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-filetype-html"></i></div>
-                                    <div class="skill-title-block">
-                                        <h3>HTML5</h3>
-                                        <span class="skill-experience">3+ Years Exp</span>
-                                    </div>
-                                </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">6 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">95%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 95%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Card: CSS3 -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-filetype-css"></i></div>
-                                    <div class="skill-title-block">
-                                        <h3>CSS3</h3>
-                                        <span class="skill-experience">3+ Years Exp</span>
-                                    </div>
-                                </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">6 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">90%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 90%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Card: JavaScript -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-filetype-js"></i></div>
-                                    <div class="skill-title-block">
-                                        <h3>JavaScript</h3>
-                                        <span class="skill-experience">3+ Years Exp</span>
-                                    </div>
-                                </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">6 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">90%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 90%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-
+                        <div class="skills-modern-grid">
                             <!-- Skill Card: React.js -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-code-square"></i></div>
-                                    <div class="skill-title-block">
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-code-square"></i></div>
+                                    <div class="skill-tech-title">
                                         <h3>React.js</h3>
-                                        <span class="skill-experience">1.5+ Years Exp</span>
+                                        <span data-i18n="skills.reactExp">Hooks, SPAs & Architecture</span>
                                     </div>
                                 </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">4 Completed</span>
+                                <p class="skill-desc" data-i18n="skills.reactDesc">Building component-driven
+                                    applications, state management, custom hooks, and dynamic client routing.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Hooks</span>
+                                    <span class="skill-tag">Context API</span>
+                                    <span class="skill-tag">React Router</span>
+                                    <span class="skill-tag">Virtual DOM</span>
                                 </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">85%</span>
+                            </div>
+
+                            <!-- Skill Card: JavaScript (ES6+) -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-filetype-js"></i></div>
+                                    <div class="skill-tech-title">
+                                        <h3>JavaScript (ES6+)</h3>
+                                        <span data-i18n="skills.jsExp">Core Logic & Asynchrony</span>
                                     </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 85%;"></div>
+                                </div>
+                                <p class="skill-desc" data-i18n="skills.jsDesc">Deep understanding of closures,
+                                    async/await, promises, DOM manipulation, and modern ES6+ paradigms.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Async/Await</span>
+                                    <span class="skill-tag">DOM APIs</span>
+                                    <span class="skill-tag">JSON / Fetch</span>
+                                    <span class="skill-tag">Modules</span>
+                                </div>
+                            </div>
+
+                            <!-- Skill Card: HTML5 -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-filetype-html"></i></div>
+                                    <div class="skill-tech-title">
+                                        <h3>HTML5</h3>
+                                        <span data-i18n="skills.htmlExp">Structure & Accessibility</span>
                                     </div>
+                                </div>
+                                <p class="skill-desc" data-i18n="skills.htmlDesc">Clean semantic architecture,
+                                    accessible web elements (ARIA), and structured markup for maximum SEO visibility.
+                                </p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Semantic HTML</span>
+                                    <span class="skill-tag">WCAG / ARIA</span>
+                                    <span class="skill-tag">SEO Tags</span>
+                                    <span class="skill-tag">Web Standards</span>
+                                </div>
+                            </div>
+
+                            <!-- Skill Card: CSS3 / Modern Styling -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-filetype-css"></i></div>
+                                    <div class="skill-tech-title">
+                                        <h3>CSS3 & Modern UI</h3>
+                                        <span data-i18n="skills.cssExp">Layouts & Motion Design</span>
+                                    </div>
+                                </div>
+                                <p class="skill-desc" data-i18n="skills.cssDesc">Flexbox, CSS Grid, responsive media
+                                    queries, CSS variables, glassmorphism, and hardware-accelerated animations.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">CSS Grid</span>
+                                    <span class="skill-tag">Flexbox</span>
+                                    <span class="skill-tag">Keyframe Anim</span>
+                                    <span class="skill-tag">Design Tokens</span>
                                 </div>
                             </div>
                         </div>
@@ -475,100 +477,80 @@
 
                     <!-- Backend Group -->
                     <div class="skills-group" id="tab-backend">
-                        <div class="skills-grid">
-                            <!-- Node.js -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-server"></i></div>
-                                    <div class="skill-title-block">
+                        <div class="skills-modern-grid">
+                            <!-- Skill Card: Node.js -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-server"></i></div>
+                                    <div class="skill-tech-title">
                                         <h3>Node.js</h3>
-                                        <span class="skill-experience">1.5+ Years Exp</span>
+                                        <span data-i18n="skills.nodeExp">Server Runtime & Event Loop</span>
                                     </div>
                                 </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">3 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">80%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 80%;"></div>
-                                    </div>
+                                <p class="skill-desc" data-i18n="skills.nodeDesc">Building high-concurrency backend
+                                    services, handling middleware, file systems, and server configurations.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Event-Driven</span>
+                                    <span class="skill-tag">NPM Ecosystem</span>
+                                    <span class="skill-tag">REST Services</span>
+                                    <span class="skill-tag">Environment Config</span>
                                 </div>
                             </div>
 
-                            <!-- Express -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-cpu"></i></div>
-                                    <div class="skill-title-block">
-                                        <h3>Express</h3>
-                                        <span class="skill-experience">1.5+ Years Exp</span>
+                            <!-- Skill Card: Express.js -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-cpu"></i></div>
+                                    <div class="skill-tech-title">
+                                        <h3>Express.js</h3>
+                                        <span data-i18n="skills.expressExp">RESTful APIs & Middleware</span>
                                     </div>
                                 </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">3 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">80%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 80%;"></div>
-                                    </div>
+                                <p class="skill-desc" data-i18n="skills.expressDesc">Developing scalable REST APIs,
+                                    authentication layers, CORS policies, and clean endpoint routing architectures.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Routing</span>
+                                    <span class="skill-tag">Middleware</span>
+                                    <span class="skill-tag">JWT Auth</span>
+                                    <span class="skill-tag">Error Handling</span>
                                 </div>
                             </div>
 
-                            <!-- MongoDB -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-database"></i></div>
-                                    <div class="skill-title-block">
+                            <!-- Skill Card: MongoDB -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-database"></i></div>
+                                    <div class="skill-tech-title">
                                         <h3>MongoDB</h3>
-                                        <span class="skill-experience">1+ Year Exp</span>
+                                        <span data-i18n="skills.mongoExp">NoSQL & Data Modeling</span>
                                     </div>
                                 </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">3 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">75%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 75%;"></div>
-                                    </div>
+                                <p class="skill-desc" data-i18n="skills.mongoDesc">Designing flexible document schemas,
+                                    indexing for performance, aggregation pipelines, and Mongoose integration.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Mongoose</span>
+                                    <span class="skill-tag">Aggregations</span>
+                                    <span class="skill-tag">Schema Design</span>
+                                    <span class="skill-tag">Atlas Cloud</span>
                                 </div>
                             </div>
 
-                            <!-- Firebase -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-cloud-check"></i></div>
-                                    <div class="skill-title-block">
+                            <!-- Skill Card: Firebase -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-cloud-check"></i></div>
+                                    <div class="skill-tech-title">
                                         <h3>Firebase</h3>
-                                        <span class="skill-experience">1+ Year Exp</span>
+                                        <span data-i18n="skills.firebaseExp">Cloud & Realtime Backend</span>
                                     </div>
                                 </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">2 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">75%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 75%;"></div>
-                                    </div>
+                                <p class="skill-desc" data-i18n="skills.firebaseDesc">Firestore databases, Firebase
+                                    Authentication, Cloud Storage, and serverless hosting deployment.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Firestore</span>
+                                    <span class="skill-tag">Auth</span>
+                                    <span class="skill-tag">Cloud Storage</span>
+                                    <span class="skill-tag">Hosting</span>
                                 </div>
                             </div>
                         </div>
@@ -576,100 +558,80 @@
 
                     <!-- Tools & Design Group -->
                     <div class="skills-group" id="tab-tools-design">
-                        <div class="skills-grid">
-                            <!-- Git/GitHub -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-git"></i></div>
-                                    <div class="skill-title-block">
+                        <div class="skills-modern-grid">
+                            <!-- Skill Card: Git & GitHub -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-git"></i></div>
+                                    <div class="skill-tech-title">
                                         <h3>Git & GitHub</h3>
-                                        <span class="skill-experience">3+ Years Exp</span>
+                                        <span data-i18n="skills.gitExp">Version Control & CI/CD</span>
                                     </div>
                                 </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">8 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">85%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 85%;"></div>
-                                    </div>
+                                <p class="skill-desc" data-i18n="skills.gitDesc">Branch management, pull requests,
+                                    semantic versioning, and deploying through GitHub Pages and Cloud platforms.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Version Control</span>
+                                    <span class="skill-tag">Workflows</span>
+                                    <span class="skill-tag">Code Review</span>
+                                    <span class="skill-tag">Deployments</span>
                                 </div>
                             </div>
 
-                            <!-- Mobile Dev -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-phone-vibrate"></i></div>
-                                    <div class="skill-title-block">
-                                        <h3>Mobile Dev</h3>
-                                        <span class="skill-experience">1+ Year Exp</span>
+                            <!-- Skill Card: UI/UX & Creative Direction -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-palette"></i></div>
+                                    <div class="skill-tech-title">
+                                        <h3>UI/UX & Design</h3>
+                                        <span data-i18n="skills.designExp">Visual Hierarchy & Systems</span>
                                     </div>
                                 </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">2 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">70%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 70%;"></div>
-                                    </div>
+                                <p class="skill-desc" data-i18n="skills.designDesc">Crafting high-converting layouts,
+                                    micro-interactions, responsive design systems, typography, and contrast harmony.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Design Systems</span>
+                                    <span class="skill-tag">Micro-Interactions</span>
+                                    <span class="skill-tag">Color Theory</span>
+                                    <span class="skill-tag">User Flow</span>
                                 </div>
                             </div>
 
-                            <!-- UI/UX Design -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-palette"></i></div>
-                                    <div class="skill-title-block">
-                                        <h3>UI/UX Design</h3>
-                                        <span class="skill-experience">2+ Years Exp</span>
+                            <!-- Skill Card: Mobile & Responsive Dev -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-phone-vibrate"></i></div>
+                                    <div class="skill-tech-title">
+                                        <h3>Mobile Web & APK</h3>
+                                        <span data-i18n="skills.mobileExp">Cordova, Capacitor & RWD</span>
                                     </div>
                                 </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">6 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">80%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 80%;"></div>
-                                    </div>
+                                <p class="skill-desc" data-i18n="skills.mobileDesc">Porting web applications to mobile
+                                    APK packages via Capacitor/Cordova with touch gestures and responsive layouts.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Capacitor</span>
+                                    <span class="skill-tag">Cordova</span>
+                                    <span class="skill-tag">Mobile First</span>
+                                    <span class="skill-tag">Touch Events</span>
                                 </div>
                             </div>
 
-                            <!-- Web Semantics / SEO -->
-                            <div class="skill-dash-card">
-                                <div class="skill-card-header">
-                                    <div class="skill-badge-icon"><i class="bi bi-graph-up-arrow"></i></div>
-                                    <div class="skill-title-block">
-                                        <h3>SEO & Semantics</h3>
-                                        <span class="skill-experience">2+ Years Exp</span>
+                            <!-- Skill Card: SEO & Web Semantics -->
+                            <div class="skill-tech-card spotlight-card">
+                                <div class="skill-card-top">
+                                    <div class="skill-icon-wrap"><i class="bi bi-graph-up-arrow"></i></div>
+                                    <div class="skill-tech-title">
+                                        <h3>SEO & Performance</h3>
+                                        <span data-i18n="skills.seoExp">JSON-LD, Meta & Speed</span>
                                     </div>
                                 </div>
-                                <div class="skill-stats-row">
-                                    <span class="stat-lbl">Projects:</span>
-                                    <span class="stat-val">6 Completed</span>
-                                </div>
-                                <div class="skill-progress-block">
-                                    <div class="progress-lbl-row">
-                                        <span>Proficiency</span>
-                                        <span class="progress-pct">85%</span>
-                                    </div>
-                                    <div class="progress-bar-track">
-                                        <div class="progress-bar-fill" style="--progress-val: 85%;"></div>
-                                    </div>
+                                <p class="skill-desc" data-i18n="skills.seoDesc">Implementing structured JSON-LD
+                                    schemas, OpenGraph tags, Core Web Vitals optimization, and audit scores.</p>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">JSON-LD</span>
+                                    <span class="skill-tag">OpenGraph</span>
+                                    <span class="skill-tag">Core Web Vitals</span>
+                                    <span class="skill-tag">Performance</span>
                                 </div>
                             </div>
                         </div>
@@ -757,6 +719,15 @@
                             <div class="device-mockup">
                                 <div class="device-reflection"></div>
                                 <div class="device-screen">
+                                    <div class="device-status-bar">
+                                        <span class="status-time">09:41</span>
+                                        <div class="dynamic-island"></div>
+                                        <div class="status-icons">
+                                            <i class="bi bi-reception-4"></i>
+                                            <i class="bi bi-wifi"></i>
+                                            <i class="bi bi-battery-full"></i>
+                                        </div>
+                                    </div>
                                     <div class="showcase-carousel" id="showcase-carousel">
                                         <div class="showcase-slide active gradient-vox" data-slide="vox">
                                             <div class="slide-mockup-inner">
