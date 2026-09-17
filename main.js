@@ -113,7 +113,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 projects: "Projects Completed",
                 yearExp: "Years of Experience",
                 technologies: "Tech Skills",
-                scroll: "Scroll"
+                scroll: "Scroll",
+                badgeStatus: "Available for projects",
+                badgeRole: "Full-Stack Engineer"
             },
             about: {
                 title: "About Me",
@@ -254,7 +256,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 projects: "Proyectos Realizados",
                 yearExp: "Años de Experiencia",
                 technologies: "Habilidades Técnicas",
-                scroll: "Desplazar"
+                scroll: "Desplazar",
+                badgeStatus: "Disponible para proyectos",
+                badgeRole: "Ingeniero Full-Stack"
             },
             about: {
                 title: "Sobre Mí",
@@ -577,14 +581,22 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveLink();
 
     /* ===================
-       6. TYPING EFFECT
+       6. TYPING EFFECT (Multi-Language Aware)
        =================== */
-    const roles = [
-        "Full-Stack Developer",
-        "React.js Developer",
-        "Node.js Developer",
-        "Freelancer",
-    ];
+    const rolesMap = {
+        en: [
+            "Full-Stack Developer",
+            "React.js Developer",
+            "Node.js & APIs Specialist",
+            "Freelancer & UI Builder"
+        ],
+        es: [
+            "Desarrollador Full-Stack",
+            "Especialista en React.js",
+            "Desarrollador Node.js y APIs",
+            "Freelancer y Creador Web"
+        ]
+    };
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -594,38 +606,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function typeEffect() {
         if (!typedRole) return;
-        if (!typedRole) return;
-        const currentRole = roles[roleIndex];
+        const currentRoles = rolesMap[currentLang] || rolesMap.en;
+        if (roleIndex >= currentRoles.length) {
+            roleIndex = 0;
+        }
+        const currentRole = currentRoles[roleIndex];
 
         if (!isDeleting) {
-            // Typing
             typedRole.textContent = currentRole.substring(0, charIndex + 1);
             charIndex++;
 
             if (charIndex === currentRole.length) {
-                // Pause before deleting
-                setTimeout(() => {
-                    isDeleting = true;
-                    typeEffect();
-                }, pauseBetween);
+                isDeleting = true;
+                setTimeout(typeEffect, pauseBetween);
                 return;
             }
-
-            setTimeout(typeEffect, typeSpeed);
         } else {
-            // Deleting
             typedRole.textContent = currentRole.substring(0, charIndex - 1);
             charIndex--;
 
             if (charIndex === 0) {
                 isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                setTimeout(typeEffect, typeSpeed * 3);
+                roleIndex = (roleIndex + 1) % currentRoles.length;
+                setTimeout(typeEffect, 500);
                 return;
             }
-
-            setTimeout(typeEffect, deleteSpeed);
         }
+
+        setTimeout(typeEffect, isDeleting ? deleteSpeed : typeSpeed);
     }
 
     typeEffect();

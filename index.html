@@ -82,15 +82,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Early Theme Detection -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -226,8 +233,19 @@
                     </div>
                 </div>
                 <div class="hero-img fade-in">
-                    <div class="profile-ring">
-                        <img src="images/profile-img-dark.png" alt="Lázaro Meneses" class="profile-img">
+                    <div class="plasma-halftone-card spotlight-card">
+                        <div class="halftone-pattern-bg"></div>
+                        <div class="plasma-photo-frame">
+                            <img src="images/profile-img-dark.png" alt="Lázaro Meneses" class="profile-plasma-img">
+                        </div>
+                        <div class="hero-floating-badge badge-top-right">
+                            <span class="badge-status-dot"></span>
+                            <span data-i18n="hero.badgeStatus">Available for projects</span>
+                        </div>
+                        <div class="hero-floating-badge badge-bottom-left">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                            <span data-i18n="hero.badgeRole">Full-Stack Engineer</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1220,6 +1238,8 @@
         <i class="bi bi-chevron-up"></i>
     </button>
 
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="main.js" defer></script>
 </body>
 
