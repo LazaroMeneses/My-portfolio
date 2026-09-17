@@ -1341,11 +1341,17 @@ header.scrolled {
 }
 
 .value-box {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius-md);
     padding: 1.2rem;
     transition: var(--transition-fast);
+}
+
+[data-theme="light"] .value-box {
+    background: #ffffff;
+    border-color: rgba(7, 6, 7, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .value-box:hover {
@@ -1353,11 +1359,20 @@ header.scrolled {
     transform: translateY(-2px);
 }
 
+[data-theme="light"] .value-box:hover {
+    border-color: var(--color-ember);
+    box-shadow: 0 4px 14px rgba(252, 80, 0, 0.15);
+}
+
 .value-box i {
     font-size: 1.35rem;
     color: var(--accent);
     margin-bottom: 0.5rem;
     display: block;
+}
+
+[data-theme="light"] .value-box i {
+    color: var(--color-ember);
 }
 
 .value-box h4 {
@@ -1388,9 +1403,15 @@ header.scrolled {
     gap: 1rem;
     align-items: flex-start;
     padding: 0.85rem 1rem;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius-md);
+}
+
+[data-theme="light"] .journey-step {
+    background: #ffffff;
+    border-color: rgba(7, 6, 7, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .step-year {
@@ -4537,4 +4558,209 @@ footer {
         font-size: 0.72rem;
         padding: 0.35rem 0.7rem;
     }
+}
+
+/* ==========================================================================
+   ENHANCED ANIMATED ICONS & BRAND GLOW DESIGN SYSTEM
+   ========================================================================== */
+
+/* Devicon Base & High-Resolution Rendering */
+i[class*="devicon-"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 1.25em;
+    vertical-align: middle;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+
+/* Micro-animación en Tech Pills */
+.tech-pill {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.28s ease !important;
+}
+
+.tech-pill i {
+    font-size: 1.15rem;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+
+.tech-pill:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+.tech-pill:hover i {
+    transform: scale(1.22) rotate(6deg);
+}
+
+/* Glowing filters per technology on hover */
+.tech-pill-react:hover i,
+.devicon-glow-react:hover i,
+.skill-tech-card:hover .devicon-glow-react i {
+    filter: drop-shadow(0 0 8px #61dafb) drop-shadow(0 0 16px rgba(97, 218, 251, 0.6));
+}
+
+.tech-pill-js:hover i,
+.devicon-glow-js:hover i,
+.skill-tech-card:hover .devicon-glow-js i {
+    filter: drop-shadow(0 0 8px #f7df1e) drop-shadow(0 0 16px rgba(247, 223, 30, 0.5));
+}
+
+.tech-pill-node:hover i,
+.devicon-glow-node:hover i,
+.skill-tech-card:hover .devicon-glow-node i {
+    filter: drop-shadow(0 0 8px #68a063) drop-shadow(0 0 16px rgba(104, 160, 99, 0.6));
+}
+
+.tech-pill-express:hover i,
+.devicon-glow-express:hover i,
+.skill-tech-card:hover .devicon-glow-express i {
+    filter: drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 14px rgba(255, 255, 255, 0.5));
+    color: #ffffff;
+}
+
+.tech-pill-mongo:hover i,
+.devicon-glow-mongo:hover i,
+.skill-tech-card:hover .devicon-glow-mongo i {
+    filter: drop-shadow(0 0 8px #47a248) drop-shadow(0 0 16px rgba(71, 162, 72, 0.6));
+}
+
+.tech-pill-firebase:hover i,
+.devicon-glow-firebase:hover i,
+.skill-tech-card:hover .devicon-glow-firebase i {
+    filter: drop-shadow(0 0 8px #ffca28) drop-shadow(0 0 16px rgba(255, 202, 40, 0.6));
+}
+
+.tech-pill-html:hover i,
+.devicon-glow-html:hover i,
+.skill-tech-card:hover .devicon-glow-html i {
+    filter: drop-shadow(0 0 8px #e34f26) drop-shadow(0 0 16px rgba(227, 79, 38, 0.6));
+}
+
+.tech-pill-css:hover i,
+.devicon-glow-css:hover i,
+.skill-tech-card:hover .devicon-glow-css i {
+    filter: drop-shadow(0 0 8px #1572b6) drop-shadow(0 0 16px rgba(21, 114, 182, 0.6));
+}
+
+.tech-pill-git:hover i,
+.devicon-glow-git:hover i,
+.skill-tech-card:hover .devicon-glow-git i {
+    filter: drop-shadow(0 0 8px #f05032) drop-shadow(0 0 16px rgba(240, 80, 50, 0.6));
+}
+
+.devicon-glow-figma:hover i,
+.skill-tech-card:hover .devicon-glow-figma i {
+    filter: drop-shadow(0 0 8px #a259ff) drop-shadow(0 0 16px rgba(162, 89, 255, 0.6));
+}
+
+.devicon-glow-android:hover i,
+.skill-tech-card:hover .devicon-glow-android i {
+    filter: drop-shadow(0 0 8px #3ddc84) drop-shadow(0 0 16px rgba(61, 220, 132, 0.6));
+}
+
+.devicon-glow-seo:hover i,
+.skill-tech-card:hover .devicon-glow-seo i {
+    filter: drop-shadow(0 0 8px #8b5cf6) drop-shadow(0 0 16px rgba(139, 92, 246, 0.6));
+}
+
+/* Animated Skill Icon Wrappers */
+.skill-icon-wrap {
+    position: relative;
+    overflow: visible;
+}
+
+.skill-icon-wrap i {
+    font-size: 1.85rem;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
+}
+
+.skill-tech-card:hover .skill-icon-wrap {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    transform: translateY(-4px) scale(1.08) !important;
+    box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="light"] .skill-tech-card:hover .skill-icon-wrap {
+    background: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.12) !important;
+}
+
+.skill-tech-card:hover .skill-icon-wrap i {
+    transform: scale(1.2) rotate(4deg);
+}
+
+/* Floating Badges Dynamic Micro-Animations */
+@keyframes icon-pulse-subtle {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 0.85;
+    }
+}
+
+@keyframes icon-levitate {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+.hero-floating-badge i {
+    animation: icon-pulse-subtle 2.8s ease-in-out infinite;
+    display: inline-block;
+    color: #ffca28;
+    filter: drop-shadow(0 0 6px rgba(255, 202, 40, 0.5));
+}
+
+/* Interactive Social Icons Pop */
+.hero-socials a {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-socials a i {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-socials a:hover i {
+    transform: scale(1.25) rotate(-6deg);
+}
+
+/* Button Icons Micro-Movement */
+.btn i,
+.btn-primary i,
+.btn-outline i {
+    display: inline-block;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn:hover i {
+    transform: translateX(3px) scale(1.15);
+}
+
+.btn-prev:hover i {
+    transform: translateX(-3px) scale(1.15) !important;
+}
+
+/* Contact Cards Hover Glow */
+.contact-card i {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+
+.contact-card:hover i {
+    transform: scale(1.2) rotate(8deg);
+    filter: drop-shadow(0 0 10px var(--accent));
 }
